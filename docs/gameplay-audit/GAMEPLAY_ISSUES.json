@@ -1,0 +1,526 @@
+{
+  "scope": "V2.5 local audit",
+  "issues": [
+    {
+      "id": "A01",
+      "title": "Focused contact cannot authorize an otherwise in-range attack",
+      "category": [
+        "A",
+        "B",
+        "C"
+      ],
+      "severity": "High",
+      "affectedSystems": [
+        "perception",
+        "attack eligibility and resolution"
+      ],
+      "affectedModes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "src/v23/game.ts:51,58,84,190–198,250–255",
+      "intendedBehavior": "Give the controller a coherent distinction between current contact, remembered contact and fictional attack eligibility.",
+      "actualBehavior": "Observe produces current observed contact, but attack uses the separate passive-only predicate. At 3 tiles +100 units a crouched rival yields an observed location inside nominal attack range with no Attack entry. At resolution a change in passive visibility alone can turn an otherwise identical rolled hit into a miss.",
+      "reproduction": "Run the focus and posture probes with clear center ray; compare seed 1 base and crouch inputs at the same due.",
+      "evidence": [
+        "DIAGNOSTICS.json#focus",
+        "DIAGNOSTICS.json#postureRng"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "Observe is one-update information only and cannot bridge this specific eligibility gap; eligibility is effectively narrower by posture.",
+      "dependencies": [
+        "A02",
+        "A03"
+      ],
+      "suggestedCorrectionDirection": "Specify acquisition versus resolution semantics, then test both against the same geometry.",
+      "ownerInputRequired": true
+    },
+    {
+      "id": "A02",
+      "title": "Continuous events can arrive between decisions without reaching the next controller sample",
+      "category": [
+        "B",
+        "E"
+      ],
+      "severity": "High",
+      "affectedSystems": [
+        "observation",
+        "provider scheduling",
+        "intent refresh"
+      ],
+      "affectedModes": [
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "src/v23/game.ts:84,250–255; server/gameplay-v25.ts:17,111–134",
+      "intendedBehavior": "Keep strategic decisions bounded while allowing meaningful changes to influence later plans.",
+      "actualBehavior": "Only one current/last contact with position and time; no event summary. Fixed 4s Objective and ~8.334s default Score grid exceed the 2.2s memory age; own defeat clears plan but respawn does not request a new one. Core state is exposed at the next checkpoint only.",
+      "reproduction": "Compare focus detection at 0.467s and TTL to recorded offline checkpoint schedule; inspect ordinary-score respawn and ordinary-objective activation.",
+      "evidence": [
+        "DIAGNOSTICS.json#focus",
+        "DIAGNOSTICS.json#prompt",
+        "DIAGNOSTICS.json#replays"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "Fresh Core/live context may be actionable in the engine while previously queued intent or null persists for seconds.",
+      "dependencies": [
+        "A01",
+        "A03"
+      ],
+      "suggestedCorrectionDirection": "Review a small filtered event digest or bounded wakeup policy; preserve provider request caps and no substitution.",
+      "ownerInputRequired": false
+    },
+    {
+      "id": "A03",
+      "title": "Provider movement catalog is narrower than the authoritative input geometry",
+      "category": [
+        "B",
+        "E"
+      ],
+      "severity": "High",
+      "affectedSystems": [
+        "AI interface",
+        "navigation",
+        "movement"
+      ],
+      "affectedModes": [
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "server/gameplay-v25.ts:20–43,111–119; src/v23/game.ts:96–115",
+      "intendedBehavior": "Make continuous movement and interruption useful to every controller through bounded input.",
+      "actualBehavior": "Provider gets only cell-center walk/run/crouch destinations and eligible directional jumps. Manual input has directional steer; engine also accepts safe off-center destinations. Movement and jump choices filtered now can never become selected later in the same window; ordinary actions can.",
+      "reproduction": "Compare the start prompt choices to the off-center walk probe and input union.",
+      "evidence": [
+        "DIAGNOSTICS.json#prompt.starting",
+        "DIAGNOSTICS.json#geometry"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "Continuous state does not imply a continuous model action vocabulary. Legal change-of-direction alternatives may be omitted.",
+      "dependencies": [
+        "A02"
+      ],
+      "suggestedCorrectionDirection": "Use a compact decision vocabulary that exposes useful steering/stop options or carefully bounded destinations.",
+      "ownerInputRequired": false
+    },
+    {
+      "id": "A04",
+      "title": "Posture and locomotion can disagree",
+      "category": [
+        "C",
+        "F"
+      ],
+      "severity": "Medium",
+      "affectedSystems": [
+        "posture",
+        "movement",
+        "perception",
+        "accuracy"
+      ],
+      "affectedModes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "src/v23/game.ts:62–79,171–173; src/v2/game.ts:282",
+      "intendedBehavior": "Maintain a legible distinction between crouched posture and movement risk-reward.",
+      "actualBehavior": "Walk preserves crouched posture but applies full walk speed and walk accuracy penalty; rival still sees the crouched passive range. Crouch-mode entry changes pose and speed together, and the usual manual path selects crouch mode when crouched.",
+      "reproduction": "Start Blue crouched and issue a walk steer; compare returned posture, motion and displacement.",
+      "evidence": [
+        "DIAGNOSTICS.json#geometry.walkWithCrouchPosture"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "Input sources can combine the same visible posture with differing movement costs.",
+      "dependencies": [],
+      "suggestedCorrectionDirection": "Decide whether crouched walking is a supported arcade state; make the UI, action validator and outcomes communicate the same rule.",
+      "ownerInputRequired": true
+    },
+    {
+      "id": "A05",
+      "title": "Action due timestamps and actual resolution differ by one boundary",
+      "category": [
+        "F",
+        "J"
+      ],
+      "severity": "Medium",
+      "affectedSystems": [
+        "timing",
+        "attack",
+        "reload",
+        "observe",
+        "peek",
+        "replay"
+      ],
+      "affectedModes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "src/v2/game.ts:12; src/v23/game.ts:43,161,177–214",
+      "intendedBehavior": "Time-based effects resolve predictably and timing is described in the active simulation units.",
+      "actualBehavior": "Legacy durations convert from 110ms units, then ceil to the active 30Hz boundary. Attack 770→800ms, reload 1320→1333⅓ms, observe 440→466⅔ms, peek 880→900ms. RNG uses due rather than resolution time. A short final step can change the rounding.",
+      "reproduction": "Read actual due/first-frame rules, confirm Observe completion at 1400 units and replay timestamps.",
+      "evidence": [
+        "DIAGNOSTICS.json#focus",
+        "GAMEPLAY_PARAMETER_REGISTRY.md"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "Serialized due, effective responsiveness, and presentation can be mistaken for one value.",
+      "dependencies": [],
+      "suggestedCorrectionDirection": "Document both clocks and test due immediately before/at/after deadlines; keep historical rounding stable.",
+      "ownerInputRequired": false
+    },
+    {
+      "id": "A06",
+      "title": "Attack resolves before movement within the boundary",
+      "category": [
+        "C",
+        "G"
+      ],
+      "severity": "Medium",
+      "affectedSystems": [
+        "movement",
+        "attack",
+        "presentation"
+      ],
+      "affectedModes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "src/v23/game.ts:166–246; src/v23/sandbox.tsx:56–85",
+      "intendedBehavior": "Make same-boundary ordering understandable in a continuous simulation.",
+      "actualBehavior": "New posture applies before firing resolution, but positions remain the previous boundary's until after shots and survey completion. Damage and visible event land in a frame holding the new positions. Blocked movement clears motion after the shot calculation.",
+      "reproduction": "Compare stepWorld ordering, equal-seed posture probe, near-boundary movement fixture and renderer update.",
+      "evidence": [
+        "DIAGNOSTICS.json#postureRng",
+        "DIAGNOSTICS.json#edge",
+        "SYSTEM_DEPENDENCY_MAP.md"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "A spectator can see a different position from the one used by a resolving shot. The preferred ordering is a design decision.",
+      "dependencies": [
+        "A01",
+        "A05"
+      ],
+      "suggestedCorrectionDirection": "Document/order explicitly and add boundary regression tests before considering a rule change.",
+      "ownerInputRequired": true
+    },
+    {
+      "id": "A07",
+      "title": "Respawn restores visibility without a matching contact-enter event",
+      "category": [
+        "A",
+        "G"
+      ],
+      "severity": "Medium",
+      "affectedSystems": [
+        "respawn",
+        "contact events",
+        "observation"
+      ],
+      "affectedModes": [
+        "score-deathmatch"
+      ],
+      "source": "src/v25/game.ts:107–140; src/v23/game.ts:250–255",
+      "intendedBehavior": "Keep observable contact transitions consistent with top-level life lifecycle.",
+      "actualBehavior": "Visibility transition runs before respawn. At the respawn state, observation immediately sees a live rival; next world step recomputes previous visibility as already true even without a stored contact, so it does not generate the missing enter.",
+      "reproduction": "Load ordinary-score tick 311; compare respawn event, Sand observed contact at 20160 and next events.",
+      "evidence": [
+        "DIAGNOSTICS.json#replays",
+        "../../evidence/gameplay-v25/ordinary-score.json"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "Any consumer relying on contact event edges, rather than polling, can miss new contact.",
+      "dependencies": [
+        "A02"
+      ],
+      "suggestedCorrectionDirection": "Define life/visibility ordering or reconcile contact edges after respawn.",
+      "ownerInputRequired": false
+    },
+    {
+      "id": "A08",
+      "title": "Manual input can stop reasserting a held steer after collision",
+      "category": [
+        "A",
+        "G"
+      ],
+      "severity": "Medium",
+      "affectedSystems": [
+        "manual sandbox",
+        "collision",
+        "responsiveness"
+      ],
+      "affectedModes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "src/v23/game.ts:226–237; src/v23/sandbox.tsx:236–257",
+      "intendedBehavior": "Held manual direction should have defined behavior when a temporary obstacle moves away.",
+      "actualBehavior": "World clears motion on collision. Input adapter caches the last dispatched dx/dy/mode and sends another steer only if this signature changes, except jump or respawn resets. A held direction need not restart when an agent obstruction clears.",
+      "reproduction": "Trace a held attempted direction after an agent collision, then compare signature before and after opponent movement.",
+      "evidence": [
+        "DIAGNOSTICS.json#geometry.relativeSweep",
+        "ACTION_COMPATIBILITY_MATRIX.md"
+      ],
+      "status": "Suspected",
+      "confidence": "High from source, end-to-end repro pending",
+      "gameplayImpact": "Manual feel can understate world responsiveness while steer is held.",
+      "dependencies": [],
+      "suggestedCorrectionDirection": "Create a browser fixture spanning dynamic separation and distinguish explicit hold/retry from collision stop.",
+      "ownerInputRequired": false
+    },
+    {
+      "id": "A09",
+      "title": "Development policy benchmark constrains behaviors",
+      "category": [
+        "D",
+        "B"
+      ],
+      "severity": "Medium",
+      "affectedSystems": [
+        "development policies",
+        "benchmarking",
+        "balance"
+      ],
+      "affectedModes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "src/v23/development.ts:10–42; src/v24/development.ts:12–31; src/v25/development.ts:17–40",
+      "intendedBehavior": "Use deterministic policies to establish coverage while keeping their behavior distinct from engine potential and genuine model behavior.",
+      "actualBehavior": "Profiles sample every 440ms phase, snap ordinary waypoints to cells, limit or defer replan; Score controllers won't revise while moving after no usable attack; Core controller returns null during a channel despite compatible commands; default pending Defender does not specifically pressure the Core.",
+      "reproduction": "Compare ordinary-objective #117 and ordinary-score #311 and policy code, plus existing V2.5 early-pressure comparison.",
+      "evidence": [
+        "DIAGNOSTICS.json#replays",
+        "../../evidence/gameplay-v25/benchmark.json"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "Balance distributions and apparent idle periods reflect controller policy as well as mode rules.",
+      "dependencies": [
+        "A03"
+      ],
+      "suggestedCorrectionDirection": "Separate controller cohorts and define comparable capabilities before rerunning balance.",
+      "ownerInputRequired": false
+    },
+    {
+      "id": "A10",
+      "title": "Spectator effects can miss authoritative events under frame batching",
+      "category": [
+        "G",
+        "I"
+      ],
+      "severity": "Medium",
+      "affectedSystems": [
+        "replay",
+        "rendering",
+        "browser scheduling"
+      ],
+      "affectedModes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "src/v23/sandbox.tsx:56–65,180–184,292–302",
+      "intendedBehavior": "Render meaningful replay events and distinguish spectator information from agent knowledge.",
+      "actualBehavior": "Playback calls show for each elapsed frame but publishes only latest frame to Phaser. Earlier attack flash/respawn effects can be omitted if several ticks are consumed; signal text can also be overwritten before browser paints. Under default view both agents are always rendered.",
+      "reproduction": "Throttle or block browser across a multi-frame replay interval and inspect last-frame-only code path; current browser proof verifies steady playback result only.",
+      "evidence": [
+        "BROWSER.txt",
+        "../../evidence/gameplay-v25/browser.json"
+      ],
+      "status": "Suspected",
+      "confidence": "High from source, runtime effect loss pending",
+      "gameplayImpact": "Missed intermediate cues make hit, awareness or respawn behavior look inconsistent without changing match results.",
+      "dependencies": [],
+      "suggestedCorrectionDirection": "Consume ordered events independently of render frame and add a filtered observation overlay for audit.",
+      "ownerInputRequired": false
+    },
+    {
+      "id": "A11",
+      "title": "V2.5 live round trip, memory, and on-chain verification remain gated or incomplete",
+      "category": [
+        "H",
+        "I"
+      ],
+      "severity": "High",
+      "affectedSystems": [
+        "Gemini",
+        "memory",
+        "hosted trials",
+        "verification"
+      ],
+      "affectedModes": [
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "server/api.ts:110–157; api/arena.ts:7–15; server/gameplay-v25.ts:39; contracts/",
+      "intendedBehavior": "Keep rule-matched identity, memory and results verifiable with actual evidence.",
+      "actualBehavior": "V2.5 runner accepts compatible lessons in isolation; API passes coaching only, sets memory revisions zero and skips reflection. Production viewer/V1 verifier do not execute V2.5. Protected provider result is unverified in this sprint.",
+      "reproduction": "Inspect API branch and previously recorded integration evidence; injected local tests only.",
+      "evidence": [
+        "../../evidence/gameplay-v25/integration.json",
+        "TEST_RUN.txt"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "V2.5 cannot establish real model responsiveness or competitive deployment readiness yet.",
+      "dependencies": [
+        "A01",
+        "A02",
+        "A03"
+      ],
+      "suggestedCorrectionDirection": "Verify local corrections first, then run protected genuine comparisons only when authorized. Keep V1 attestation and replay separate.",
+      "ownerInputRequired": false
+    },
+    {
+      "id": "A12",
+      "title": "Exact-reference imports retain historical duplicate-defeat behavior",
+      "category": [
+        "B",
+        "K"
+      ],
+      "severity": "Low",
+      "affectedSystems": [
+        "historical replay",
+        "Objective variant"
+      ],
+      "affectedModes": [
+        "objective-duel reference"
+      ],
+      "source": "src/v25/game.ts:97–105,143–148; src/v23/game.ts:245–255",
+      "intendedBehavior": "Preserve earlier outcomes and stored events without contaminating current presets.",
+      "actualBehavior": "Reference uses historical non-live-only branch. Already-defeated case can emit repeated defeat and remain obstructive/targetable until terminal. Default and reference-live use live checks.",
+      "reproduction": "Compare exact reference and reference-live from V2.5 benchmark and current V2.5 tests.",
+      "evidence": [
+        "../../evidence/gameplay-v25/benchmark.json",
+        "TEST_RUN.txt"
+      ],
+      "status": "Intentional",
+      "confidence": "High",
+      "gameplayImpact": "Historical control invalid for interpreting current defeat/event rates without annotation.",
+      "dependencies": [],
+      "suggestedCorrectionDirection": "Maintain frozen fixture expectations and label historical control.",
+      "ownerInputRequired": false
+    },
+    {
+      "id": "A13",
+      "title": "One command per side limits same-boundary independent state changes",
+      "category": [
+        "B",
+        "E",
+        "K"
+      ],
+      "severity": "Medium",
+      "affectedSystems": [
+        "world input",
+        "sandbox",
+        "provider"
+      ],
+      "affectedModes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "src/v23/game.ts:13–16,166–185; src/v23/sandbox.tsx:214–257",
+      "intendedBehavior": "Allow compatible game states to overlap and respond at the next practical boundary.",
+      "actualBehavior": "Movement can continue during a compatible action, but two new inputs cannot start for one side on the same step; key queue selects one action before changed steering. Firing or peek disables further actions selectively.",
+      "reproduction": "Compare WALK+existing reload matrix row and stop then precision requiring two decision slots.",
+      "evidence": [
+        "DIAGNOSTICS.json#matrix"
+      ],
+      "status": "Intentional",
+      "confidence": "High",
+      "gameplayImpact": "Compatible persistence is present, while command bundling and same-boundary starting are limited.",
+      "dependencies": [],
+      "suggestedCorrectionDirection": "Retain single input unless owner requires simultaneous starts; define precedence and measure effective latency first.",
+      "ownerInputRequired": false
+    },
+    {
+      "id": "A14",
+      "title": "Filtered prompt omits available game feedback and active timer detail",
+      "category": [
+        "E",
+        "H"
+      ],
+      "severity": "Medium",
+      "affectedSystems": [
+        "observation",
+        "provider prompt"
+      ],
+      "affectedModes": [
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "src/v23/game.ts:84–94; src/v25/game.ts:162–184; server/gameplay-v25.ts:20–43",
+      "intendedBehavior": "Let an agent assess its own prior action outcomes, limits and progress from authorized information.",
+      "actualBehavior": "Own active firing/reload/survey have labels/booleans but no due time, destination or friendly event outcomes. Full replay has them. Rival positions only through legitimate contact; Core public interaction includes opponent role/side and progress, which implies the actor is within the Core diamond.",
+      "reproduction": "Compare prompt keys and filtered views to replay state and events; test distinct same-position obscured and visible states.",
+      "evidence": [
+        "DIAGNOSTICS.json#prompt.starting",
+        "DIAGNOSTICS.json#replays"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "A model may see that it spent ammo without knowing hit/miss or when currently running actions complete. Exact rival hidden position/HP not serialized in audited prompts.",
+      "dependencies": [
+        "A02"
+      ],
+      "suggestedCorrectionDirection": "Add filtered feedback and documentation of what Core information is public; preserve privacy tests.",
+      "ownerInputRequired": true
+    },
+    {
+      "id": "A15",
+      "title": "Posture, behavior and world-radius boundary coverage is incomplete",
+      "category": [
+        "I",
+        "L"
+      ],
+      "severity": "Medium",
+      "affectedSystems": [
+        "movement",
+        "geometry",
+        "action timing",
+        "observation",
+        "renderer"
+      ],
+      "affectedModes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "source": "test/gameplay-v23.test.ts; test/gameplay-v25.test.ts; test/gameplay-v25-server.test.ts",
+      "intendedBehavior": "Exercise interactions and exact boundaries with reachable transcripts in addition to synthetic snapshots.",
+      "actualBehavior": "Current tests cover continuous motion, sweeps, basic privacy, concurrency, simultaneous damage, clock and parity samples. They do not assert contact pulse end-to-end, filtered-event lifetime under real windows, held steer recovery, batched effects, full mixed-mode matrix, or low-end browser timing.",
+      "reproduction": "Compare the named existing tests to diagnostics and explicit coverage gap list.",
+      "evidence": [
+        "AUDIT_EVIDENCE.md",
+        "TEST_RUN.txt"
+      ],
+      "status": "Confirmed",
+      "confidence": "High",
+      "gameplayImpact": "Passing deterministic regression suite cannot determine competitive feel or provider agency.",
+      "dependencies": [
+        "A01",
+        "A02",
+        "A04",
+        "A07",
+        "A08",
+        "A10"
+      ],
+      "suggestedCorrectionDirection": "Promote reproduced interactions to targeted regressions with both reachable and precise fixtures.",
+      "ownerInputRequired": false
+    }
+  ]
+}

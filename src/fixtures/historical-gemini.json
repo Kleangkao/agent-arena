@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "rulesVersion": "lane-v1",
+  "mapVersion": "dust-yard-prototype-v1",
+  "label": "Historical Gemini match",
+  "initialState": {
+    "step": 0,
+    "fighters": [
+      {
+        "position": 0,
+        "hp": 100,
+        "ammo": 3
+      },
+      {
+        "position": 6,
+        "hp": 100,
+        "ammo": 3
+      }
+    ],
+    "result": null
+  },
+  "events": [
+    {
+      "step": 1,
+      "actions": [
+        "advance",
+        "wait"
+      ],
+      "state": {
+        "step": 1,
+        "fighters": [
+          {
+            "position": 1,
+            "hp": 100,
+            "ammo": 3
+          },
+          {
+            "position": 6,
+            "hp": 100,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 2,
+      "actions": [
+        "advance",
+        "wait"
+      ],
+      "state": {
+        "step": 2,
+        "fighters": [
+          {
+            "position": 2,
+            "hp": 100,
+            "ammo": 3
+          },
+          {
+            "position": 6,
+            "hp": 100,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 3,
+      "actions": [
+        "advance",
+        "wait"
+      ],
+      "state": {
+        "step": 3,
+        "fighters": [
+          {
+            "position": 3,
+            "hp": 100,
+            "ammo": 3
+          },
+          {
+            "position": 6,
+            "hp": 100,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 4,
+      "actions": [
+        "advance",
+        "wait"
+      ],
+      "state": {
+        "step": 4,
+        "fighters": [
+          {
+            "position": 4,
+            "hp": 100,
+            "ammo": 3
+          },
+          {
+            "position": 6,
+            "hp": 100,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 5,
+      "actions": [
+        "advance",
+        "wait"
+      ],
+      "state": {
+        "step": 5,
+        "fighters": [
+          {
+            "position": 5,
+            "hp": 100,
+            "ammo": 3
+          },
+          {
+            "position": 6,
+            "hp": 100,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 6,
+      "actions": [
+        "attack",
+        "wait"
+      ],
+      "state": {
+        "step": 6,
+        "fighters": [
+          {
+            "position": 5,
+            "hp": 100,
+            "ammo": 2
+          },
+          {
+            "position": 6,
+            "hp": 75,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 7,
+      "actions": [
+        "attack",
+        "wait"
+      ],
+      "state": {
+        "step": 7,
+        "fighters": [
+          {
+            "position": 5,
+            "hp": 100,
+            "ammo": 1
+          },
+          {
+            "position": 6,
+            "hp": 50,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 8,
+      "actions": [
+        "attack",
+        "wait"
+      ],
+      "state": {
+        "step": 8,
+        "fighters": [
+          {
+            "position": 5,
+            "hp": 100,
+            "ammo": 0
+          },
+          {
+            "position": 6,
+            "hp": 25,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 9,
+      "actions": [
+        "reload",
+        "wait"
+      ],
+      "state": {
+        "step": 9,
+        "fighters": [
+          {
+            "position": 5,
+            "hp": 100,
+            "ammo": 3
+          },
+          {
+            "position": 6,
+            "hp": 25,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 10,
+      "actions": [
+        "attack",
+        "wait"
+      ],
+      "state": {
+        "step": 10,
+        "fighters": [
+          {
+            "position": 5,
+            "hp": 100,
+            "ammo": 2
+          },
+          {
+            "position": 6,
+            "hp": 0,
+            "ammo": 3
+          }
+        ],
+        "result": "blue"
+      }
+    }
+  ],
+  "result": "blue"
+}

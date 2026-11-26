@@ -1,0 +1,18 @@
+{
+  "chainId": 97,
+  "agentId": "2933",
+  "owner": "0x0f7340C0B93377f4c59d0ACCcc076991bb872E30",
+  "ownershipBlock": "145034230",
+  "matchId": "ea32cd37-964f-4364-83de-3e717004fa13",
+  "mode": "relay",
+  "result": "blue",
+  "model": "gemini-3.5-flash-lite",
+  "evidenceUrl": "https://agent-arena-preview.vercel.app/competition/commander-2933.json",
+  "replayHash": "0x2bb2bae77244a32813bd80d6052ee12600c7d7243d27ea0b0defa478f0c0c850",
+  "evidenceHash": "0xadd6160b9499c74448219c3b1b1bd332cb4f51f70b156e991dc7414cb1d2a9f0",
+  "matchKey": "0x4c19883ebdb539e0657b1c30372854513b18a7e16c00b54f273a79fe2df0a675",
+  "chain": {
+    "status": "recorded",
+    "hash": "0x2c36b996f25a4b06e0764ce81947af7883830757a94ead7b03969fd6bc193e8f"
+  }
+}

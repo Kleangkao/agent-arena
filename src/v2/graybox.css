@@ -1,0 +1,25 @@
+.graybox { max-width: 700px; padding: 20px 16px 44px; }
+.graybox-title, .graybox-status, .graybox-score { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.graybox-title { font-size: .82rem; color: #b8ada1; margin-bottom: 22px; }
+.graybox-title a { color: #edc285; }
+.graybox h1 { margin-bottom: 10px; }
+.graybox p { margin: 0 0 20px; }
+.graybox-score { margin: 0 0 10px; }
+.graybox-score div { display: grid; gap: 4px; color: #8ecaef; font-size: .88rem; }
+.graybox-score div + div { text-align: right; color: #efc580; }
+.graybox-blue { --health: #6eb7ed; }
+.graybox-sand { --health: #efc580; }
+.graybox-board { background: #3b3028; aspect-ratio: 9 / 7; }
+.graybox-board canvas { width: 100%; height: auto; display: block; }
+.graybox-status { align-items: start; min-height: 48px; padding-top: 10px; font-size: .86rem; }
+.graybox-status strong { white-space: nowrap; }
+.graybox-status span { text-align: right; }
+.graybox-controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.graybox-controls button, .graybox select { min-height: 44px; padding: 6px 12px; border: 1px solid #8b7761; background: #292727; color: #f4e8d7; }
+.graybox-controls .primary { background: #edc285; color: #231d18; }
+.graybox-controls button:disabled { opacity: .45; cursor: default; }
+.graybox details { margin-top: 14px; padding: 10px; }
+.graybox label { font-size: .85rem; }
+.graybox input[type=file] { max-width: 100%; color: inherit; }
+.graybox pre { max-height: 260px; overflow: auto; }
+.graybox-link { display: inline-block; margin-top: 12px; color: #edc285; }

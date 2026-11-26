@@ -1,0 +1,1473 @@
+{
+  "id": "a0f9c67d-1ac6-4e7b-b009-18d3950603c2",
+  "status": "completed",
+  "replay": {
+    "version": 7,
+    "config": {
+      "mapVersion": "relay-yard-v1",
+      "teamSize": 5,
+      "rulesVersion": "squads-v3",
+      "mode": "tdm"
+    },
+    "source": "operator-attested-gemini",
+    "windows": [
+      [
+        {
+          "intent": "Advance cautiously toward cover and setup positions.",
+          "orders": [
+            "5,5",
+            "5,6",
+            "5,7",
+            "5,8",
+            "5,9"
+          ]
+        },
+        {
+          "intent": "Advance cautiously toward cover and rivals",
+          "orders": [
+            "20,9",
+            "20,8",
+            "20,7",
+            "20,6",
+            "20,5"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Advance cautiously toward cover",
+          "orders": [
+            "7,5",
+            "7,6",
+            "7,7",
+            "7,8",
+            "7,9"
+          ]
+        },
+        {
+          "intent": "Advance units into defensive cover and prepare positions.",
+          "orders": [
+            "15,9",
+            "15,8",
+            "15,7",
+            "15,6",
+            "15,5"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Advance cautiously toward cover and enemies while keeping pulses silent.",
+          "orders": [
+            "11,5",
+            "11,6",
+            "11,7",
+            "11,8",
+            "11,9"
+          ]
+        },
+        {
+          "intent": "Advance team toward central territory to engage rivals and establish positioning",
+          "orders": [
+            "11,9",
+            "11,8",
+            "12,8",
+            "11,6",
+            "11,5"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Reposition to cover and prepare defensive pulses.",
+          "orders": [
+            "9,5/pulse",
+            "9,6/pulse",
+            "8,6/pulse",
+            "9,8/pulse",
+            "9,9/pulse"
+          ]
+        },
+        {
+          "intent": "Engage rivals and secure elimination lead",
+          "orders": [
+            "10,9/pulse",
+            "10,8/pulse",
+            "9,8/pulse",
+            "10,6/pulse",
+            "10,5/pulse"
+          ]
+        }
+      ]
+    ],
+    "final": "draw",
+    "interruption": null
+  },
+  "attempts": [
+    {
+      "side": 0,
+      "step": 0,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 3831,
+      "model": "gemini-3.5-flash-lite",
+      "input": 707,
+      "output": 68,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "side": 1,
+      "step": 0,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 1426,
+      "model": "gemini-3.5-flash-lite",
+      "input": 723,
+      "output": 72,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 12,
+      "attempt": 1,
+      "status": "invalid-orders",
+      "ms": 2814,
+      "model": "gemini-3.5-flash-lite",
+      "input": 708,
+      "output": 75,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failure": "Slot 2 targets a wall or off-board cell at 12,7."
+    },
+    {
+      "side": 1,
+      "step": 12,
+      "attempt": 1,
+      "status": "503",
+      "ms": 3215
+    },
+    {
+      "side": 0,
+      "step": 12,
+      "attempt": 2,
+      "status": "accepted",
+      "ms": 4448,
+      "model": "gemini-3.5-flash-lite",
+      "input": 740,
+      "output": 65,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "side": 1,
+      "step": 12,
+      "attempt": 2,
+      "status": "accepted",
+      "ms": 2630,
+      "model": "gemini-3.5-flash-lite",
+      "input": 724,
+      "output": 74,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 24,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 1198,
+      "model": "gemini-3.5-flash-lite",
+      "input": 708,
+      "output": 76,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "side": 1,
+      "step": 24,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 3730,
+      "model": "gemini-3.5-flash-lite",
+      "input": 724,
+      "output": 77,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 36,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 1739,
+      "model": "gemini-3.5-flash-lite",
+      "input": 712,
+      "output": 83,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "side": 1,
+      "step": 36,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 3749,
+      "model": "gemini-3.5-flash-lite",
+      "input": 728,
+      "output": 86,
+      "coachingRevision": "official-sand-v1"
+    }
+  ],
+  "durationMs": 18610,
+  "model": "gemini-3.5-flash-lite",
+  "coaching": "",
+  "variant": "reference",
+  "exchange": [
+    {
+      "side": 1,
+      "tick": 0,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 0,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                23,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                24,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                23,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                24,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                23,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                3,
+                5
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                2,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                3,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                2,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        }
+      },
+      "response": "{\n  \"intent\": \"Advance cautiously toward cover and rivals\",\n  \"orders\": [\n    \"20,9\",\n    \"20,8\",\n    \"20,7\",\n    \"20,6\",\n    \"20,5\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 0,
+      "tick": 0,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "",
+        "observation": {
+          "tick": 0,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                3,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                2,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                3,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                2,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                23,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        }
+      },
+      "response": "{\n  \"intent\": \"Advance cautiously toward cover and setup positions.\",\n  \"orders\": [\n    \"5,5\",\n    \"5,6\",\n    \"5,7\",\n    \"5,8\",\n    \"5,9\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 0,
+      "tick": 12,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "",
+        "observation": {
+          "tick": 12,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                5,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                5,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                5,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                5,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                5,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                20,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                20,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                20,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                20,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                20,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        }
+      },
+      "response": "{\n  \"intent\": \"Advance formation to close distance and engage rival team.\",\n  \"orders\": [\n    \"12,5\",\n    \"12,6\",\n    \"12,7\",\n    \"12,8\",\n    \"12,9\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 1,
+      "tick": 12,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 12,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                20,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                20,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                20,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                20,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                20,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                5,
+                5
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                5,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                5,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                5,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                5,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        }
+      },
+      "response": "{\n  \"intent\": \"Advance units into defensive cover and prepare positions.\",\n  \"orders\": [\n    \"15,9\",\n    \"15,8\",\n    \"15,7\",\n    \"15,6\",\n    \"15,5\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 0,
+      "tick": 12,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "",
+        "observation": {
+          "tick": 12,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                5,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                5,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                5,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                5,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                5,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                20,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                20,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                20,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                20,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                20,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "validationFeedback": "Slot 2 targets a wall or off-board cell at 12,7. Author a complete replacement plan for the same snapshot."
+      },
+      "response": "{\n  \"intent\": \"Advance cautiously toward cover\",\n  \"orders\": [\n    \"7,5\",\n    \"7,6\",\n    \"7,7\",\n    \"7,8\",\n    \"7,9\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 0,
+      "tick": 24,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "",
+        "observation": {
+          "tick": 24,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                7,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                7,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                7,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                7,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                7,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                15,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                15,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                16,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                15,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                15,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        }
+      },
+      "response": "{\n  \"intent\": \"Advance cautiously toward cover and enemies while keeping pulses silent.\",\n  \"orders\": [\n    \"11,5\",\n    \"11,6\",\n    \"11,7\",\n    \"11,8\",\n    \"11,9\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 1,
+      "tick": 24,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 24,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                15,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                15,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                16,
+                8
+              ],
+              "hp": 100,
+              "blocked": 4
+            },
+            {
+              "slot": 3,
+              "at": [
+                15,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                15,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                7,
+                5
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                7,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                7,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                7,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                7,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        }
+      },
+      "response": "{\n  \"intent\": \"Advance team toward central territory to engage rivals and establish positioning\",\n  \"orders\": [\n    \"11,9\",\n    \"11,8\",\n    \"12,8\",\n    \"11,6\",\n    \"11,5\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 0,
+      "tick": 36,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "",
+        "observation": {
+          "tick": 36,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                10,
+                5
+              ],
+              "hp": 100,
+              "blocked": 8
+            },
+            {
+              "slot": 1,
+              "at": [
+                10,
+                6
+              ],
+              "hp": 100,
+              "blocked": 8
+            },
+            {
+              "slot": 2,
+              "at": [
+                9,
+                6
+              ],
+              "hp": 100,
+              "blocked": 2
+            },
+            {
+              "slot": 3,
+              "at": [
+                10,
+                8
+              ],
+              "hp": 100,
+              "blocked": 8
+            },
+            {
+              "slot": 4,
+              "at": [
+                10,
+                9
+              ],
+              "hp": 100,
+              "blocked": 8
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                12,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                12,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                13,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                12,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                12,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        }
+      },
+      "response": "{\n  \"intent\": \"Reposition to cover and prepare defensive pulses.\",\n  \"orders\": [\n    \"9,5\",\n    \"9,6\",\n    \"8,6\",\n    \"9,8\",\n    \"9,9\"\n  ],\n  \"pulseSlots\": [0, 1, 2, 3, 4]\n}"
+    },
+    {
+      "side": 1,
+      "tick": 36,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 36,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                12,
+                9
+              ],
+              "hp": 100,
+              "blocked": 8
+            },
+            {
+              "slot": 1,
+              "at": [
+                12,
+                8
+              ],
+              "hp": 100,
+              "blocked": 8
+            },
+            {
+              "slot": 2,
+              "at": [
+                13,
+                8
+              ],
+              "hp": 100,
+              "blocked": 5
+            },
+            {
+              "slot": 3,
+              "at": [
+                12,
+                6
+              ],
+              "hp": 100,
+              "blocked": 8
+            },
+            {
+              "slot": 4,
+              "at": [
+                12,
+                5
+              ],
+              "hp": 100,
+              "blocked": 8
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                10,
+                5
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                10,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                9,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                10,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                10,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        }
+      },
+      "response": "{\n  \"intent\": \"Engage rivals and secure elimination lead\",\n  \"orders\": [\n    \"10,9\",\n    \"10,8\",\n    \"9,8\",\n    \"10,6\",\n    \"10,5\"\n  ],\n  \"pulseSlots\": [0, 1, 2, 3, 4]\n}"
+    }
+  ]
+}

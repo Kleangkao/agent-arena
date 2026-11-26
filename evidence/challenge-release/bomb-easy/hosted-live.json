@@ -1,0 +1,194 @@
+{
+  "origin": "https://agent-arena-preview.vercel.app",
+  "kind": "hosted-live",
+  "shots": [
+    "evidence/challenge-release/bomb-easy/hosted-live-play-desktop.png",
+    "evidence/challenge-release/bomb-easy/hosted-live-play-mobile.png",
+    "evidence/challenge-release/bomb-easy/hosted-live-agent-mobile.png",
+    "evidence/challenge-release/bomb-easy/hosted-live-prepare-mobile.png",
+    "evidence/challenge-release/bomb-easy/hosted-live-prepare-desktop.png",
+    "evidence/challenge-release/bomb-easy/hosted-live-battle-desktop.png",
+    "evidence/challenge-release/bomb-easy/hosted-live-battle-mobile.png",
+    "evidence/challenge-release/bomb-easy/hosted-live-review-mobile.png",
+    "evidence/challenge-release/bomb-easy/hosted-live-review-desktop.png",
+    "evidence/challenge-release/bomb-easy/hosted-live-rematch-setup.png"
+  ],
+  "recording": null,
+  "errors": [],
+  "failure": null,
+  "startStatuses": [
+    202
+  ],
+  "runs": [
+    {
+      "id": "4fcd40dd-402b-467a-a614-af507de796b2",
+      "status": "completed",
+      "model": "gemini-3.5-flash-lite",
+      "guidance": {
+        "strategy": "proactive",
+        "autonomy": "coach-led",
+        "coaching": "Choose one Core and keep nearby units supporting the link.",
+        "revision": "749ab66fb6aa2b0cf866ac492b0062f62ab9a2d2a9e2f4d70300d4fc64d79480",
+        "requests": 3,
+        "received": {
+          "autonomy": "Give the coach’s guidance strong weight where practical. Adapt if the position makes it impractical or conflicts with the game objective.",
+          "coaching": "Choose one Core and keep nearby units supporting the link.",
+          "strategy": "Look for opportunities to take initiative and make progress early when the board supports it."
+        }
+      },
+      "attempts": [
+        {
+          "ms": 764,
+          "side": 0,
+          "step": 0,
+          "input": 1792,
+          "model": "gemini-3.5-flash-lite",
+          "output": 72,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "749ab66fb6aa2b0cf866ac492b0062f62ab9a2d2a9e2f4d70300d4fc64d79480"
+        },
+        {
+          "ms": 2,
+          "side": 1,
+          "step": 0,
+          "status": "accepted",
+          "attempt": 1
+        },
+        {
+          "ms": 877,
+          "side": 0,
+          "step": 12,
+          "input": 2105,
+          "model": "gemini-3.5-flash-lite",
+          "output": 77,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "749ab66fb6aa2b0cf866ac492b0062f62ab9a2d2a9e2f4d70300d4fc64d79480"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 12,
+          "status": "accepted",
+          "attempt": 1
+        },
+        {
+          "ms": 712,
+          "side": 0,
+          "step": 24,
+          "input": 2139,
+          "model": "gemini-3.5-flash-lite",
+          "output": 72,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "749ab66fb6aa2b0cf866ac492b0062f62ab9a2d2a9e2f4d70300d4fc64d79480"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 24,
+          "status": "accepted",
+          "attempt": 1
+        }
+      ],
+      "durationMs": 2405,
+      "replay": {
+        "final": "blue",
+        "config": {
+          "mode": "bomb",
+          "teamSize": 5,
+          "mapVersion": "relay-yard-v1",
+          "rulesVersion": "squads-v3"
+        },
+        "source": "arena-challenge",
+        "version": 7,
+        "windows": [
+          [
+            {
+              "intent": "Advance to the North site and initiate the link while supporting units secure the surrounding area.",
+              "orders": [
+                "13,3/link",
+                "13,2",
+                "13,4",
+                "12,3",
+                "12,4"
+              ]
+            },
+            {
+              "intent": "Guard both Core sites.",
+              "orders": [
+                "14,3/pulse",
+                "14,11/pulse",
+                "13,10/pulse",
+                "13,12/pulse",
+                "12,11/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Focus on the North site, link with slot 0, and provide surrounding pulse and support support.",
+              "orders": [
+                "13,3/link",
+                "13,2",
+                "13,4",
+                "12,3/pulse",
+                "12,4"
+              ]
+            },
+            {
+              "intent": "Guard both Core sites.",
+              "orders": [
+                "14,3/pulse",
+                "14,11/pulse",
+                "13,10/pulse",
+                "13,12/pulse",
+                "12,11/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Secure the North site link and pulse nearby threats to maintain site activation countdown.",
+              "orders": [
+                "13,3/link",
+                "13,2",
+                "13,4",
+                "12,3/pulse",
+                "12,4"
+              ]
+            },
+            {
+              "intent": "Respond to activity at the Core.",
+              "orders": [
+                "14,3/link",
+                "13,2/pulse",
+                "13,4/pulse",
+                "14,11/pulse",
+                "13,10/pulse"
+              ]
+            }
+          ]
+        ],
+        "challenge": {
+          "format": "challenge",
+          "policy": "arena-bot/v3",
+          "opponent": "arena-easy",
+          "difficulty": "easy"
+        },
+        "interruption": null
+      },
+      "terminal": {
+        "score": [
+          0,
+          0
+        ],
+        "tick": 32,
+        "result": "blue"
+      }
+    }
+  ],
+  "practiced": [],
+  "publicVerificationRequested": false
+}

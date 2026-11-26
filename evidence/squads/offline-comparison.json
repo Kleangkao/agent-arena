@@ -1,0 +1,162 @@
+{
+  "method": "One fixed split-vs-north scripted matchup per size; 30 warm timing samples. Planning and browser playback excluded.",
+  "collision": [
+    {
+      "rules": "squads-v1",
+      "blueAtSpawn": 2,
+      "blockedUnitTicks": 38
+    },
+    {
+      "rules": "squads-v2",
+      "blueAtSpawn": 0,
+      "blockedUnitTicks": 8
+    }
+  ],
+  "openingComparison": {
+    "method": "Execute the two genuine Blue opening plans against the same accepted Sand plan from the current-rules run.",
+    "runs": [
+      {
+        "intent": "Occupy North relay scoring cells with four units and send one unit to South relay to scout and score.",
+        "score": [
+          2,
+          2
+        ],
+        "blueUnits": [
+          {
+            "at": [
+              12,
+              4
+            ],
+            "hp": 0
+          },
+          {
+            "at": [
+              10,
+              5
+            ],
+            "hp": 100
+          },
+          {
+            "at": [
+              12,
+              6
+            ],
+            "hp": 100
+          },
+          {
+            "at": [
+              11,
+              7
+            ],
+            "hp": 100
+          },
+          {
+            "at": [
+              13,
+              11
+            ],
+            "hp": 20
+          }
+        ]
+      },
+      {
+        "intent": "Control South relay with four units and send one unit to North.",
+        "score": [
+          0,
+          2
+        ],
+        "blueUnits": [
+          {
+            "at": [
+              10,
+              6
+            ],
+            "hp": 60
+          },
+          {
+            "at": [
+              11,
+              8
+            ],
+            "hp": 80
+          },
+          {
+            "at": [
+              12,
+              9
+            ],
+            "hp": 80
+          },
+          {
+            "at": [
+              10,
+              10
+            ],
+            "hp": 100
+          },
+          {
+            "at": [
+              11,
+              7
+            ],
+            "hp": 100
+          }
+        ]
+      }
+    ]
+  },
+  "sizes": [
+    {
+      "size": 3,
+      "ticks": 38,
+      "score": [
+        24,
+        21
+      ],
+      "result": "blue",
+      "shots": 21,
+      "blockedSurvivors": 0,
+      "medianMs": 0.58,
+      "p95Ms": 1.14
+    },
+    {
+      "size": 5,
+      "ticks": 35,
+      "score": [
+        24,
+        23
+      ],
+      "result": "blue",
+      "shots": 33,
+      "blockedSurvivors": 0,
+      "medianMs": 0.65,
+      "p95Ms": 0.94
+    },
+    {
+      "size": 10,
+      "ticks": 35,
+      "score": [
+        24,
+        23
+      ],
+      "result": "blue",
+      "shots": 65,
+      "blockedSurvivors": 0,
+      "medianMs": 1.59,
+      "p95Ms": 2.04
+    },
+    {
+      "size": 20,
+      "ticks": 32,
+      "score": [
+        24,
+        21
+      ],
+      "result": "blue",
+      "shots": 128,
+      "blockedSurvivors": 12,
+      "medianMs": 4.19,
+      "p95Ms": 4.8
+    }
+  ]
+}

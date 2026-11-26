@@ -1,0 +1,242 @@
+{
+  "id": "1ca149fa-5c19-42d8-a58b-d3a56aea493d",
+  "status": "completed",
+  "replay": {
+    "version": 7,
+    "config": {
+      "mapVersion": "relay-yard-v1",
+      "teamSize": 5,
+      "rulesVersion": "squads-v3",
+      "mode": "tdm"
+    },
+    "source": "operator-attested-gemini",
+    "windows": [
+      [
+        {
+          "intent": "Advance cautiously toward the right side to engage rival units.",
+          "orders": [
+            "6,5",
+            "6,6",
+            "6,7",
+            "6,8",
+            "6,9"
+          ]
+        },
+        {
+          "intent": "Advance cautiously toward the center to engage the enemy team.",
+          "orders": [
+            "18,9",
+            "18,8",
+            "18,7",
+            "18,6",
+            "18,5"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Advance cautiously toward the right side cover and prepare defensive pulses.",
+          "orders": [
+            "11,5",
+            "11,6",
+            "11,7",
+            "11,8",
+            "11,9"
+          ]
+        },
+        {
+          "intent": "Advance cautiously and establish crossfire positions to engage rival units.",
+          "orders": [
+            "15,9",
+            "15,8",
+            "15,7",
+            "15,6",
+            "15,5"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Reposition units to avoid invalid wall targets and engage rivals cautiously.",
+          "orders": [
+            "13,5",
+            "13,6",
+            "12,6",
+            "13,8",
+            "13,9"
+          ]
+        },
+        {
+          "intent": "Engage rivals and maintain pressure to secure eliminations.",
+          "orders": [
+            "11,9",
+            "11,8",
+            "11,6",
+            "11,6",
+            "11,5"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Maintain defensive positions and exchange fire.",
+          "orders": [
+            "12,5",
+            "12,6",
+            "11,6",
+            "12,8",
+            "12,9"
+          ]
+        },
+        {
+          "intent": "Maintain defensive posture and secure the lead.",
+          "orders": [
+            "14,9",
+            "14,8",
+            "15,6",
+            "14,6",
+            "14,5"
+          ]
+        }
+      ]
+    ],
+    "final": "draw",
+    "interruption": null
+  },
+  "attempts": [
+    {
+      "side": 0,
+      "step": 0,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 2187,
+      "model": "gemini-3.5-flash-lite",
+      "input": 635,
+      "output": 64,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "side": 1,
+      "step": 0,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 1780,
+      "model": "gemini-3.5-flash-lite",
+      "input": 651,
+      "output": 69,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 12,
+      "attempt": 1,
+      "status": "invalid-orders",
+      "ms": 2169,
+      "model": "gemini-3.5-flash-lite",
+      "input": 638,
+      "output": 71,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failure": "Slot 2 targets a wall or off-board cell at 12,7."
+    },
+    {
+      "side": 1,
+      "step": 12,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 1900,
+      "model": "gemini-3.5-flash-lite",
+      "input": 654,
+      "output": 70,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 12,
+      "attempt": 2,
+      "status": "accepted",
+      "ms": 1765,
+      "model": "gemini-3.5-flash-lite",
+      "input": 670,
+      "output": 70,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "side": 0,
+      "step": 24,
+      "attempt": 1,
+      "status": "invalid-orders",
+      "ms": 2572,
+      "model": "gemini-3.5-flash-lite",
+      "input": 641,
+      "output": 65,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failure": "Slot 2 targets a wall or off-board cell at 13,7."
+    },
+    {
+      "side": 1,
+      "step": 24,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 2174,
+      "model": "gemini-3.5-flash-lite",
+      "input": 657,
+      "output": 69,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 24,
+      "attempt": 2,
+      "status": "accepted",
+      "ms": 1621,
+      "model": "gemini-3.5-flash-lite",
+      "input": 673,
+      "output": 71,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "side": 0,
+      "step": 36,
+      "attempt": 1,
+      "status": "503",
+      "ms": 2290
+    },
+    {
+      "side": 1,
+      "step": 36,
+      "attempt": 1,
+      "status": "invalid-orders",
+      "ms": 1082,
+      "model": "gemini-3.5-flash-lite",
+      "input": 661,
+      "output": 73,
+      "coachingRevision": "official-sand-v1",
+      "failure": "Slot 1 targets a wall or off-board cell at 14,7."
+    },
+    {
+      "side": 1,
+      "step": 36,
+      "attempt": 2,
+      "status": "accepted",
+      "ms": 4823,
+      "model": "gemini-3.5-flash-lite",
+      "input": 693,
+      "output": 66,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 36,
+      "attempt": 2,
+      "status": "accepted",
+      "ms": 814,
+      "model": "gemini-3.5-flash-lite",
+      "input": 645,
+      "output": 65,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "durationMs": 16234,
+  "model": "gemini-3.5-flash-lite",
+  "coaching": ""
+}

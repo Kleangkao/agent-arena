@@ -1,0 +1,123 @@
+async page => {
+  const failures = [];
+  let apiCalls = 0;
+  const register = page => {
+    page.on('pageerror', error => failures.push(error.message));
+    page.on('requestfailed', request => { if (request.url().includes('127.0.0.1') && !request.url().includes('/api/memory')) failures.push(request.url()); });
+    page.on('request', request => { if (request.url().includes('/api/')) apiCalls++; });
+    page.on('response', response => { if (response.url().includes('127.0.0.1') && !response.ok() && response.status() !== 304 && !response.url().includes('/api/memory')) failures.push(response.url() + ' ' + response.status()); });
+  };
+  register(page);
+  const url = new URL('/',page.url()).href;
+  const out = 'evidence/final-integration/';
+  const shot = async (page, name) => page.screenshot({path:out+''+name,fullPage:true});
+  const click = (page, name) => page.getByRole('button',{name,exact:true}).click();
+  const health = async page => (await page.locator('meter').evaluateAll(els=>els.map(e=>e.value))).join('/');
+  const waitTurn = (page, turn) => page.getByText('Turn '+turn+' / 10',{exact:true}).waitFor();
+  const verify = async (page, expected) => {
+    await page.getByRole('heading',{name:'Victory',exact:true}).waitFor();
+    if (await health(page)!==expected) throw new Error('Replay HUD disagrees with expected final state.');
+  };
+
+  await page.setViewportSize({width:1280,height:900});
+  await page.goto(url);
+  
+  await page.locator('.canvas[aria-busy=false]').waitFor();
+  await page.waitForTimeout(600);
+  await shot(page,'01-play.png');
+  await page.locator('canvas').screenshot({path:out+'04-dust-yard.png'});
+  if (await page.getByRole('navigation',{name:'Primary'}).getByRole('button').count()!==3) throw new Error('Primary navigation changed.');
+  await click(page,'My Agent');
+  await shot(page,'02-my-agent.png');
+  await click(page,'Arena');
+  if(url.startsWith('https:')&&await page.getByRole('button',{name:/challenge/i}).count())throw Error('Challenge exposed on preview');
+  const protocol=await page.request.get(url+'protocol.md');
+  if(!protocol.ok()||!(await protocol.text()).includes('ArenaSettlement ABI'))throw Error('Protocol unavailable');
+  if(!(await page.request.get(url+'arena-settlement-abi.json')).ok())throw Error('ABI unavailable');
+  await shot(page,'03-arena.png');
+  let baseline = apiCalls;
+  await click(page,'HISTORICAL GEMINI MATCH →');
+  await waitTurn(page,3);
+  await page.waitForTimeout(480);
+  await shot(page,'09-historical.png');
+  await click(page,'PAUSE');
+  const frozen = await page.locator('.round span').textContent();
+  await page.waitForTimeout(1200);
+  if (await page.locator('.round span').textContent()!==frozen) throw new Error('Replay advances when paused.');
+  await click(page,'RESUME');
+  await waitTurn(page,4);
+  await click(page,'SKIP TO RESULT');
+  await verify(page,'100/0');
+  await page.locator('canvas').screenshot({path:out+'terminal-historical-skip.png'});
+  await click(page,'WATCH AGAIN ↗');
+  await waitTurn(page,1);
+  await click(page,'SKIP TO RESULT');
+  await verify(page,'100/0');
+  if (apiCalls!==baseline) throw new Error('Historical playback needed API requests.');
+  await page.reload();
+  await click(page,'Arena');
+  await click(page,'HISTORICAL GEMINI MATCH →');
+  await click(page,'SKIP TO RESULT');
+  await verify(page,'100/0');
+
+  const browser=page.context().browser();
+  const context=await browser.newContext({viewport:{width:1280,height:900},recordVideo:{dir:out,size:{width:1280,height:900}}});
+  const playback=await context.newPage();
+  register(playback);
+  await playback.goto(url);
+  await playback.locator('.canvas[aria-busy=false]').waitFor();
+  await click(playback,'Arena');
+  baseline=apiCalls;
+  await click(playback,'TWO-TURN GEMINI MATCH →');
+  const expected=['100/100','100/100','75/75','75/50','50/50','25/25','25/0'];
+  for(const [i,hp] of expected.entries()){
+    await waitTurn(playback,i+1);
+    if(await health(playback)!==hp) throw new Error('Turn '+(i+1)+' expected '+hp+' got '+await health(playback));
+    if(i===2){await playback.waitForTimeout(100);await shot(playback,'05-battle.png');}
+  }
+  await verify(playback,'25/0');
+  await playback.locator('canvas').screenshot({path:out+'terminal-replay-normal.png'});
+  await shot(playback,'06-result.png');
+  if(apiCalls!==baseline)throw new Error('Two-turn playback used API requests.');
+  const video=playback.video();
+  await context.close();
+  await video.saveAs(out+'two-turn-gemini.webm');
+  await video.delete();
+
+  await page.setViewportSize({width:390,height:844});
+  await page.goto(url);
+  await page.evaluate(()=>localStorage.removeItem('arena-training-cleared'));
+  await page.reload();
+  await page.getByRole('button',{name:'Quick start · Locked',exact:true}).isDisabled().then(x=>{if(!x)throw Error('Stage starts unlocked');});
+  await click(page,'START PRACTICE ↗');
+  await waitTurn(page,3);
+  await shot(page,'08-mobile-practice.png');
+  if(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth))throw new Error('Mobile overflows.');
+  await page.getByRole('heading',{name:'Victory',exact:true}).waitFor();
+  await click(page,'NEXT STAGE ↗');
+  await page.getByRole('heading',{name:'Victory',exact:true}).waitFor();
+  await shot(page,'mobile-training-cleared.png');
+  await click(page,'Training stages');
+  await page.reload();
+  if(!await page.getByRole('button',{name:'Quick start ✓',exact:true}).isEnabled())throw Error('Campaign did not persist');
+  await click(page,'START PRACTICE ↗');
+  await page.getByRole('heading',{name:'Victory',exact:true}).waitFor();
+  await click(page,'REMATCH ↗');
+  await waitTurn(page,1);
+  await click(page,'Arena');
+  baseline=apiCalls;
+  await click(page,'TWO-TURN GEMINI MATCH →');
+  await waitTurn(page,3);
+  await page.waitForTimeout(110);
+  await shot(page,'07-mobile.png');
+  await click(page,'PAUSE');
+  await click(page,'SKIP TO RESULT');
+  await verify(page,'25/0');
+  await shot(page,'mobile-recorded-result.png');
+  await click(page,'My Agent');
+  await page.getByText('Agent Passport',{exact:true}).click();
+  await shot(page,'mobile-public-passport.png');
+  if(apiCalls!==baseline)throw new Error('Mobile replay used API requests.');
+  if(failures.length)throw new Error(failures.join('\n'));
+  console.log('Verified Edge desktop 1280×900 and mobile 390×844, both replays, seven authoritative HUD states, pause/resume/skip, refresh, practice and rematch, and zero replay API calls.');
+}

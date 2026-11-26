@@ -1,0 +1,7 @@
+.arena-data/
+.agents/
+.codex/
+.env*
+.playwright-cli/
+evidence/
+supabase/.temp/

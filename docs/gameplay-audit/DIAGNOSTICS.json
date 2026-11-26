@@ -1,0 +1,5103 @@
+{
+  "node": "v24.14.0",
+  "matrix": {
+    "standing": {
+      "stop": false,
+      "posture": true,
+      "walk": true,
+      "run": true,
+      "crouch": true,
+      "jump": true,
+      "attack": true,
+      "precision": true,
+      "reload": true,
+      "observe": true,
+      "peek": true
+    },
+    "walking": {
+      "stop": true,
+      "posture": true,
+      "walk": true,
+      "run": true,
+      "crouch": true,
+      "jump": true,
+      "attack": true,
+      "precision": false,
+      "reload": true,
+      "observe": true,
+      "peek": false
+    },
+    "running": {
+      "stop": true,
+      "posture": false,
+      "walk": true,
+      "run": true,
+      "crouch": true,
+      "jump": true,
+      "attack": false,
+      "precision": false,
+      "reload": false,
+      "observe": false,
+      "peek": false
+    },
+    "crouched": {
+      "stop": false,
+      "posture": true,
+      "walk": true,
+      "run": true,
+      "crouch": true,
+      "jump": true,
+      "attack": true,
+      "precision": true,
+      "reload": true,
+      "observe": true,
+      "peek": true
+    },
+    "crouch-moving": {
+      "stop": true,
+      "posture": false,
+      "walk": true,
+      "run": true,
+      "crouch": true,
+      "jump": true,
+      "attack": true,
+      "precision": false,
+      "reload": true,
+      "observe": true,
+      "peek": false
+    },
+    "jumping": {
+      "stop": false,
+      "posture": false,
+      "walk": false,
+      "run": false,
+      "crouch": false,
+      "jump": false,
+      "attack": false,
+      "precision": false,
+      "reload": false,
+      "observe": false,
+      "peek": false
+    },
+    "attack": {
+      "stop": false,
+      "posture": true,
+      "walk": true,
+      "run": false,
+      "crouch": true,
+      "jump": false,
+      "attack": false,
+      "precision": false,
+      "reload": false,
+      "observe": false,
+      "peek": false
+    },
+    "precision": {
+      "stop": false,
+      "posture": false,
+      "walk": false,
+      "run": false,
+      "crouch": false,
+      "jump": false,
+      "attack": false,
+      "precision": false,
+      "reload": false,
+      "observe": false,
+      "peek": false
+    },
+    "reload": {
+      "stop": false,
+      "posture": true,
+      "walk": true,
+      "run": false,
+      "crouch": true,
+      "jump": false,
+      "attack": false,
+      "precision": false,
+      "reload": false,
+      "observe": true,
+      "peek": false
+    },
+    "observe": {
+      "stop": false,
+      "posture": true,
+      "walk": true,
+      "run": false,
+      "crouch": true,
+      "jump": false,
+      "attack": false,
+      "precision": false,
+      "reload": true,
+      "observe": false,
+      "peek": false
+    },
+    "peek": {
+      "stop": false,
+      "posture": true,
+      "walk": false,
+      "run": false,
+      "crouch": false,
+      "jump": false,
+      "attack": false,
+      "precision": false,
+      "reload": false,
+      "observe": false,
+      "peek": false
+    },
+    "defeated": {
+      "stop": false,
+      "posture": false,
+      "walk": false,
+      "run": false,
+      "crouch": false,
+      "jump": false,
+      "attack": false,
+      "precision": false,
+      "reload": false,
+      "observe": false,
+      "peek": false
+    }
+  },
+  "geometry": {
+    "footprintBoundary": [
+      true,
+      false
+    ],
+    "crossWall": false,
+    "occluded": true,
+    "routeAroundWall": [
+      {
+        "x": 20790,
+        "y": 20790
+      },
+      {
+        "x": 26730,
+        "y": 20790
+      },
+      {
+        "x": 32670,
+        "y": 20790
+      },
+      {
+        "x": 32670,
+        "y": 14850
+      }
+    ],
+    "relativeSweep": true,
+    "positions": [
+      {
+        "x": 8910,
+        "y": 20790
+      },
+      {
+        "x": 9210,
+        "y": 20790
+      },
+      {
+        "x": 9210,
+        "y": 20490
+      },
+      {
+        "x": 9210,
+        "y": 20490
+      }
+    ],
+    "walkWithCrouchPosture": {
+      "position": {
+        "x": 14550,
+        "y": 20790
+      },
+      "hp": 100,
+      "ammo": 4,
+      "posture": "crouch",
+      "exposedUntil": 0,
+      "motion": {
+        "mode": "walk",
+        "dx": -1,
+        "dy": 0
+      },
+      "contact": {
+        "position": {
+          "x": 32670,
+          "y": 20790
+        },
+        "time": 100
+      }
+    }
+  },
+  "exposed": [
+    {
+      "units": 17820,
+      "clear": true,
+      "view": {
+        "version": 1,
+        "time": 0,
+        "agent": {
+          "position": {
+            "x": 14850,
+            "y": 20790
+          },
+          "hp": 100,
+          "ammo": 4,
+          "posture": "upright",
+          "reloading": false,
+          "life": "alive"
+        },
+        "world": {
+          "contact": {
+            "status": "visible",
+            "position": {
+              "x": 32670,
+              "y": 20790
+            },
+            "time": 0
+          }
+        },
+        "match": {
+          "mode": "score-deathmatch",
+          "remaining": 225000,
+          "score": 0,
+          "opponentScore": 0,
+          "target": 5,
+          "respawnIn": null,
+          "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+        },
+        "legal": {
+          "actions": [
+            "posture",
+            "attack",
+            "precision",
+            "observe",
+            "peek"
+          ],
+          "movement": [
+            "walk",
+            "crouch",
+            "run",
+            "jump"
+          ]
+        }
+      }
+    },
+    {
+      "units": 17821,
+      "clear": true,
+      "view": {
+        "version": 1,
+        "time": 0,
+        "agent": {
+          "position": {
+            "x": 14850,
+            "y": 20790
+          },
+          "hp": 100,
+          "ammo": 4,
+          "posture": "upright",
+          "reloading": false,
+          "life": "alive"
+        },
+        "world": {
+          "contact": {
+            "status": "unknown"
+          }
+        },
+        "match": {
+          "mode": "score-deathmatch",
+          "remaining": 225000,
+          "score": 0,
+          "opponentScore": 0,
+          "target": 5,
+          "respawnIn": null,
+          "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+        },
+        "legal": {
+          "actions": [
+            "posture",
+            "observe",
+            "peek"
+          ],
+          "movement": [
+            "walk",
+            "crouch",
+            "run",
+            "jump"
+          ]
+        }
+      }
+    },
+    {
+      "units": 23760,
+      "clear": true,
+      "view": {
+        "version": 1,
+        "time": 0,
+        "agent": {
+          "position": {
+            "x": 14850,
+            "y": 20790
+          },
+          "hp": 100,
+          "ammo": 4,
+          "posture": "upright",
+          "reloading": false,
+          "life": "alive"
+        },
+        "world": {
+          "contact": {
+            "status": "visible",
+            "position": {
+              "x": 38610,
+              "y": 20790
+            },
+            "time": 0
+          }
+        },
+        "match": {
+          "mode": "score-deathmatch",
+          "remaining": 225000,
+          "score": 0,
+          "opponentScore": 0,
+          "target": 5,
+          "respawnIn": null,
+          "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+        },
+        "legal": {
+          "actions": [
+            "posture",
+            "attack",
+            "precision",
+            "observe",
+            "peek"
+          ],
+          "movement": [
+            "walk",
+            "crouch",
+            "run",
+            "jump"
+          ]
+        }
+      }
+    },
+    {
+      "units": 23761,
+      "clear": true,
+      "view": {
+        "version": 1,
+        "time": 0,
+        "agent": {
+          "position": {
+            "x": 14850,
+            "y": 20790
+          },
+          "hp": 100,
+          "ammo": 4,
+          "posture": "upright",
+          "reloading": false,
+          "life": "alive"
+        },
+        "world": {
+          "contact": {
+            "status": "visible",
+            "position": {
+              "x": 38611,
+              "y": 20790
+            },
+            "time": 0
+          }
+        },
+        "match": {
+          "mode": "score-deathmatch",
+          "remaining": 225000,
+          "score": 0,
+          "opponentScore": 0,
+          "target": 5,
+          "respawnIn": null,
+          "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+        },
+        "legal": {
+          "actions": [
+            "posture",
+            "observe",
+            "peek"
+          ],
+          "movement": [
+            "walk",
+            "crouch",
+            "run",
+            "jump"
+          ]
+        }
+      }
+    }
+  ],
+  "focus": {
+    "start": {
+      "version": 1,
+      "time": 0,
+      "agent": {
+        "position": {
+          "x": 14850,
+          "y": 20790
+        },
+        "hp": 100,
+        "ammo": 4,
+        "posture": "upright",
+        "reloading": false,
+        "life": "alive"
+      },
+      "world": {
+        "contact": {
+          "status": "unknown"
+        }
+      },
+      "match": {
+        "mode": "score-deathmatch",
+        "remaining": 225000,
+        "score": 0,
+        "opponentScore": 0,
+        "target": 5,
+        "respawnIn": null,
+        "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+      },
+      "legal": {
+        "actions": [
+          "posture",
+          "observe",
+          "peek"
+        ],
+        "movement": [
+          "walk",
+          "crouch",
+          "run",
+          "jump"
+        ]
+      }
+    },
+    "end": {
+      "version": 1,
+      "time": 1400,
+      "agent": {
+        "position": {
+          "x": 14850,
+          "y": 20790
+        },
+        "hp": 100,
+        "ammo": 4,
+        "posture": "upright",
+        "reloading": false,
+        "life": "alive"
+      },
+      "world": {
+        "contact": {
+          "status": "observed",
+          "position": {
+            "x": 32770,
+            "y": 20790
+          },
+          "time": 1400
+        }
+      },
+      "match": {
+        "mode": "score-deathmatch",
+        "remaining": 223600,
+        "score": 0,
+        "opponentScore": 0,
+        "target": 5,
+        "respawnIn": null,
+        "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+      },
+      "legal": {
+        "actions": [
+          "posture",
+          "observe",
+          "peek"
+        ],
+        "movement": [
+          "walk",
+          "crouch",
+          "run",
+          "jump"
+        ]
+      }
+    },
+    "event": [
+      {
+        "kind": "complete",
+        "side": 0,
+        "action": "observe"
+      },
+      {
+        "kind": "contact",
+        "side": 0,
+        "visible": true
+      }
+    ],
+    "next": {
+      "version": 1,
+      "time": 1500,
+      "agent": {
+        "position": {
+          "x": 14850,
+          "y": 20790
+        },
+        "hp": 100,
+        "ammo": 4,
+        "posture": "upright",
+        "reloading": false,
+        "life": "alive"
+      },
+      "world": {
+        "contact": {
+          "status": "last seen",
+          "position": {
+            "x": 32770,
+            "y": 20790
+          },
+          "time": 1400
+        }
+      },
+      "match": {
+        "mode": "score-deathmatch",
+        "remaining": 223500,
+        "score": 0,
+        "opponentScore": 0,
+        "target": 5,
+        "respawnIn": null,
+        "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+      },
+      "legal": {
+        "actions": [
+          "posture",
+          "observe",
+          "peek"
+        ],
+        "movement": [
+          "walk",
+          "crouch",
+          "run",
+          "jump"
+        ]
+      }
+    },
+    "nextEvents": [
+      {
+        "kind": "contact",
+        "side": 0,
+        "visible": false
+      }
+    ]
+  },
+  "postureRng": {
+    "seed": 1,
+    "baseEvents": [
+      {
+        "kind": "attack",
+        "side": 0,
+        "outcome": "hit",
+        "damage": 18
+      },
+      {
+        "kind": "complete",
+        "side": 0,
+        "action": "attack"
+      }
+    ],
+    "changedEvents": [
+      {
+        "kind": "attack",
+        "side": 0,
+        "outcome": "miss",
+        "damage": 0
+      },
+      {
+        "kind": "complete",
+        "side": 0,
+        "action": "attack"
+      },
+      {
+        "kind": "contact",
+        "side": 0,
+        "visible": false
+      }
+    ]
+  },
+  "edge": {
+    "before": 23760,
+    "after": 24060,
+    "events": [
+      {
+        "kind": "attack",
+        "side": 0,
+        "outcome": "hit",
+        "damage": 18
+      },
+      {
+        "kind": "complete",
+        "side": 0,
+        "action": "attack"
+      },
+      {
+        "kind": "contact",
+        "side": 0,
+        "visible": false
+      },
+      {
+        "kind": "contact",
+        "side": 1,
+        "visible": false
+      }
+    ]
+  },
+  "prompt": {
+    "keys": [
+      "rulesVersion",
+      "participant",
+      "version",
+      "time",
+      "agent",
+      "world",
+      "match",
+      "legal",
+      "map",
+      "coaching",
+      "memory",
+      "task",
+      "choices"
+    ],
+    "starting": {
+      "rulesVersion": "arcade-v2.5",
+      "participant": "blue-agent",
+      "version": 1,
+      "time": 0,
+      "agent": {
+        "position": {
+          "x": 8910,
+          "y": 20790
+        },
+        "hp": 100,
+        "ammo": 4,
+        "posture": "upright",
+        "reloading": false,
+        "life": "alive"
+      },
+      "world": {
+        "contact": {
+          "status": "unknown"
+        }
+      },
+      "match": {
+        "mode": "objective-duel",
+        "remaining": 58080,
+        "role": "Activator",
+        "phase": "pending",
+        "position": {
+          "x": 26730,
+          "y": 20790
+        },
+        "radius": 4000,
+        "activate": 9000,
+        "disable": 9000,
+        "interruptedByDamage": false,
+        "interaction": null,
+        "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+      },
+      "legal": {
+        "actions": [
+          "posture",
+          "observe",
+          "peek"
+        ],
+        "movement": [
+          "walk",
+          "crouch",
+          "run",
+          "jump"
+        ]
+      },
+      "map": {
+        "version": "dust-yard-grid-v2.0",
+        "width": 9,
+        "height": 7,
+        "walls": [
+          13,
+          22,
+          40,
+          49
+        ],
+        "crates": [
+          20,
+          24,
+          38,
+          42
+        ],
+        "unit": 5940
+      },
+      "coaching": {
+        "revision": "audit-fixture",
+        "text": "Select an available arcade input."
+      },
+      "memory": null,
+      "task": "Compete under the public victory rules. Coaching guides preferences. Return picks in priority order. Each pick has a choice index and an explicit repeat count (1–3). At each boundary the first currently legal pick may execute, until its repetitions expire. Picks can wait for eligibility, expire at the next checkpoint and never generate substitute actions. Interest in a position does not require repeating movement. Time units are 1/3000 second.",
+      "choices": [
+        {
+          "index": 0,
+          "input": {
+            "kind": "attack"
+          },
+          "available": false
+        },
+        {
+          "index": 1,
+          "input": {
+            "kind": "precision"
+          },
+          "available": false
+        },
+        {
+          "index": 2,
+          "input": {
+            "kind": "reload"
+          },
+          "available": false
+        },
+        {
+          "index": 3,
+          "input": {
+            "kind": "observe"
+          },
+          "available": true
+        },
+        {
+          "index": 4,
+          "input": {
+            "kind": "peek"
+          },
+          "available": true
+        },
+        {
+          "index": 5,
+          "input": {
+            "kind": "stop"
+          },
+          "available": false
+        },
+        {
+          "index": 6,
+          "input": {
+            "kind": "interact"
+          },
+          "available": false
+        },
+        {
+          "index": 7,
+          "input": {
+            "kind": "cancel-interaction"
+          },
+          "available": false
+        },
+        {
+          "index": 8,
+          "input": {
+            "kind": "posture",
+            "posture": "upright"
+          },
+          "available": true
+        },
+        {
+          "index": 9,
+          "input": {
+            "kind": "posture",
+            "posture": "crouch"
+          },
+          "available": true
+        },
+        {
+          "index": 10,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 8910,
+              "y": 14850
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 11,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 2970,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 12,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 14850,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 13,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 8910,
+              "y": 26730
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 14,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 8910,
+              "y": 8910
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 15,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 2970,
+              "y": 14850
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 16,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 2970,
+              "y": 26730
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 17,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 20790,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 18,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 8910,
+              "y": 32670
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 19,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 8910,
+              "y": 2970
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 20,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 2970,
+              "y": 8910
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 21,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 14850,
+              "y": 8910
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 22,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 2970,
+              "y": 32670
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 23,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 20790,
+              "y": 14850
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 24,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 26730,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 25,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 20790,
+              "y": 26730
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 26,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 14850,
+              "y": 32670
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 27,
+          "input": {
+            "kind": "move",
+            "mode": "walk",
+            "to": {
+              "x": 8910,
+              "y": 38610
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 28,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 8910,
+              "y": 14850
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 29,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 2970,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 30,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 14850,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 31,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 8910,
+              "y": 26730
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 32,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 8910,
+              "y": 8910
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 33,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 2970,
+              "y": 14850
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 34,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 2970,
+              "y": 26730
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 35,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 20790,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 36,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 8910,
+              "y": 32670
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 37,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 8910,
+              "y": 2970
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 38,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 2970,
+              "y": 8910
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 39,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 14850,
+              "y": 8910
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 40,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 2970,
+              "y": 32670
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 41,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 20790,
+              "y": 14850
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 42,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 26730,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 43,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 20790,
+              "y": 26730
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 44,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 14850,
+              "y": 32670
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 45,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 8910,
+              "y": 38610
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 46,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 2970,
+              "y": 2970
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 47,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 14850,
+              "y": 2970
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 48,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 20790,
+              "y": 8910
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 49,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 2970,
+              "y": 38610
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 50,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 32670,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 51,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 20790,
+              "y": 32670
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 52,
+          "input": {
+            "kind": "move",
+            "mode": "run",
+            "to": {
+              "x": 14850,
+              "y": 38610
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 53,
+          "input": {
+            "kind": "move",
+            "mode": "crouch",
+            "to": {
+              "x": 8910,
+              "y": 14850
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 54,
+          "input": {
+            "kind": "move",
+            "mode": "crouch",
+            "to": {
+              "x": 2970,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 55,
+          "input": {
+            "kind": "move",
+            "mode": "crouch",
+            "to": {
+              "x": 14850,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 56,
+          "input": {
+            "kind": "move",
+            "mode": "crouch",
+            "to": {
+              "x": 8910,
+              "y": 26730
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 57,
+          "input": {
+            "kind": "move",
+            "mode": "crouch",
+            "to": {
+              "x": 8910,
+              "y": 8910
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 58,
+          "input": {
+            "kind": "move",
+            "mode": "crouch",
+            "to": {
+              "x": 2970,
+              "y": 14850
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 59,
+          "input": {
+            "kind": "move",
+            "mode": "crouch",
+            "to": {
+              "x": 2970,
+              "y": 26730
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 60,
+          "input": {
+            "kind": "move",
+            "mode": "crouch",
+            "to": {
+              "x": 20790,
+              "y": 20790
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 61,
+          "input": {
+            "kind": "move",
+            "mode": "crouch",
+            "to": {
+              "x": 8910,
+              "y": 32670
+            }
+          },
+          "available": true
+        },
+        {
+          "index": 62,
+          "input": {
+            "kind": "steer",
+            "mode": "jump",
+            "dx": -1,
+            "dy": -1
+          },
+          "available": true
+        },
+        {
+          "index": 63,
+          "input": {
+            "kind": "steer",
+            "mode": "jump",
+            "dx": -1,
+            "dy": 0
+          },
+          "available": true
+        },
+        {
+          "index": 64,
+          "input": {
+            "kind": "steer",
+            "mode": "jump",
+            "dx": -1,
+            "dy": 1
+          },
+          "available": true
+        },
+        {
+          "index": 65,
+          "input": {
+            "kind": "steer",
+            "mode": "jump",
+            "dx": 0,
+            "dy": -1
+          },
+          "available": true
+        },
+        {
+          "index": 66,
+          "input": {
+            "kind": "steer",
+            "mode": "jump",
+            "dx": 0,
+            "dy": 1
+          },
+          "available": true
+        },
+        {
+          "index": 67,
+          "input": {
+            "kind": "steer",
+            "mode": "jump",
+            "dx": 1,
+            "dy": 0
+          },
+          "available": true
+        }
+      ]
+    },
+    "defeated": {
+      "rulesVersion": "arcade-v2.5",
+      "participant": "blue-agent",
+      "version": 1,
+      "time": 0,
+      "agent": {
+        "position": {
+          "x": 14850,
+          "y": 20790
+        },
+        "hp": 0,
+        "ammo": 4,
+        "posture": "upright",
+        "reloading": false,
+        "life": "defeated"
+      },
+      "world": {
+        "contact": {
+          "status": "unknown"
+        }
+      },
+      "match": {
+        "mode": "score-deathmatch",
+        "remaining": 225000,
+        "score": 0,
+        "opponentScore": 0,
+        "target": 5,
+        "respawnIn": null,
+        "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+      },
+      "legal": {
+        "actions": [],
+        "movement": []
+      },
+      "map": {
+        "version": "dust-yard-grid-v2.0",
+        "width": 9,
+        "height": 7,
+        "walls": [
+          13,
+          22,
+          40,
+          49
+        ],
+        "crates": [
+          20,
+          24,
+          38,
+          42
+        ],
+        "unit": 5940
+      },
+      "coaching": {
+        "revision": "audit-fixture",
+        "text": "Select an available arcade input."
+      },
+      "memory": null,
+      "task": "Compete under the public victory rules. Coaching guides preferences. Return picks in priority order. Each pick has a choice index and an explicit repeat count (1–3). At each boundary the first currently legal pick may execute, until its repetitions expire. Picks can wait for eligibility, expire at the next checkpoint and never generate substitute actions. Interest in a position does not require repeating movement. Time units are 1/3000 second.",
+      "choices": [
+        {
+          "index": 0,
+          "input": {
+            "kind": "attack"
+          },
+          "available": false
+        },
+        {
+          "index": 1,
+          "input": {
+            "kind": "precision"
+          },
+          "available": false
+        },
+        {
+          "index": 2,
+          "input": {
+            "kind": "reload"
+          },
+          "available": false
+        },
+        {
+          "index": 3,
+          "input": {
+            "kind": "observe"
+          },
+          "available": false
+        },
+        {
+          "index": 4,
+          "input": {
+            "kind": "peek"
+          },
+          "available": false
+        },
+        {
+          "index": 5,
+          "input": {
+            "kind": "stop"
+          },
+          "available": false
+        },
+        {
+          "index": 6,
+          "input": {
+            "kind": "posture",
+            "posture": "upright"
+          },
+          "available": false
+        },
+        {
+          "index": 7,
+          "input": {
+            "kind": "posture",
+            "posture": "crouch"
+          },
+          "available": false
+        }
+      ]
+    },
+    "attempts": [
+      {
+        "side": 0,
+        "step": 0,
+        "attempt": 1,
+        "status": "ok",
+        "ms": 2,
+        "matchContext": {
+          "mode": "objective-duel",
+          "remaining": 58080,
+          "role": "Activator",
+          "phase": "pending",
+          "position": {
+            "x": 26730,
+            "y": 20790
+          },
+          "radius": 4000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptedByDamage": false,
+          "interaction": null,
+          "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+        },
+        "coachingRevision": "audit-fixture",
+        "memoryRevision": 0,
+        "model": "offline-fixture",
+        "intents": [],
+        "unexecuted": 0
+      },
+      {
+        "side": 1,
+        "step": 0,
+        "attempt": 1,
+        "status": "ok",
+        "ms": 2,
+        "matchContext": {
+          "mode": "objective-duel",
+          "remaining": 58080,
+          "role": "Defender",
+          "phase": "pending",
+          "position": {
+            "x": 26730,
+            "y": 20790
+          },
+          "radius": 4000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptedByDamage": false,
+          "interaction": null,
+          "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+        },
+        "coachingRevision": "audit-fixture",
+        "memoryRevision": 0,
+        "model": "offline-fixture",
+        "intents": [],
+        "unexecuted": 0
+      },
+      {
+        "side": 0,
+        "step": 120,
+        "attempt": 1,
+        "status": "ok",
+        "ms": 1,
+        "matchContext": {
+          "mode": "objective-duel",
+          "remaining": 46080,
+          "role": "Activator",
+          "phase": "pending",
+          "position": {
+            "x": 26730,
+            "y": 20790
+          },
+          "radius": 4000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptedByDamage": false,
+          "interaction": null,
+          "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+        },
+        "coachingRevision": "audit-fixture",
+        "memoryRevision": 0,
+        "model": "offline-fixture",
+        "intents": [],
+        "unexecuted": 0
+      },
+      {
+        "side": 1,
+        "step": 120,
+        "attempt": 1,
+        "status": "ok",
+        "ms": 0,
+        "matchContext": {
+          "mode": "objective-duel",
+          "remaining": 46080,
+          "role": "Defender",
+          "phase": "pending",
+          "position": {
+            "x": 26730,
+            "y": 20790
+          },
+          "radius": 4000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptedByDamage": false,
+          "interaction": null,
+          "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+        },
+        "coachingRevision": "audit-fixture",
+        "memoryRevision": 0,
+        "model": "offline-fixture",
+        "intents": [],
+        "unexecuted": 0
+      },
+      {
+        "side": 0,
+        "step": 240,
+        "attempt": 1,
+        "status": "ok",
+        "ms": 1,
+        "matchContext": {
+          "mode": "objective-duel",
+          "remaining": 34080,
+          "role": "Activator",
+          "phase": "pending",
+          "position": {
+            "x": 26730,
+            "y": 20790
+          },
+          "radius": 4000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptedByDamage": false,
+          "interaction": null,
+          "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+        },
+        "coachingRevision": "audit-fixture",
+        "memoryRevision": 0,
+        "model": "offline-fixture",
+        "intents": [],
+        "unexecuted": 0
+      },
+      {
+        "side": 1,
+        "step": 240,
+        "attempt": 1,
+        "status": "ok",
+        "ms": 0,
+        "matchContext": {
+          "mode": "objective-duel",
+          "remaining": 34080,
+          "role": "Defender",
+          "phase": "pending",
+          "position": {
+            "x": 26730,
+            "y": 20790
+          },
+          "radius": 4000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptedByDamage": false,
+          "interaction": null,
+          "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+        },
+        "coachingRevision": "audit-fixture",
+        "memoryRevision": 0,
+        "model": "offline-fixture",
+        "intents": [],
+        "unexecuted": 0
+      },
+      {
+        "side": 0,
+        "step": 360,
+        "attempt": 1,
+        "status": "ok",
+        "ms": 0,
+        "matchContext": {
+          "mode": "objective-duel",
+          "remaining": 22080,
+          "role": "Activator",
+          "phase": "pending",
+          "position": {
+            "x": 26730,
+            "y": 20790
+          },
+          "radius": 4000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptedByDamage": false,
+          "interaction": null,
+          "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+        },
+        "coachingRevision": "audit-fixture",
+        "memoryRevision": 0,
+        "model": "offline-fixture",
+        "intents": [],
+        "unexecuted": 0
+      },
+      {
+        "side": 1,
+        "step": 360,
+        "attempt": 1,
+        "status": "ok",
+        "ms": 0,
+        "matchContext": {
+          "mode": "objective-duel",
+          "remaining": 22080,
+          "role": "Defender",
+          "phase": "pending",
+          "position": {
+            "x": 26730,
+            "y": 20790
+          },
+          "radius": 4000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptedByDamage": false,
+          "interaction": null,
+          "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+        },
+        "coachingRevision": "audit-fixture",
+        "memoryRevision": 0,
+        "model": "offline-fixture",
+        "intents": [],
+        "unexecuted": 0
+      },
+      {
+        "side": 0,
+        "step": 480,
+        "attempt": 1,
+        "status": "ok",
+        "ms": 0,
+        "matchContext": {
+          "mode": "objective-duel",
+          "remaining": 10080,
+          "role": "Activator",
+          "phase": "pending",
+          "position": {
+            "x": 26730,
+            "y": 20790
+          },
+          "radius": 4000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptedByDamage": false,
+          "interaction": null,
+          "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+        },
+        "coachingRevision": "audit-fixture",
+        "memoryRevision": 0,
+        "model": "offline-fixture",
+        "intents": [],
+        "unexecuted": 0
+      },
+      {
+        "side": 1,
+        "step": 480,
+        "attempt": 1,
+        "status": "ok",
+        "ms": 0,
+        "matchContext": {
+          "mode": "objective-duel",
+          "remaining": 10080,
+          "role": "Defender",
+          "phase": "pending",
+          "position": {
+            "x": 26730,
+            "y": 20790
+          },
+          "radius": 4000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptedByDamage": false,
+          "interaction": null,
+          "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+        },
+        "coachingRevision": "audit-fixture",
+        "memoryRevision": 0,
+        "model": "offline-fixture",
+        "intents": [],
+        "unexecuted": 0
+      }
+    ],
+    "final": {
+      "tick": 581,
+      "time": 58080,
+      "fighters": [
+        {
+          "position": {
+            "x": 8910,
+            "y": 20790
+          },
+          "hp": 100,
+          "ammo": 4,
+          "posture": "upright",
+          "exposedUntil": 0
+        },
+        {
+          "position": {
+            "x": 44550,
+            "y": 20790
+          },
+          "hp": 100,
+          "ammo": 4,
+          "posture": "upright",
+          "exposedUntil": 0
+        }
+      ],
+      "result": "sand",
+      "core": {
+        "phase": "pending",
+        "deadline": 58080
+      },
+      "reason": "activation-prevented"
+    }
+  },
+  "replays": [
+    {
+      "name": "ordinary-objective",
+      "source": "development-policy",
+      "config": {
+        "rulesVersion": "arcade-v2.5",
+        "mapVersion": "dust-yard-grid-v2.0",
+        "step": 100,
+        "seed": 39,
+        "participants": [
+          "blue-agent",
+          "sand-agent"
+        ],
+        "mode": "objective-duel",
+        "activator": 0,
+        "variant": "long-disable",
+        "objective": {
+          "pending": 58080,
+          "active": 24000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptOnHit": false,
+          "radius": 4000,
+          "position": {
+            "x": 26730,
+            "y": 20790
+          }
+        }
+      },
+      "bytes": 5564,
+      "loadMs": 6.688600000000008,
+      "frames": 357,
+      "inputs": 23,
+      "events": 56,
+      "final": {
+        "tick": 357,
+        "time": 35700,
+        "fighters": [
+          {
+            "position": {
+              "x": 18750,
+              "y": 20790
+            },
+            "hp": 46,
+            "ammo": 1,
+            "posture": "crouch",
+            "exposedUntil": 5340,
+            "contact": {
+              "position": {
+                "x": 28950,
+                "y": 20790
+              },
+              "time": 35700
+            }
+          },
+          {
+            "position": {
+              "x": 28950,
+              "y": 20790
+            },
+            "hp": 64,
+            "ammo": 4,
+            "posture": "upright",
+            "exposedUntil": 9240,
+            "contact": {
+              "position": {
+                "x": 18750,
+                "y": 20790
+              },
+              "time": 35700
+            }
+          }
+        ],
+        "result": "blue",
+        "core": {
+          "phase": "completed",
+          "deadline": 35700
+        },
+        "reason": "core-completed"
+      },
+      "examples": [
+        {
+          "event": {
+            "kind": "contact",
+            "side": 1,
+            "visible": true
+          },
+          "tick": 1,
+          "state": {
+            "tick": 1,
+            "time": 100,
+            "fighters": [
+              {
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2740,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 24730,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 21090
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 26730
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 9510,
+                    "y": 20790
+                  },
+                  "time": 100
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "pending",
+              "deadline": 58080
+            },
+            "reason": null
+          },
+          "gap": 35340,
+          "view": {
+            "version": 1,
+            "time": 100,
+            "agent": {
+              "position": {
+                "x": 44550,
+                "y": 21090
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "mode": "walk",
+              "reloading": false,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "time": 100
+              }
+            },
+            "match": {
+              "mode": "objective-duel",
+              "remaining": 57980,
+              "role": "Defender",
+              "phase": "pending",
+              "position": {
+                "x": 26730,
+                "y": 20790
+              },
+              "radius": 4000,
+              "activate": 9000,
+              "disable": 9000,
+              "interruptedByDamage": false,
+              "interaction": null,
+              "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+            },
+            "legal": {
+              "actions": [
+                "stop",
+                "posture",
+                "observe"
+              ],
+              "movement": [
+                "walk",
+                "crouch",
+                "run",
+                "jump"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 2,
+            "time": 200,
+            "fighters": [
+              {
+                "position": {
+                  "x": 10110,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2840,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 24730,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 21390
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 26730
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 10110,
+                    "y": 20790
+                  },
+                  "time": 200
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "pending",
+              "deadline": 58080
+            },
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 14
+        },
+        {
+          "event": {
+            "kind": "objective",
+            "action": "activated",
+            "side": 0
+          },
+          "tick": 117,
+          "state": {
+            "tick": 117,
+            "time": 11700,
+            "fighters": [
+              {
+                "position": {
+                  "x": 24730,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 5340,
+                "contact": {
+                  "position": {
+                    "x": 44550,
+                    "y": 23430
+                  },
+                  "time": 11700
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 23430
+                },
+                "hp": 100,
+                "ammo": 3,
+                "posture": "upright",
+                "exposedUntil": 9240,
+                "contact": {
+                  "position": {
+                    "x": 24730,
+                    "y": 20790
+                  },
+                  "time": 11700
+                },
+                "motion": {
+                  "mode": "jump",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 20790
+                    }
+                  ]
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "active",
+              "deadline": 35700
+            },
+            "reason": null
+          },
+          "gap": 22460,
+          "view": {
+            "version": 1,
+            "time": 11700,
+            "agent": {
+              "position": {
+                "x": 44550,
+                "y": 23430
+              },
+              "hp": 100,
+              "ammo": 3,
+              "posture": "upright",
+              "mode": "jump",
+              "reloading": false,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 24730,
+                  "y": 20790
+                },
+                "time": 11700
+              }
+            },
+            "match": {
+              "mode": "objective-duel",
+              "remaining": 24000,
+              "role": "Defender",
+              "phase": "active",
+              "position": {
+                "x": 26730,
+                "y": 20790
+              },
+              "radius": 4000,
+              "activate": 9000,
+              "disable": 9000,
+              "interruptedByDamage": false,
+              "interaction": null,
+              "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+            },
+            "legal": {
+              "actions": [],
+              "movement": []
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 118,
+            "time": 11800,
+            "fighters": [
+              {
+                "position": {
+                  "x": 24730,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 5340,
+                "contact": {
+                  "position": {
+                    "x": 44550,
+                    "y": 23130
+                  },
+                  "time": 11800
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 23130
+                },
+                "hp": 100,
+                "ammo": 3,
+                "posture": "upright",
+                "exposedUntil": 9240,
+                "contact": {
+                  "position": {
+                    "x": 24730,
+                    "y": 20790
+                  },
+                  "time": 11800
+                },
+                "motion": {
+                  "mode": "jump",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 20790
+                    }
+                  ]
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "active",
+              "deadline": 35700
+            },
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 119
+        }
+      ]
+    },
+    {
+      "name": "ordinary-score",
+      "source": "development-policy",
+      "config": {
+        "rulesVersion": "arcade-v2.5",
+        "mapVersion": "dust-yard-grid-v2.0",
+        "step": 100,
+        "seed": 12,
+        "participants": [
+          "blue-agent",
+          "sand-agent"
+        ],
+        "mode": "score-deathmatch",
+        "target": 5,
+        "limit": 225000,
+        "respawnDelay": 3600
+      },
+      "bytes": 16829,
+      "loadMs": 9.672500000000014,
+      "frames": 1622,
+      "inputs": 95,
+      "events": 226,
+      "final": {
+        "tick": 1622,
+        "time": 162200,
+        "fighters": [
+          {
+            "position": {
+              "x": 32670,
+              "y": 20790
+            },
+            "hp": 0,
+            "ammo": 0,
+            "posture": "upright",
+            "exposedUntil": 0
+          },
+          {
+            "position": {
+              "x": 40650,
+              "y": 20790
+            },
+            "hp": 100,
+            "ammo": 3,
+            "posture": "upright",
+            "exposedUntil": 0
+          }
+        ],
+        "result": "sand",
+        "score": [
+          4,
+          5
+        ],
+        "respawnAt": [
+          null,
+          null
+        ],
+        "reason": "target-score"
+      },
+      "examples": [
+        {
+          "event": {
+            "kind": "contact",
+            "side": 1,
+            "visible": true
+          },
+          "tick": 1,
+          "state": {
+            "tick": 1,
+            "time": 100,
+            "fighters": [
+              {
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2740,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 20790,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 44250,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 32670,
+                      "y": 20790
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 9510,
+                    "y": 20790
+                  },
+                  "time": 100
+                }
+              }
+            ],
+            "result": null,
+            "score": [
+              0,
+              0
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "gap": 34740,
+          "view": {
+            "version": 1,
+            "time": 100,
+            "agent": {
+              "position": {
+                "x": 44250,
+                "y": 20790
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "mode": "walk",
+              "reloading": false,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "time": 100
+              }
+            },
+            "match": {
+              "mode": "score-deathmatch",
+              "remaining": 224900,
+              "score": 0,
+              "opponentScore": 0,
+              "target": 5,
+              "respawnIn": null,
+              "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+            },
+            "legal": {
+              "actions": [
+                "stop",
+                "posture",
+                "observe"
+              ],
+              "movement": [
+                "walk",
+                "crouch",
+                "run",
+                "jump"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 2,
+            "time": 200,
+            "fighters": [
+              {
+                "position": {
+                  "x": 10110,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2840,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 20790,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 43950,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 32670,
+                      "y": 20790
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 10110,
+                    "y": 20790
+                  },
+                  "time": 200
+                }
+              }
+            ],
+            "result": null,
+            "score": [
+              0,
+              0
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 14
+        },
+        {
+          "event": {
+            "kind": "respawn",
+            "side": 1
+          },
+          "tick": 311,
+          "state": {
+            "tick": 311,
+            "time": 31100,
+            "fighters": [
+              {
+                "position": {
+                  "x": 24390,
+                  "y": 20790
+                },
+                "hp": 32,
+                "ammo": 0,
+                "posture": "upright",
+                "exposedUntil": 4640,
+                "reloadDue": 31760,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 20790,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0
+              }
+            ],
+            "result": null,
+            "score": [
+              1,
+              0
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "gap": 20160,
+          "view": {
+            "version": 1,
+            "time": 31100,
+            "agent": {
+              "position": {
+                "x": 44550,
+                "y": 20790
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "reloading": false,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 24390,
+                  "y": 20790
+                },
+                "time": 31100
+              }
+            },
+            "match": {
+              "mode": "score-deathmatch",
+              "remaining": 193900,
+              "score": 0,
+              "opponentScore": 1,
+              "target": 5,
+              "respawnIn": null,
+              "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+            },
+            "legal": {
+              "actions": [
+                "posture",
+                "attack",
+                "precision",
+                "observe",
+                "peek"
+              ],
+              "movement": [
+                "walk",
+                "crouch",
+                "run",
+                "jump"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 312,
+            "time": 31200,
+            "fighters": [
+              {
+                "position": {
+                  "x": 24090,
+                  "y": 20790
+                },
+                "hp": 32,
+                "ammo": 0,
+                "posture": "upright",
+                "exposedUntil": 4640,
+                "reloadDue": 31760,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 20790,
+                      "y": 20790
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 44550,
+                    "y": 20790
+                  },
+                  "time": 31200
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 24090,
+                    "y": 20790
+                  },
+                  "time": 31200
+                }
+              }
+            ],
+            "result": null,
+            "score": [
+              1,
+              0
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 317
+        }
+      ]
+    },
+    {
+      "name": "interrupted",
+      "source": "development-policy",
+      "config": {
+        "rulesVersion": "arcade-v2.5",
+        "mapVersion": "dust-yard-grid-v2.0",
+        "step": 100,
+        "seed": 1,
+        "participants": [
+          "blue-agent",
+          "sand-agent"
+        ],
+        "mode": "objective-duel",
+        "activator": 0,
+        "variant": "long-disable",
+        "objective": {
+          "pending": 58080,
+          "active": 24000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptOnHit": false,
+          "radius": 4000,
+          "position": {
+            "x": 26730,
+            "y": 20790
+          }
+        }
+      },
+      "bytes": 5490,
+      "loadMs": 3.7110999999999876,
+      "frames": 476,
+      "inputs": 24,
+      "events": 57,
+      "final": {
+        "tick": 476,
+        "time": 47600,
+        "fighters": [
+          {
+            "position": {
+              "x": 14850,
+              "y": 20790
+            },
+            "hp": 0,
+            "ammo": 1,
+            "posture": "upright",
+            "exposedUntil": 5340,
+            "contact": {
+              "position": {
+                "x": 30510,
+                "y": 20790
+              },
+              "time": 35300
+            }
+          },
+          {
+            "position": {
+              "x": 30510,
+              "y": 20790
+            },
+            "hp": 82,
+            "ammo": 4,
+            "posture": "crouch",
+            "exposedUntil": 0,
+            "contact": {
+              "position": {
+                "x": 14850,
+                "y": 20790
+              },
+              "time": 35300
+            }
+          }
+        ],
+        "result": "blue",
+        "core": {
+          "phase": "completed",
+          "deadline": 47600
+        },
+        "reason": "core-completed"
+      },
+      "examples": [
+        {
+          "event": {
+            "kind": "contact",
+            "side": 1,
+            "visible": true
+          },
+          "tick": 1,
+          "state": {
+            "tick": 1,
+            "time": 100,
+            "fighters": [
+              {
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2740,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 24730,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "survey": {
+                  "kind": "observe",
+                  "due": 1320
+                },
+                "contact": {
+                  "position": {
+                    "x": 9510,
+                    "y": 20790
+                  },
+                  "time": 100
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "pending",
+              "deadline": 58080
+            },
+            "reason": null
+          },
+          "gap": 35040,
+          "view": {
+            "version": 1,
+            "time": 100,
+            "agent": {
+              "position": {
+                "x": 44550,
+                "y": 20790
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "reloading": false,
+              "surveying": "observe",
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "time": 100
+              }
+            },
+            "match": {
+              "mode": "objective-duel",
+              "remaining": 57980,
+              "role": "Defender",
+              "phase": "pending",
+              "position": {
+                "x": 26730,
+                "y": 20790
+              },
+              "radius": 4000,
+              "activate": 9000,
+              "disable": 9000,
+              "interruptedByDamage": false,
+              "interaction": null,
+              "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+            },
+            "legal": {
+              "actions": [
+                "posture"
+              ],
+              "movement": [
+                "walk",
+                "crouch"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 2,
+            "time": 200,
+            "fighters": [
+              {
+                "position": {
+                  "x": 10110,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2840,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 24730,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "survey": {
+                  "kind": "observe",
+                  "due": 1320
+                },
+                "contact": {
+                  "position": {
+                    "x": 10110,
+                    "y": 20790
+                  },
+                  "time": 200
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "pending",
+              "deadline": 58080
+            },
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 14
+        },
+        {
+          "event": {
+            "kind": "objective",
+            "action": "activated",
+            "side": 0
+          },
+          "tick": 236,
+          "state": {
+            "tick": 236,
+            "time": 23600,
+            "fighters": [
+              {
+                "position": {
+                  "x": 24730,
+                  "y": 20790
+                },
+                "hp": 10,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 5340,
+                "contact": {
+                  "position": {
+                    "x": 37710,
+                    "y": 20790
+                  },
+                  "time": 23600
+                }
+              },
+              {
+                "position": {
+                  "x": 37710,
+                  "y": 20790
+                },
+                "hp": 82,
+                "ammo": 1,
+                "posture": "crouch",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 24730,
+                    "y": 20790
+                  },
+                  "time": 23600
+                },
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 20790
+                    },
+                    {
+                      "x": 44550,
+                      "y": 26730
+                    }
+                  ]
+                },
+                "reloadDue": 26460
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "active",
+              "deadline": 47600
+            },
+            "reason": null
+          },
+          "gap": 12980,
+          "view": {
+            "version": 1,
+            "time": 23600,
+            "agent": {
+              "position": {
+                "x": 37710,
+                "y": 20790
+              },
+              "hp": 82,
+              "ammo": 1,
+              "posture": "crouch",
+              "mode": "walk",
+              "reloading": true,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 24730,
+                  "y": 20790
+                },
+                "time": 23600
+              }
+            },
+            "match": {
+              "mode": "objective-duel",
+              "remaining": 24000,
+              "role": "Defender",
+              "phase": "active",
+              "position": {
+                "x": 26730,
+                "y": 20790
+              },
+              "radius": 4000,
+              "activate": 9000,
+              "disable": 9000,
+              "interruptedByDamage": false,
+              "interaction": null,
+              "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+            },
+            "legal": {
+              "actions": [
+                "stop",
+                "posture",
+                "observe"
+              ],
+              "movement": [
+                "walk",
+                "crouch"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 237,
+            "time": 23700,
+            "fighters": [
+              {
+                "position": {
+                  "x": 24730,
+                  "y": 20790
+                },
+                "hp": 10,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 5340,
+                "contact": {
+                  "position": {
+                    "x": 38010,
+                    "y": 20790
+                  },
+                  "time": 23700
+                }
+              },
+              {
+                "position": {
+                  "x": 38010,
+                  "y": 20790
+                },
+                "hp": 82,
+                "ammo": 1,
+                "posture": "crouch",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 24730,
+                    "y": 20790
+                  },
+                  "time": 23700
+                },
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 20790
+                    },
+                    {
+                      "x": 44550,
+                      "y": 26730
+                    }
+                  ]
+                },
+                "reloadDue": 26460
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "active",
+              "deadline": 47600
+            },
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 238
+        }
+      ]
+    },
+    {
+      "name": "simultaneous-defeats",
+      "source": "development-policy",
+      "config": {
+        "rulesVersion": "arcade-v2.5",
+        "mapVersion": "dust-yard-grid-v2.0",
+        "step": 100,
+        "seed": 4,
+        "participants": [
+          "blue-agent",
+          "sand-agent"
+        ],
+        "mode": "score-deathmatch",
+        "target": 5,
+        "limit": 225000,
+        "respawnDelay": 3600
+      },
+      "bytes": 16996,
+      "loadMs": 6.639200000000017,
+      "frames": 1608,
+      "inputs": 93,
+      "events": 224,
+      "final": {
+        "tick": 1608,
+        "time": 160800,
+        "fighters": [
+          {
+            "position": {
+              "x": 8910,
+              "y": 20790
+            },
+            "hp": 100,
+            "ammo": 1,
+            "posture": "upright",
+            "exposedUntil": 0
+          },
+          {
+            "position": {
+              "x": 29670,
+              "y": 20790
+            },
+            "hp": 0,
+            "ammo": 1,
+            "posture": "upright",
+            "exposedUntil": 0
+          }
+        ],
+        "result": "blue",
+        "score": [
+          5,
+          3
+        ],
+        "respawnAt": [
+          null,
+          null
+        ],
+        "reason": "target-score"
+      },
+      "examples": [
+        {
+          "event": {
+            "kind": "contact",
+            "side": 1,
+            "visible": true
+          },
+          "tick": 1,
+          "state": {
+            "tick": 1,
+            "time": 100,
+            "fighters": [
+              {
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2740,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 20790,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 44250,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 32670,
+                      "y": 20790
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 9510,
+                    "y": 20790
+                  },
+                  "time": 100
+                }
+              }
+            ],
+            "result": null,
+            "score": [
+              0,
+              0
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "gap": 34740,
+          "view": {
+            "version": 1,
+            "time": 100,
+            "agent": {
+              "position": {
+                "x": 44250,
+                "y": 20790
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "mode": "walk",
+              "reloading": false,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "time": 100
+              }
+            },
+            "match": {
+              "mode": "score-deathmatch",
+              "remaining": 224900,
+              "score": 0,
+              "opponentScore": 0,
+              "target": 5,
+              "respawnIn": null,
+              "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+            },
+            "legal": {
+              "actions": [
+                "stop",
+                "posture",
+                "observe"
+              ],
+              "movement": [
+                "walk",
+                "crouch",
+                "run",
+                "jump"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 2,
+            "time": 200,
+            "fighters": [
+              {
+                "position": {
+                  "x": 10110,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2840,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 20790,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 43950,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 32670,
+                      "y": 20790
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 10110,
+                    "y": 20790
+                  },
+                  "time": 200
+                }
+              }
+            ],
+            "result": null,
+            "score": [
+              0,
+              0
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 14
+        },
+        {
+          "event": {
+            "kind": "respawn",
+            "side": 1
+          },
+          "tick": 285,
+          "state": {
+            "tick": 285,
+            "time": 28500,
+            "fighters": [
+              {
+                "position": {
+                  "x": 20790,
+                  "y": 20790
+                },
+                "hp": 32,
+                "ammo": 1,
+                "posture": "upright",
+                "exposedUntil": 29340,
+                "survey": {
+                  "kind": "observe",
+                  "due": 29120
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0
+              }
+            ],
+            "result": null,
+            "score": [
+              1,
+              0
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "gap": 23760,
+          "view": {
+            "version": 1,
+            "time": 28500,
+            "agent": {
+              "position": {
+                "x": 44550,
+                "y": 20790
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "reloading": false,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 20790,
+                  "y": 20790
+                },
+                "time": 28500
+              }
+            },
+            "match": {
+              "mode": "score-deathmatch",
+              "remaining": 196500,
+              "score": 0,
+              "opponentScore": 1,
+              "target": 5,
+              "respawnIn": null,
+              "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+            },
+            "legal": {
+              "actions": [
+                "posture",
+                "attack",
+                "precision",
+                "observe",
+                "peek"
+              ],
+              "movement": [
+                "walk",
+                "crouch",
+                "run",
+                "jump"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 286,
+            "time": 28600,
+            "fighters": [
+              {
+                "position": {
+                  "x": 20790,
+                  "y": 20790
+                },
+                "hp": 32,
+                "ammo": 1,
+                "posture": "upright",
+                "exposedUntil": 29340,
+                "survey": {
+                  "kind": "observe",
+                  "due": 29120
+                },
+                "contact": {
+                  "position": {
+                    "x": 44550,
+                    "y": 20790
+                  },
+                  "time": 28600
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 20790,
+                    "y": 20790
+                  },
+                  "time": 28600
+                }
+              }
+            ],
+            "result": null,
+            "score": [
+              1,
+              0
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 291
+        }
+      ]
+    },
+    {
+      "name": "defeated-activator",
+      "source": "development-policy",
+      "config": {
+        "rulesVersion": "arcade-v2.5",
+        "mapVersion": "dust-yard-grid-v2.0",
+        "step": 100,
+        "seed": 1,
+        "participants": [
+          "blue-agent",
+          "sand-agent"
+        ],
+        "mode": "objective-duel",
+        "activator": 0,
+        "variant": "long-disable",
+        "objective": {
+          "pending": 58080,
+          "active": 24000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptOnHit": false,
+          "radius": 4000,
+          "position": {
+            "x": 26730,
+            "y": 20790
+          }
+        }
+      },
+      "bytes": 5490,
+      "loadMs": 2.6001999999999725,
+      "frames": 476,
+      "inputs": 24,
+      "events": 57,
+      "final": {
+        "tick": 476,
+        "time": 47600,
+        "fighters": [
+          {
+            "position": {
+              "x": 14850,
+              "y": 20790
+            },
+            "hp": 0,
+            "ammo": 1,
+            "posture": "upright",
+            "exposedUntil": 5340,
+            "contact": {
+              "position": {
+                "x": 30510,
+                "y": 20790
+              },
+              "time": 35300
+            }
+          },
+          {
+            "position": {
+              "x": 30510,
+              "y": 20790
+            },
+            "hp": 82,
+            "ammo": 4,
+            "posture": "crouch",
+            "exposedUntil": 0,
+            "contact": {
+              "position": {
+                "x": 14850,
+                "y": 20790
+              },
+              "time": 35300
+            }
+          }
+        ],
+        "result": "blue",
+        "core": {
+          "phase": "completed",
+          "deadline": 47600
+        },
+        "reason": "core-completed"
+      },
+      "examples": [
+        {
+          "event": {
+            "kind": "contact",
+            "side": 1,
+            "visible": true
+          },
+          "tick": 1,
+          "state": {
+            "tick": 1,
+            "time": 100,
+            "fighters": [
+              {
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2740,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 24730,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "survey": {
+                  "kind": "observe",
+                  "due": 1320
+                },
+                "contact": {
+                  "position": {
+                    "x": 9510,
+                    "y": 20790
+                  },
+                  "time": 100
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "pending",
+              "deadline": 58080
+            },
+            "reason": null
+          },
+          "gap": 35040,
+          "view": {
+            "version": 1,
+            "time": 100,
+            "agent": {
+              "position": {
+                "x": 44550,
+                "y": 20790
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "reloading": false,
+              "surveying": "observe",
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "time": 100
+              }
+            },
+            "match": {
+              "mode": "objective-duel",
+              "remaining": 57980,
+              "role": "Defender",
+              "phase": "pending",
+              "position": {
+                "x": 26730,
+                "y": 20790
+              },
+              "radius": 4000,
+              "activate": 9000,
+              "disable": 9000,
+              "interruptedByDamage": false,
+              "interaction": null,
+              "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+            },
+            "legal": {
+              "actions": [
+                "posture"
+              ],
+              "movement": [
+                "walk",
+                "crouch"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 2,
+            "time": 200,
+            "fighters": [
+              {
+                "position": {
+                  "x": 10110,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2840,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 24730,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "survey": {
+                  "kind": "observe",
+                  "due": 1320
+                },
+                "contact": {
+                  "position": {
+                    "x": 10110,
+                    "y": 20790
+                  },
+                  "time": 200
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "pending",
+              "deadline": 58080
+            },
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 14
+        },
+        {
+          "event": {
+            "kind": "objective",
+            "action": "activated",
+            "side": 0
+          },
+          "tick": 236,
+          "state": {
+            "tick": 236,
+            "time": 23600,
+            "fighters": [
+              {
+                "position": {
+                  "x": 24730,
+                  "y": 20790
+                },
+                "hp": 10,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 5340,
+                "contact": {
+                  "position": {
+                    "x": 37710,
+                    "y": 20790
+                  },
+                  "time": 23600
+                }
+              },
+              {
+                "position": {
+                  "x": 37710,
+                  "y": 20790
+                },
+                "hp": 82,
+                "ammo": 1,
+                "posture": "crouch",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 24730,
+                    "y": 20790
+                  },
+                  "time": 23600
+                },
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 20790
+                    },
+                    {
+                      "x": 44550,
+                      "y": 26730
+                    }
+                  ]
+                },
+                "reloadDue": 26460
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "active",
+              "deadline": 47600
+            },
+            "reason": null
+          },
+          "gap": 12980,
+          "view": {
+            "version": 1,
+            "time": 23600,
+            "agent": {
+              "position": {
+                "x": 37710,
+                "y": 20790
+              },
+              "hp": 82,
+              "ammo": 1,
+              "posture": "crouch",
+              "mode": "walk",
+              "reloading": true,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 24730,
+                  "y": 20790
+                },
+                "time": 23600
+              }
+            },
+            "match": {
+              "mode": "objective-duel",
+              "remaining": 24000,
+              "role": "Defender",
+              "phase": "active",
+              "position": {
+                "x": 26730,
+                "y": 20790
+              },
+              "radius": 4000,
+              "activate": 9000,
+              "disable": 9000,
+              "interruptedByDamage": false,
+              "interaction": null,
+              "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+            },
+            "legal": {
+              "actions": [
+                "stop",
+                "posture",
+                "observe"
+              ],
+              "movement": [
+                "walk",
+                "crouch"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 237,
+            "time": 23700,
+            "fighters": [
+              {
+                "position": {
+                  "x": 24730,
+                  "y": 20790
+                },
+                "hp": 10,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 5340,
+                "contact": {
+                  "position": {
+                    "x": 38010,
+                    "y": 20790
+                  },
+                  "time": 23700
+                }
+              },
+              {
+                "position": {
+                  "x": 38010,
+                  "y": 20790
+                },
+                "hp": 82,
+                "ammo": 1,
+                "posture": "crouch",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 24730,
+                    "y": 20790
+                  },
+                  "time": 23700
+                },
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 20790
+                    },
+                    {
+                      "x": 44550,
+                      "y": 26730
+                    }
+                  ]
+                },
+                "reloadDue": 26460
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "active",
+              "deadline": 47600
+            },
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 238
+        }
+      ]
+    },
+    {
+      "name": "score-clock",
+      "source": "development-policy",
+      "config": {
+        "rulesVersion": "arcade-v2.5",
+        "mapVersion": "dust-yard-grid-v2.0",
+        "step": 100,
+        "seed": 1,
+        "participants": [
+          "blue-agent",
+          "sand-agent"
+        ],
+        "mode": "score-deathmatch",
+        "target": 5,
+        "limit": 135000,
+        "respawnDelay": 3600
+      },
+      "bytes": 14194,
+      "loadMs": 4.216700000000003,
+      "frames": 1350,
+      "inputs": 83,
+      "events": 182,
+      "final": {
+        "tick": 1350,
+        "time": 135000,
+        "fighters": [
+          {
+            "position": {
+              "x": 9810,
+              "y": 20790
+            },
+            "hp": 100,
+            "ammo": 0,
+            "posture": "upright",
+            "exposedUntil": 0,
+            "contact": {
+              "position": {
+                "x": 24450,
+                "y": 20790
+              },
+              "time": 135000
+            }
+          },
+          {
+            "position": {
+              "x": 24450,
+              "y": 20790
+            },
+            "hp": 28,
+            "ammo": 3,
+            "posture": "upright",
+            "exposedUntil": 0,
+            "contact": {
+              "position": {
+                "x": 9810,
+                "y": 20790
+              },
+              "time": 135000
+            }
+          }
+        ],
+        "result": "sand",
+        "score": [
+          3,
+          4
+        ],
+        "respawnAt": [
+          null,
+          null
+        ],
+        "reason": "score-clock"
+      },
+      "examples": [
+        {
+          "event": {
+            "kind": "contact",
+            "side": 1,
+            "visible": true
+          },
+          "tick": 1,
+          "state": {
+            "tick": 1,
+            "time": 100,
+            "fighters": [
+              {
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2740,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 20790,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 44250,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 32670,
+                      "y": 20790
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 9510,
+                    "y": 20790
+                  },
+                  "time": 100
+                }
+              }
+            ],
+            "result": null,
+            "score": [
+              0,
+              0
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "gap": 34740,
+          "view": {
+            "version": 1,
+            "time": 100,
+            "agent": {
+              "position": {
+                "x": 44250,
+                "y": 20790
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "mode": "walk",
+              "reloading": false,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 9510,
+                  "y": 20790
+                },
+                "time": 100
+              }
+            },
+            "match": {
+              "mode": "score-deathmatch",
+              "remaining": 134900,
+              "score": 0,
+              "opponentScore": 0,
+              "target": 5,
+              "respawnIn": null,
+              "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+            },
+            "legal": {
+              "actions": [
+                "stop",
+                "posture",
+                "observe"
+              ],
+              "movement": [
+                "walk",
+                "crouch",
+                "run",
+                "jump"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 2,
+            "time": 200,
+            "fighters": [
+              {
+                "position": {
+                  "x": 10110,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 2840,
+                "motion": {
+                  "mode": "run",
+                  "path": [
+                    {
+                      "x": 20790,
+                      "y": 20790
+                    }
+                  ]
+                }
+              },
+              {
+                "position": {
+                  "x": 43950,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 32670,
+                      "y": 20790
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 10110,
+                    "y": 20790
+                  },
+                  "time": 200
+                }
+              }
+            ],
+            "result": null,
+            "score": [
+              0,
+              0
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 14
+        },
+        {
+          "event": {
+            "kind": "respawn",
+            "side": 0
+          },
+          "tick": 219,
+          "state": {
+            "tick": 219,
+            "time": 21900,
+            "fighters": [
+              {
+                "position": {
+                  "x": 8910,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0
+              },
+              {
+                "position": {
+                  "x": 22050,
+                  "y": 20790
+                },
+                "hp": 64,
+                "ammo": 3,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 20790,
+                      "y": 20790
+                    }
+                  ]
+                }
+              }
+            ],
+            "result": null,
+            "score": [
+              0,
+              1
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "gap": 13140,
+          "view": {
+            "version": 1,
+            "time": 21900,
+            "agent": {
+              "position": {
+                "x": 8910,
+                "y": 20790
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "reloading": false,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 22050,
+                  "y": 20790
+                },
+                "time": 21900
+              }
+            },
+            "match": {
+              "mode": "score-deathmatch",
+              "remaining": 113100,
+              "score": 0,
+              "opponentScore": 1,
+              "target": 5,
+              "respawnIn": null,
+              "victory": "One point per opposing defeat. Both simultaneous defeats score before settlement. Equal scores at the target or deadline draw."
+            },
+            "legal": {
+              "actions": [
+                "posture",
+                "attack",
+                "precision",
+                "observe",
+                "peek"
+              ],
+              "movement": [
+                "walk",
+                "crouch",
+                "run",
+                "jump"
+              ]
+            }
+          },
+          "side": 0,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 220,
+            "time": 22000,
+            "fighters": [
+              {
+                "position": {
+                  "x": 8910,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 21750,
+                    "y": 20790
+                  },
+                  "time": 22000
+                }
+              },
+              {
+                "position": {
+                  "x": 21750,
+                  "y": 20790
+                },
+                "hp": 64,
+                "ammo": 3,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 20790,
+                      "y": 20790
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 8910,
+                    "y": 20790
+                  },
+                  "time": 22000
+                }
+              }
+            ],
+            "result": null,
+            "score": [
+              0,
+              1
+            ],
+            "respawnAt": [
+              null,
+              null
+            ],
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 225
+        }
+      ]
+    },
+    {
+      "name": "idle-objective-deadline",
+      "source": "development-policy",
+      "config": {
+        "rulesVersion": "arcade-v2.5",
+        "mapVersion": "dust-yard-grid-v2.0",
+        "step": 100,
+        "seed": 3,
+        "participants": [
+          "blue-agent",
+          "sand-agent"
+        ],
+        "mode": "objective-duel",
+        "activator": 0,
+        "variant": "long-disable",
+        "objective": {
+          "pending": 58080,
+          "active": 24000,
+          "activate": 9000,
+          "disable": 9000,
+          "interruptOnHit": false,
+          "radius": 4000,
+          "position": {
+            "x": 26730,
+            "y": 20790
+          }
+        }
+      },
+      "bytes": 1113,
+      "loadMs": 1.987700000000018,
+      "frames": 581,
+      "inputs": 0,
+      "events": 1,
+      "final": {
+        "tick": 581,
+        "time": 58080,
+        "fighters": [
+          {
+            "position": {
+              "x": 8910,
+              "y": 20790
+            },
+            "hp": 100,
+            "ammo": 4,
+            "posture": "upright",
+            "exposedUntil": 0
+          },
+          {
+            "position": {
+              "x": 44550,
+              "y": 20790
+            },
+            "hp": 100,
+            "ammo": 4,
+            "posture": "upright",
+            "exposedUntil": 0
+          }
+        ],
+        "result": "sand",
+        "core": {
+          "phase": "pending",
+          "deadline": 58080
+        },
+        "reason": "activation-prevented"
+      },
+      "examples": []
+    },
+    {
+      "name": "manual",
+      "source": "manual-sandbox",
+      "config": {
+        "rulesVersion": "arcade-v2.5",
+        "mapVersion": "dust-yard-grid-v2.0",
+        "step": 100,
+        "seed": 3,
+        "participants": [
+          "blue-agent",
+          "sand-agent"
+        ],
+        "mode": "objective-duel",
+        "activator": 0,
+        "variant": "reference",
+        "objective": {
+          "pending": 58080,
+          "active": 18000,
+          "activate": 2700,
+          "disable": 2700,
+          "interruptOnHit": false,
+          "radius": 4000,
+          "position": {
+            "x": 26730,
+            "y": 20790
+          }
+        }
+      },
+      "bytes": 2736,
+      "loadMs": 1.308300000000031,
+      "frames": 252,
+      "inputs": 14,
+      "events": 18,
+      "final": {
+        "tick": 252,
+        "time": 25200,
+        "fighters": [
+          {
+            "position": {
+              "x": 23310,
+              "y": 20790
+            },
+            "hp": 46,
+            "ammo": 4,
+            "posture": "upright",
+            "exposedUntil": 0,
+            "contact": {
+              "position": {
+                "x": 28730,
+                "y": 20790
+              },
+              "time": 25200
+            }
+          },
+          {
+            "position": {
+              "x": 28730,
+              "y": 20790
+            },
+            "hp": 100,
+            "ammo": 4,
+            "posture": "upright",
+            "exposedUntil": 0,
+            "contact": {
+              "position": {
+                "x": 23310,
+                "y": 20790
+              },
+              "time": 25200
+            }
+          }
+        ],
+        "result": "sand",
+        "core": {
+          "phase": "disabled",
+          "deadline": 25800
+        },
+        "reason": "core-disabled"
+      },
+      "examples": [
+        {
+          "event": {
+            "kind": "contact",
+            "side": 0,
+            "visible": true
+          },
+          "tick": 65,
+          "state": {
+            "tick": 65,
+            "time": 6500,
+            "fighters": [
+              {
+                "position": {
+                  "x": 23310,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 44550,
+                    "y": 18450
+                  },
+                  "time": 6500
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 18450
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 26730
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 23310,
+                    "y": 20790
+                  },
+                  "time": 6500
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "pending",
+              "deadline": 58080,
+              "interaction": {
+                "side": 0,
+                "started": 5100
+              }
+            },
+            "reason": null
+          },
+          "gap": 23580,
+          "view": {
+            "version": 1,
+            "time": 6500,
+            "agent": {
+              "position": {
+                "x": 23310,
+                "y": 20790
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "reloading": false,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 44550,
+                  "y": 18450
+                },
+                "time": 6500
+              }
+            },
+            "match": {
+              "mode": "objective-duel",
+              "remaining": 51580,
+              "role": "Activator",
+              "phase": "pending",
+              "position": {
+                "x": 26730,
+                "y": 20790
+              },
+              "radius": 4000,
+              "activate": 2700,
+              "disable": 2700,
+              "interruptedByDamage": false,
+              "interaction": {
+                "by": "self",
+                "progress": 1400
+              },
+              "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+            },
+            "legal": {
+              "actions": [
+                "posture",
+                "attack",
+                "precision",
+                "observe",
+                "peek",
+                "cancel-interaction"
+              ],
+              "movement": [
+                "walk",
+                "crouch",
+                "run",
+                "jump"
+              ]
+            }
+          },
+          "side": 0,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 66,
+            "time": 6600,
+            "fighters": [
+              {
+                "position": {
+                  "x": 23310,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 44550,
+                    "y": 18750
+                  },
+                  "time": 6600
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 18750
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 26730
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 23310,
+                    "y": 20790
+                  },
+                  "time": 6600
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "pending",
+              "deadline": 58080,
+              "interaction": {
+                "side": 0,
+                "started": 5100
+              }
+            },
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 66
+        },
+        {
+          "event": {
+            "kind": "objective",
+            "action": "activated",
+            "side": 0
+          },
+          "tick": 78,
+          "state": {
+            "tick": 78,
+            "time": 7800,
+            "fighters": [
+              {
+                "position": {
+                  "x": 23310,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 44550,
+                    "y": 22350
+                  },
+                  "time": 7800
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 22350
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 26730
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 23310,
+                    "y": 20790
+                  },
+                  "time": 7800
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "active",
+              "deadline": 25800
+            },
+            "reason": null
+          },
+          "gap": 22800,
+          "view": {
+            "version": 1,
+            "time": 7800,
+            "agent": {
+              "position": {
+                "x": 44550,
+                "y": 22350
+              },
+              "hp": 100,
+              "ammo": 4,
+              "posture": "upright",
+              "mode": "walk",
+              "reloading": false,
+              "life": "alive"
+            },
+            "world": {
+              "contact": {
+                "status": "visible",
+                "position": {
+                  "x": 23310,
+                  "y": 20790
+                },
+                "time": 7800
+              }
+            },
+            "match": {
+              "mode": "objective-duel",
+              "remaining": 18000,
+              "role": "Defender",
+              "phase": "active",
+              "position": {
+                "x": 26730,
+                "y": 20790
+              },
+              "radius": 4000,
+              "activate": 2700,
+              "disable": 2700,
+              "interruptedByDamage": false,
+              "interaction": null,
+              "victory": "Pending: survivor wins, or Defender wins at the deadline. Mutual defeat draws. Active: Activator wins when the Core completes or Defender falls. Defender wins by disabling the Core. Legal interactions may complete exactly at the deadline."
+            },
+            "legal": {
+              "actions": [
+                "stop",
+                "posture",
+                "attack",
+                "observe"
+              ],
+              "movement": [
+                "walk",
+                "crouch",
+                "run",
+                "jump"
+              ]
+            }
+          },
+          "side": 1,
+          "nextInput": null,
+          "nextEvents": [],
+          "nextState": {
+            "tick": 79,
+            "time": 7900,
+            "fighters": [
+              {
+                "position": {
+                  "x": 23310,
+                  "y": 20790
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "contact": {
+                  "position": {
+                    "x": 44550,
+                    "y": 22650
+                  },
+                  "time": 7900
+                }
+              },
+              {
+                "position": {
+                  "x": 44550,
+                  "y": 22650
+                },
+                "hp": 100,
+                "ammo": 4,
+                "posture": "upright",
+                "exposedUntil": 0,
+                "motion": {
+                  "mode": "walk",
+                  "path": [
+                    {
+                      "x": 44550,
+                      "y": 26730
+                    }
+                  ]
+                },
+                "contact": {
+                  "position": {
+                    "x": 23310,
+                    "y": 20790
+                  },
+                  "time": 7900
+                }
+              }
+            ],
+            "result": null,
+            "core": {
+              "phase": "active",
+              "deadline": 25800
+            },
+            "reason": null
+          },
+          "policySeek": null,
+          "policyRoam": null,
+          "nextPolicyBoundary": 80
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "mode": "elimination",
+      "samples": 48,
+      "medianMs": 2.122700000000009,
+      "p90Ms": 3.711999999999989,
+      "meanFrames": 574.25,
+      "meanEvents": 80.875,
+      "meanBytes": 7776.354166666667
+    },
+    {
+      "mode": "objective-duel",
+      "samples": 48,
+      "medianMs": 2.162200000000098,
+      "p90Ms": 3.0471999999999753,
+      "meanFrames": 385.9166666666667,
+      "meanEvents": 54.770833333333336,
+      "meanBytes": 5402.708333333333
+    },
+    {
+      "mode": "score-deathmatch",
+      "samples": 48,
+      "medianMs": 3.3654999999999973,
+      "p90Ms": 5.242200000000025,
+      "meanFrames": 1770.25,
+      "meanEvents": 244.25,
+      "meanBytes": 18366.75
+    }
+  ],
+  "reachable": {
+    "ticks": 2250,
+    "final": {
+      "tick": 2250,
+      "time": 225000,
+      "fighters": [
+        {
+          "position": {
+            "x": 42510,
+            "y": 20790
+          },
+          "hp": 100,
+          "ammo": 4,
+          "posture": "upright",
+          "exposedUntil": 0,
+          "contact": {
+            "position": {
+              "x": 44550,
+              "y": 20790
+            },
+            "time": 225000
+          }
+        },
+        {
+          "position": {
+            "x": 44550,
+            "y": 20790
+          },
+          "hp": 100,
+          "ammo": 4,
+          "posture": "upright",
+          "exposedUntil": 0,
+          "contact": {
+            "position": {
+              "x": 42510,
+              "y": 20790
+            },
+            "time": 225000
+          }
+        }
+      ],
+      "result": "draw",
+      "score": [
+        0,
+        0
+      ],
+      "respawnAt": [
+        null,
+        null
+      ],
+      "reason": "equal-score"
+    }
+  }
+}

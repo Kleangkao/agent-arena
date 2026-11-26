@@ -1,0 +1,11 @@
+import {describe,it,expect,beforeAll} from 'vitest';
+import {readFileSync} from 'node:fs';
+import solc from 'solc';
+import {createPublicClient,createWalletClient,http} from 'viem';
+import {hardhat} from 'viem/chains';
+import {initial,resolve,legal,type State,type Action} from '../src/game';
+const url=process.env.PARITY_RPC;
+describe.skipIf(!url)('Solidity / TypeScript parity',()=>{let address:`0x${string}`,abi:any;const client=createPublicClient({chain:hardhat,transport:http(url)});const wallet=createWalletClient({chain:hardhat,transport:http(url)});
+ beforeAll(async()=>{const input={language:'Solidity',sources:{'ArenaRules.sol':{content:readFileSync('contracts/ArenaRules.sol','utf8')}},settings:{outputSelection:{'*':{'*':['abi','evm.bytecode.object']}}}};const output=JSON.parse(solc.compile(JSON.stringify(input)));const c=output.contracts['ArenaRules.sol'].ArenaRules;abi=c.abi;const [account]=await wallet.getAddresses();const hash=await wallet.deployContract({account,abi,bytecode:`0x${c.evm.bytecode.object}`});address=(await client.waitForTransactionReceipt({hash})).contractAddress!});
+ it('matches every legal action pair across reachable states',async()=>{const ids:Record<Action,number>={wait:0,advance:1,attack:2,reload:3};let states:State[]=[initial()];for(let depth=0;depth<4;depth++){let next:State[]=[];for(const s of states.slice(0,12)){if(s.result)continue;for(const a of legal(s,0))for(const b of legal(s,1)){const actual:any=await client.readContract({address,abi,functionName:'transition',args:[{step:s.step,blue:s.fighters[0],sand:s.fighters[1],result:0},ids[a],ids[b]]});const expected=resolve(s,[a,b]);expect(actual).toEqual({step:expected.step,blue:expected.fighters[0],sand:expected.fighters[1],result:expected.result===null?0:expected.result==='blue'?1:expected.result==='sand'?2:3});next.push(expected)}}states=next}},30000);
+});

@@ -1,0 +1,46 @@
+{
+  "source": "Official BNB Chain MCP, read-only",
+  "chain": {
+    "network": "bsc-testnet",
+    "chainId": 97,
+    "blockNumber": "145036629",
+    "rpcUrl": "https://data-seed-prebsc-1-s1.binance.org:8545"
+  },
+  "identity": {
+    "agentId": "2933",
+    "owner": "0x0f7340C0B93377f4c59d0ACCcc076991bb872E30",
+    "network": "bsc-testnet",
+    "uriScheme": "https"
+  },
+  "receipt": {
+    "status": "success",
+    "hash": "0x2c36b996f25a4b06e0764ce81947af7883830757a94ead7b03969fd6bc193e8f",
+    "to": "0xbd1a8427da0b2b2d947a391ed117e49ec8801f81",
+    "blockNumber": "145034610",
+    "gasUsed": "68449",
+    "logs": [
+      {
+        "topics": [
+          "0x6b383ca7001e182da381946be8fc59d80374dfbc113d5c81deeb30a3e07a0c87",
+          "0x4c19883ebdb539e0657b1c30372854513b18a7e16c00b54f273a79fe2df0a675",
+          "0xadd6160b9499c74448219c3b1b1bd332cb4f51f70b156e991dc7414cb1d2a9f0"
+        ],
+        "removed": false
+      }
+    ]
+  },
+  "storage": {
+    "evidenceHash": "0xadd6160b9499c74448219c3b1b1bd332cb4f51f70b156e991dc7414cb1d2a9f0",
+    "blockNumber": "145034610"
+  },
+  "reproduced": {
+    "mode": "relay",
+    "rulesVersion": "squads-v3",
+    "winner": "blue",
+    "score": [
+      24,
+      12
+    ],
+    "matchId": "ea32cd37-964f-4364-83de-3e717004fa13"
+  }
+}

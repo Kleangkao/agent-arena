@@ -1,0 +1,101 @@
+{
+  "version": 7,
+  "config": {
+    "rulesVersion": "squads-v1",
+    "mapVersion": "relay-yard-v1",
+    "teamSize": 5
+  },
+  "source": "operator-attested-gemini",
+  "windows": [
+    [
+      {
+        "intent": "Surround North Relay with four units and send one unit to South Relay.",
+        "orders": [
+          "12,3",
+          "13,2",
+          "14,3",
+          "13,4",
+          "13,11"
+        ]
+      },
+      {
+        "intent": "Surround and contest the south relay while holding defensive formation.",
+        "orders": [
+          "13,11",
+          "13,11",
+          "13,11",
+          "13,11",
+          "13,11"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Secure the northern relay with units and reposition injured ones while keeping pressure on the south.",
+        "orders": [
+          "12,3",
+          "14,3",
+          "12,5",
+          "14,5",
+          "13,10"
+        ]
+      },
+      {
+        "intent": "Defend relays and engage vulnerable rival units",
+        "orders": [
+          "23,11",
+          "24,11",
+          "13,11",
+          "14,6",
+          "13,5"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Adjusting after losses, moving surviving units toward North relay to secure points.",
+        "orders": [
+          "12,3",
+          "14,3",
+          "-",
+          "-",
+          "-"
+        ]
+      },
+      {
+        "intent": "Retreat the heavily damaged unit to safety while surviving units press the advantage.",
+        "orders": [
+          "13,11",
+          "13,11",
+          "-",
+          "-",
+          "13,11"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Secure North relay scoring cells and scout South with surviving units.",
+        "orders": [
+          "12,3",
+          "14,3",
+          "-",
+          "-",
+          "-"
+        ]
+      },
+      {
+        "intent": "Defend the south relay and regroup surviving units to contest control.",
+        "orders": [
+          "13,11",
+          "13,11",
+          "-",
+          "-",
+          "13,11"
+        ]
+      }
+    ]
+  ],
+  "final": "sand",
+  "interruption": null
+}

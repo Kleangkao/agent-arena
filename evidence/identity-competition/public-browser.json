@@ -1,0 +1,29 @@
+{
+  "origin": "https://agent-arena-preview.vercel.app",
+  "runs": [
+    {
+      "width": 1180,
+      "passport": "evidence/identity-competition/public-passport-1180.png",
+      "battle": "evidence/identity-competition/public-battle-1180.png",
+      "result": "evidence/identity-competition/public-result-1180.png",
+      "chainStatus": "Identity and replay commitment recorded on BSC Testnet.",
+      "transaction": "https://testnet.bscscan.com/tx/0x2c36b996f25a4b06e0764ce81947af7883830757a94ead7b03969fd6bc193e8f",
+      "zeroApiPosts": true,
+      "reopenedAfterRefresh": true,
+      "noHorizontalOverflow": true,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "passport": "evidence/identity-competition/public-passport-390.png",
+      "battle": "evidence/identity-competition/public-battle-390.png",
+      "result": "evidence/identity-competition/public-result-390.png",
+      "chainStatus": "Identity and replay commitment recorded on BSC Testnet.",
+      "transaction": "https://testnet.bscscan.com/tx/0x2c36b996f25a4b06e0764ce81947af7883830757a94ead7b03969fd6bc193e8f",
+      "zeroApiPosts": true,
+      "reopenedAfterRefresh": true,
+      "noHorizontalOverflow": true,
+      "pageErrors": []
+    }
+  ]
+}

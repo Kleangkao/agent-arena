@@ -1,0 +1,869 @@
+[
+  {
+    "id": "2b3b99a1-0eb9-4dd9-8849-12f1434cd13e",
+    "status": "interrupted",
+    "model": "gemini-3.5-flash-lite",
+    "coaching": [
+      "Favor North. Assign four units to distinct North Relay scoring cells, and send one to South to scout and score.",
+      "Spend resources only when they help you win. Keep competing for the lead."
+    ],
+    "attempts": [
+      {
+        "side": 0,
+        "step": 0,
+        "attempt": 1,
+        "status": "400",
+        "ms": 122
+      },
+      {
+        "side": 1,
+        "step": 0,
+        "attempt": 1,
+        "status": "400",
+        "ms": 132
+      }
+    ],
+    "durationMs": 137,
+    "final": {
+      "result": null,
+      "score": [
+        0,
+        0
+      ],
+      "tick": 0,
+      "alive": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shots": 0,
+      "controlledTicks": [
+        0,
+        0
+      ]
+    },
+    "replay": {
+      "version": 7,
+      "config": {
+        "rulesVersion": "squads-v1",
+        "mapVersion": "relay-yard-v1",
+        "teamSize": 5
+      },
+      "source": "operator-attested-gemini",
+      "windows": [],
+      "final": null,
+      "interruption": "provider"
+    }
+  },
+  {
+    "id": "81f02334-fcac-42ac-8fb2-b31206672efa",
+    "status": "completed",
+    "model": "gemini-3.5-flash-lite",
+    "coaching": [
+      "Favor North. Assign four units to distinct North Relay scoring cells, and send one to South to scout and score.",
+      "Spend resources only when they help you win. Keep competing for the lead."
+    ],
+    "attempts": [
+      {
+        "side": 0,
+        "step": 0,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 1184,
+        "model": "gemini-3.5-flash-lite",
+        "input": 635,
+        "output": 74,
+        "coachingRevision": "7a8c02a58ee5c71dc04e1fe420875dbf779c2cbe438319295e223d7981e188b2"
+      },
+      {
+        "side": 1,
+        "step": 0,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 1185,
+        "model": "gemini-3.5-flash-lite",
+        "input": 627,
+        "output": 75,
+        "coachingRevision": "official-sand-v1"
+      },
+      {
+        "side": 0,
+        "step": 12,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 1431,
+        "model": "gemini-3.5-flash-lite",
+        "input": 638,
+        "output": 76,
+        "coachingRevision": "7a8c02a58ee5c71dc04e1fe420875dbf779c2cbe438319295e223d7981e188b2"
+      },
+      {
+        "side": 1,
+        "step": 12,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 1297,
+        "model": "gemini-3.5-flash-lite",
+        "input": 630,
+        "output": 70,
+        "coachingRevision": "official-sand-v1"
+      },
+      {
+        "side": 0,
+        "step": 24,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 778,
+        "model": "gemini-3.5-flash-lite",
+        "input": 611,
+        "output": 60,
+        "coachingRevision": "7a8c02a58ee5c71dc04e1fe420875dbf779c2cbe438319295e223d7981e188b2"
+      },
+      {
+        "side": 1,
+        "step": 24,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 1834,
+        "model": "gemini-3.5-flash-lite",
+        "input": 589,
+        "output": 68,
+        "coachingRevision": "official-sand-v1"
+      },
+      {
+        "side": 0,
+        "step": 36,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 1180,
+        "model": "gemini-3.5-flash-lite",
+        "input": 612,
+        "output": 57,
+        "coachingRevision": "7a8c02a58ee5c71dc04e1fe420875dbf779c2cbe438319295e223d7981e188b2"
+      },
+      {
+        "side": 1,
+        "step": 36,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 1440,
+        "model": "gemini-3.5-flash-lite",
+        "input": 590,
+        "output": 66,
+        "coachingRevision": "official-sand-v1"
+      }
+    ],
+    "durationMs": 5902,
+    "final": {
+      "result": "sand",
+      "score": [
+        7,
+        16
+      ],
+      "tick": 48,
+      "alive": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "shots": 30,
+      "controlledTicks": [
+        0,
+        23
+      ]
+    },
+    "replay": {
+      "version": 7,
+      "config": {
+        "rulesVersion": "squads-v1",
+        "mapVersion": "relay-yard-v1",
+        "teamSize": 5
+      },
+      "source": "operator-attested-gemini",
+      "windows": [
+        [
+          {
+            "intent": "Surround North Relay with four units and send one unit to South Relay.",
+            "orders": [
+              "12,3",
+              "13,2",
+              "14,3",
+              "13,4",
+              "13,11"
+            ]
+          },
+          {
+            "intent": "Surround and contest the south relay while holding defensive formation.",
+            "orders": [
+              "13,11",
+              "13,11",
+              "13,11",
+              "13,11",
+              "13,11"
+            ]
+          }
+        ],
+        [
+          {
+            "intent": "Secure the northern relay with units and reposition injured ones while keeping pressure on the south.",
+            "orders": [
+              "12,3",
+              "14,3",
+              "12,5",
+              "14,5",
+              "13,10"
+            ]
+          },
+          {
+            "intent": "Defend relays and engage vulnerable rival units",
+            "orders": [
+              "23,11",
+              "24,11",
+              "13,11",
+              "14,6",
+              "13,5"
+            ]
+          }
+        ],
+        [
+          {
+            "intent": "Adjusting after losses, moving surviving units toward North relay to secure points.",
+            "orders": [
+              "12,3",
+              "14,3",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "intent": "Retreat the heavily damaged unit to safety while surviving units press the advantage.",
+            "orders": [
+              "13,11",
+              "13,11",
+              "-",
+              "-",
+              "13,11"
+            ]
+          }
+        ],
+        [
+          {
+            "intent": "Secure North relay scoring cells and scout South with surviving units.",
+            "orders": [
+              "12,3",
+              "14,3",
+              "-",
+              "-",
+              "-"
+            ]
+          },
+          {
+            "intent": "Defend the south relay and regroup surviving units to contest control.",
+            "orders": [
+              "13,11",
+              "13,11",
+              "-",
+              "-",
+              "13,11"
+            ]
+          }
+        ]
+      ],
+      "final": "sand",
+      "interruption": null
+    }
+  },
+  {
+    "id": "a9c59b06-9927-4d82-ac42-8320a40001f9",
+    "status": "interrupted",
+    "model": "gemini-3.5-flash-lite",
+    "coaching": [
+      "Favor South. Assign four units to distinct South Relay scoring cells, and send one to North to scout and score.",
+      "Spend resources only when they help you win. Keep competing for the lead."
+    ],
+    "sameSetup": "81f02334-fcac-42ac-8fb2-b31206672efa",
+    "attempts": [
+      {
+        "side": 0,
+        "step": 0,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 2327,
+        "model": "gemini-3.5-flash-lite",
+        "input": 635,
+        "output": 75,
+        "coachingRevision": "15913e43064619b147e03c3f0f6b1752906025af08c6eb5e9a196de8b6701ce2"
+      },
+      {
+        "side": 1,
+        "step": 0,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 1940,
+        "model": "gemini-3.5-flash-lite",
+        "input": 627,
+        "output": 73,
+        "coachingRevision": "official-sand-v1"
+      },
+      {
+        "side": 0,
+        "step": 12,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 2476,
+        "model": "gemini-3.5-flash-lite",
+        "input": 637,
+        "output": 79,
+        "coachingRevision": "15913e43064619b147e03c3f0f6b1752906025af08c6eb5e9a196de8b6701ce2"
+      },
+      {
+        "side": 1,
+        "step": 12,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 1562,
+        "model": "gemini-3.5-flash-lite",
+        "input": 629,
+        "output": 69,
+        "coachingRevision": "official-sand-v1"
+      },
+      {
+        "side": 0,
+        "step": 24,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 2351,
+        "model": "gemini-3.5-flash-lite",
+        "input": 637,
+        "output": 74,
+        "coachingRevision": "15913e43064619b147e03c3f0f6b1752906025af08c6eb5e9a196de8b6701ce2"
+      },
+      {
+        "side": 1,
+        "step": 24,
+        "attempt": 1,
+        "status": "invalid-orders",
+        "ms": 1825,
+        "model": "gemini-3.5-flash-lite",
+        "input": 616,
+        "output": 73,
+        "coachingRevision": "official-sand-v1"
+      }
+    ],
+    "durationMs": 7158,
+    "final": {
+      "result": null,
+      "score": [
+        0,
+        0
+      ],
+      "tick": 24,
+      "alive": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shots": 7,
+      "controlledTicks": [
+        0,
+        0
+      ]
+    },
+    "replay": {
+      "version": 7,
+      "config": {
+        "rulesVersion": "squads-v1",
+        "mapVersion": "relay-yard-v1",
+        "teamSize": 5
+      },
+      "source": "operator-attested-gemini",
+      "windows": [
+        [
+          {
+            "intent": "Control South relay with four units and send one to North relay.",
+            "orders": [
+              "13,10",
+              "12,11",
+              "13,12",
+              "14,11",
+              "13,3"
+            ]
+          },
+          {
+            "intent": "Surround and contest the northern relay while closing in on rival units.",
+            "orders": [
+              "15,3",
+              "15,5",
+              "15,7",
+              "15,9",
+              "15,11"
+            ]
+          }
+        ],
+        [
+          {
+            "intent": "Control the south relay with four units while scouting the north relay with the remaining unit.",
+            "orders": [
+              "12,10",
+              "13,10",
+              "14,10",
+              "13,12",
+              "13,3"
+            ]
+          },
+          {
+            "intent": "Capture the relays and apply pressure to rival units.",
+            "orders": [
+              "13,11",
+              "13,3",
+              "15,7",
+              "16,6",
+              "15,5"
+            ]
+          }
+        ]
+      ],
+      "final": null,
+      "interruption": "invalid-orders"
+    }
+  },
+  {
+    "id": "21bd79a1-2f63-464d-9724-94339fb27cb3",
+    "status": "completed",
+    "model": "gemini-3.5-flash-lite",
+    "coaching": [
+      "Favor South. Assign four units to distinct South Relay scoring cells, and send one to North to scout and score.",
+      "Spend resources only when they help you win. Keep competing for the lead."
+    ],
+    "sameSetup": "81f02334-fcac-42ac-8fb2-b31206672efa",
+    "attempts": [
+      {
+        "side": 0,
+        "step": 0,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 1519,
+        "model": "gemini-3.5-flash-lite",
+        "input": 635,
+        "output": 75,
+        "coachingRevision": "15913e43064619b147e03c3f0f6b1752906025af08c6eb5e9a196de8b6701ce2"
+      },
+      {
+        "side": 1,
+        "step": 0,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 2551,
+        "model": "gemini-3.5-flash-lite",
+        "input": 627,
+        "output": 73,
+        "coachingRevision": "official-sand-v1"
+      },
+      {
+        "side": 0,
+        "step": 12,
+        "attempt": 1,
+        "status": "503",
+        "ms": 3667
+      },
+      {
+        "side": 1,
+        "step": 12,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 2094,
+        "model": "gemini-3.5-flash-lite",
+        "input": 629,
+        "output": 72,
+        "coachingRevision": "official-sand-v1"
+      },
+      {
+        "side": 0,
+        "step": 12,
+        "attempt": 2,
+        "status": "accepted",
+        "ms": 4164,
+        "model": "gemini-3.5-flash-lite",
+        "input": 637,
+        "output": 76,
+        "coachingRevision": "15913e43064619b147e03c3f0f6b1752906025af08c6eb5e9a196de8b6701ce2"
+      },
+      {
+        "side": 0,
+        "step": 24,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 3930,
+        "model": "gemini-3.5-flash-lite",
+        "input": 637,
+        "output": 65,
+        "coachingRevision": "15913e43064619b147e03c3f0f6b1752906025af08c6eb5e9a196de8b6701ce2"
+      },
+      {
+        "side": 1,
+        "step": 24,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 3432,
+        "model": "gemini-3.5-flash-lite",
+        "input": 616,
+        "output": 74,
+        "coachingRevision": "official-sand-v1"
+      },
+      {
+        "side": 0,
+        "step": 36,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 2140,
+        "model": "gemini-3.5-flash-lite",
+        "input": 637,
+        "output": 71,
+        "coachingRevision": "15913e43064619b147e03c3f0f6b1752906025af08c6eb5e9a196de8b6701ce2"
+      },
+      {
+        "side": 1,
+        "step": 36,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 3071,
+        "model": "gemini-3.5-flash-lite",
+        "input": 618,
+        "output": 72,
+        "coachingRevision": "official-sand-v1"
+      }
+    ],
+    "durationMs": 18057,
+    "final": {
+      "result": "sand",
+      "score": [
+        0,
+        21
+      ],
+      "tick": 48,
+      "alive": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shots": 7,
+      "controlledTicks": [
+        21,
+        0
+      ]
+    },
+    "replay": {
+      "version": 7,
+      "config": {
+        "rulesVersion": "squads-v1",
+        "mapVersion": "relay-yard-v1",
+        "teamSize": 5
+      },
+      "source": "operator-attested-gemini",
+      "windows": [
+        [
+          {
+            "intent": "Control South relay with four units and send one unit to North.",
+            "orders": [
+              "12,11",
+              "13,12",
+              "14,11",
+              "13,10",
+              "13,3"
+            ]
+          },
+          {
+            "intent": "Advance units toward the central area to contest relays and engage the rival team.",
+            "orders": [
+              "15,9",
+              "15,8",
+              "15,7",
+              "15,6",
+              "15,5"
+            ]
+          }
+        ],
+        [
+          {
+            "intent": "Secure South relay with four units and send one unit to scout North.",
+            "orders": [
+              "12,11",
+              "13,12",
+              "14,11",
+              "13,10",
+              "13,3"
+            ]
+          },
+          {
+            "intent": "Secure the northern relay and converge on the central rivals to contest control.",
+            "orders": [
+              "13,3",
+              "13,3",
+              "15,3",
+              "15,4",
+              "15,5"
+            ]
+          }
+        ],
+        [
+          {
+            "intent": "Prioritize South relay control and scouting.",
+            "orders": [
+              "12,11",
+              "13,12",
+              "14,11",
+              "14,10",
+              "-"
+            ]
+          },
+          {
+            "intent": "Disengage blocked units from the right side and maneuver to contest the relays.",
+            "orders": [
+              "20,9",
+              "20,8",
+              "13,3",
+              "13,3",
+              "13,11"
+            ]
+          }
+        ],
+        [
+          {
+            "intent": "Defend our remaining units and maintain positions near the south scoring zone.",
+            "orders": [
+              "12,11",
+              "14,11",
+              "12,10",
+              "14,10",
+              "-"
+            ]
+          },
+          {
+            "intent": "Maintain control of the northern relay while pushing remaining units to pressure the rival and secure victory.",
+            "orders": [
+              "23,7",
+              "24,7",
+              "15,6",
+              "-",
+              "15,4"
+            ]
+          }
+        ]
+      ],
+      "final": "sand",
+      "interruption": null
+    }
+  },
+  {
+    "id": "64687a33-3e0b-491d-a05b-443052a37181",
+    "status": "completed",
+    "model": "gemini-3.5-flash-lite",
+    "coaching": [
+      "Favor North. Assign four units to distinct North Relay scoring cells, and send one to South to scout and score.",
+      "Spend resources only when they help you win. Keep competing for the lead."
+    ],
+    "attempts": [
+      {
+        "side": 0,
+        "step": 0,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 3887,
+        "model": "gemini-3.5-flash-lite",
+        "input": 662,
+        "output": 80,
+        "coachingRevision": "7a8c02a58ee5c71dc04e1fe420875dbf779c2cbe438319295e223d7981e188b2"
+      },
+      {
+        "side": 1,
+        "step": 0,
+        "attempt": 1,
+        "status": "invalid-orders",
+        "ms": 4006,
+        "model": "gemini-3.5-flash-lite",
+        "input": 654,
+        "output": 74,
+        "coachingRevision": "official-sand-v1",
+        "failure": "Slot 2 targets a wall or off-board cell at 13,7."
+      },
+      {
+        "side": 1,
+        "step": 0,
+        "attempt": 2,
+        "status": "accepted",
+        "ms": 4801,
+        "model": "gemini-3.5-flash-lite",
+        "input": 686,
+        "output": 69,
+        "coachingRevision": "official-sand-v1"
+      },
+      {
+        "side": 0,
+        "step": 12,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 4683,
+        "model": "gemini-3.5-flash-lite",
+        "input": 651,
+        "output": 66,
+        "coachingRevision": "7a8c02a58ee5c71dc04e1fe420875dbf779c2cbe438319295e223d7981e188b2"
+      },
+      {
+        "side": 1,
+        "step": 12,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 4427,
+        "model": "gemini-3.5-flash-lite",
+        "input": 643,
+        "output": 71,
+        "coachingRevision": "official-sand-v1"
+      },
+      {
+        "side": 0,
+        "step": 24,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 5051,
+        "model": "gemini-3.5-flash-lite",
+        "input": 639,
+        "output": 59,
+        "coachingRevision": "7a8c02a58ee5c71dc04e1fe420875dbf779c2cbe438319295e223d7981e188b2"
+      },
+      {
+        "side": 1,
+        "step": 24,
+        "attempt": 1,
+        "status": "accepted",
+        "ms": 4921,
+        "model": "gemini-3.5-flash-lite",
+        "input": 630,
+        "output": 66,
+        "coachingRevision": "official-sand-v1"
+      }
+    ],
+    "durationMs": 18554,
+    "final": {
+      "result": "sand",
+      "score": [
+        21,
+        24
+      ],
+      "tick": 34,
+      "alive": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "shots": 30,
+      "controlledTicks": [
+        22,
+        23
+      ]
+    },
+    "replay": {
+      "version": 7,
+      "config": {
+        "rulesVersion": "squads-v2",
+        "mapVersion": "relay-yard-v1",
+        "teamSize": 5
+      },
+      "source": "operator-attested-gemini",
+      "windows": [
+        [
+          {
+            "intent": "Occupy North relay scoring cells with four units and send one unit to South relay to scout and score.",
+            "orders": [
+              "12,3",
+              "13,2",
+              "14,3",
+              "13,4",
+              "13,11"
+            ]
+          },
+          {
+            "intent": "Advance units toward central relays and engagement positions.",
+            "orders": [
+              "13,11",
+              "13,11",
+              "13,3",
+              "13,3",
+              "13,3"
+            ]
+          }
+        ],
+        [
+          {
+            "intent": "Secure North relay scoring positions and hold the South relay.",
+            "orders": [
+              "-",
+              "13,2",
+              "12,3",
+              "14,3",
+              "13,11"
+            ]
+          },
+          {
+            "intent": "Secure control of the northern relay and press the attack on wounded rivals.",
+            "orders": [
+              "13,11",
+              "13,11",
+              "-",
+              "13,11",
+              "13,3"
+            ]
+          }
+        ],
+        [
+          {
+            "intent": "Reinforce North relay control and maintain scoring advantage.",
+            "orders": [
+              "-",
+              "13,2",
+              "12,3",
+              "14,3",
+              "-"
+            ]
+          },
+          {
+            "intent": "Defend the southern relay, stabilize remaining health, and secure points to win.",
+            "orders": [
+              "13,11",
+              "13,9",
+              "-",
+              "13,8",
+              "-"
+            ]
+          }
+        ]
+      ],
+      "final": "sand",
+      "interruption": null
+    }
+  }
+]

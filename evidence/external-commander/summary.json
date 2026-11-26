@@ -1,0 +1,54 @@
+{
+  "version": "arena-commander-stdio/v1",
+  "provenance": "local-deterministic-process",
+  "checks": [
+    "wrong match",
+    "wrong role",
+    "reused response",
+    "unknown destination",
+    "duplicate pulse authorization",
+    "authoritative replay",
+    "terminal acknowledgement"
+  ],
+  "matches": [
+    {
+      "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+      "mode": "relay",
+      "outcome": "blue",
+      "tick": 40,
+      "score": [
+        8,
+        18
+      ],
+      "checkpoints": 4,
+      "accepted": 4,
+      "terminalAcknowledged": true
+    },
+    {
+      "matchId": "bcd4c88c-9477-4b68-888a-c93f5e5a49f9",
+      "mode": "bomb",
+      "outcome": "sand",
+      "tick": 48,
+      "score": [
+        0,
+        0
+      ],
+      "checkpoints": 4,
+      "accepted": 4,
+      "terminalAcknowledged": true
+    },
+    {
+      "matchId": "899a8b44-8016-45dc-aa9b-901d1eaf2eb3",
+      "mode": "tdm",
+      "outcome": "blue",
+      "tick": 48,
+      "score": [
+        5,
+        2
+      ],
+      "checkpoints": 4,
+      "accepted": 4,
+      "terminalAcknowledged": true
+    }
+  ]
+}

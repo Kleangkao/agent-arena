@@ -1,0 +1,31 @@
+# Human strategy and Territory Relay
+
+Challenge Mode is now the primary Play format. See [Challenge Mode](CHALLENGE_MODE.md) for the Arena bot difficulties, the scripted comparison, and the Versus limitation. The notes below describe the coaching release that is still on the public site.
+
+In [Play](https://agent-arena-preview.vercel.app/), choose a mode, a strategic preference and how closely the Blue commander should follow your guidance. Add a coaching message if useful. The match runs on the server before playback. In the result, open **Your match review** to view the effective guidance, then use **Revise strategy** to edit the next match while retaining the previous arena, opponent and model. **Try scripted practice** starts a local 5v5 without an account, wallet or inference.
+
+## Implementation
+
+- The authenticated guest requests a match with optional strategic philosophy, autonomy and coaching. The server maps the choices to natural-language guidance, locks the combined prompt and revision in the private match reservation, and supplies it to Gemini at each Blue checkpoint. Guidance is never an order or a rules setting. Both commanders still author orders on the same pre-step frame, and only validated orders reach the deterministic engine.
+- The private result distinguishes model responses that used the locked revision, accepted and rejected plans, stated intent, authorized actions and resulting game events. The V7 replay and public BNB evidence contain no reserved guidance. Same-setup rematches use a fresh guest request ID while locking the previous opponent, model, mode and version. Signed entries require a fresh signature for a new match. The signature covers mode and rules version, and private coaching stays outside it.
+- The current Relay rules are `squads-v4`. North and South retain their original geometry. Three uncontested ticks capture or recapture a site. An owned site earns a point per tick when uncontested, even after everyone leaves. Contention pauses capture and scoring. Empty or owner-only occupancy clears incomplete claims. Relay scores to 60, times out at tick 72 and retains elimination. Bomb and Team Deathmatch keep `squads-v3`, as does the archived Commander #2933 recording. V7 replay commitments already include the exact rules version. [Continuous rules](CONTINUOUS_SQUADS.md)
+
+## Genuine matches
+
+The first two guest matches ran on the production alias with the same `gemini-3.5-flash-lite` model, official Sand opponent, Proactive and Coach-led preferences and identical starting conditions. The rematch changed the coaching message through the result UI. Each terminal result reconstructed from its V7 replay.
+
+| Trial | Model calls and result | Observed play |
+| --- | --- | --- |
+| `1e717606-de46-453d-ac22-58881183f502` | 10 accepted of 10 attempts, 4.283 s, Blue 60–6 at tick 53 | Blue took South at tick 15 and North at 19. Sand recaptured South at 48. Blue stated North as its initial priority and authored a later South route that produced the first capture. Blue fired 19 pulses. |
+| `ab1bd390-a82a-41c6-b269-bf026c6123d5` | 8 accepted of 8 attempts, 14.158 s, Blue 60–0 at tick 47 | Blue took South at tick 16 and North at 19. It authorized five opening pulse slots after authorizing zero in the first opening. Blue fired 11 pulses. |
+| `58939564-df7b-4f34-ab00-606200e32650` | 12 accepted of 12 attempts, 4.825 s, Blue 54–46 at tick 72 | On the final deployment, Blue captured North at 19 and Sand captured South at 27. Blue repeated its opening orders at all six checkpoints and scored an early-lead win without expanding. |
+
+The private review recorded five and four Blue model responses using the locked revisions in the first match and rematch, then six in the final smoke test. None scored from a vacant owned area. The deterministic fixture directly verifies vacant scoring. Expansion and recapture were visible in the first match. The first/rematch pair cannot establish that coaching caused the differences or that balance is settled. [Same-setup traces](../evidence/human-strategy/hosted-live.json) · [Final deployment trace](../evidence/human-strategy/final/hosted-live.json)
+
+## Verification and boundaries
+
+- `PARITY_RPC=http://127.0.0.1:8545 npm test` passed 177 tests across 37 files. The new Relay tests exercise simultaneous capture, abandoned control, contested progress, recapture, explicit pulses, deterministic replay and max duration. The participation test exercises v4 signatures and the legacy suite exercises earlier versions. `npm run build` passed with the existing viem browser compatibility warning. `npm audit --omit=dev` found zero issues. The full development tree still reports the existing Hardhat and Zod findings.
+- Production health was 200 with live squads enabled. Unauthenticated entry was 401 and cross-origin guest creation was 403. Supabase, shared concurrency and start pacing are unchanged. No new daily cap, provider credentials or contract writes were introduced.
+- Final deployment `dpl_A8wEFHoH4US348ESUvwoy4NjFgiH` passed Chromium checks at 1180 and 390 px. The run played the genuine Relay match through its result, reviewed the guidance, opened corrective preparation, verified the historical signed replay and Testnet record, and finished scripted practice in all three modes. Verification issued no generation requests. [Desktop setup](../evidence/human-strategy/final/hosted-live-play-desktop.png) · [Mobile preparation](../evidence/human-strategy/final/hosted-live-prepare-mobile.png) · [Mobile result and review](../evidence/human-strategy/final/hosted-live-review-mobile.png) · [Final release video](../evidence/human-strategy/final/hosted-live.webm)
+- [Identity-bound evidence](IDENTITY_COMPETITION.md) remains public and independently verifiable. Run `npx tsx scripts/verify-identity-competition.ts --expect-chain`. BSC anchors the historic match's evidence hash. Squad rules compute outcomes off-chain and model attribution comes from the operator. No new guest match was published to the registry.
+- The local external sample remains deterministic under the original rules. The squad release has no mid-match human changes, new squad reflection, or public external matchmaking. No independent human enjoyment or mode balance study was completed.

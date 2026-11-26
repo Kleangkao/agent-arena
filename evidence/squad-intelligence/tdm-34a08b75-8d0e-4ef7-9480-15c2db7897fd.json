@@ -1,0 +1,1877 @@
+{
+  "id": "34a08b75-8d0e-4ef7-9480-15c2db7897fd",
+  "status": "interrupted",
+  "replay": {
+    "version": 7,
+    "config": {
+      "mapVersion": "relay-yard-v1",
+      "teamSize": 5,
+      "rulesVersion": "squads-v3",
+      "mode": "tdm"
+    },
+    "source": "operator-attested-gemini",
+    "windows": [
+      [
+        {
+          "intent": "Advance and engage the rival team cautiously while avoiding wall collisions",
+          "orders": [
+            "7,5",
+            "8,7",
+            "7,7",
+            "8,9",
+            "7,9"
+          ]
+        },
+        {
+          "intent": "Advance cautiously toward the center to engage the rival team and secure early combat advantages.",
+          "orders": [
+            "15,9",
+            "15,8",
+            "15,7",
+            "15,6",
+            "15,5"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Advance toward central territory and prepare to engage rivals",
+          "orders": [
+            "11,5",
+            "11,6",
+            "11,7",
+            "11,9",
+            "11,9"
+          ]
+        },
+        {
+          "intent": "Advance further toward the center and prepare to engage the rival team.",
+          "orders": [
+            "15,10",
+            "15,9",
+            "15,7",
+            "15,6",
+            "15,5"
+          ]
+        }
+      ]
+    ],
+    "final": null,
+    "interruption": "invalid-orders"
+  },
+  "attempts": [
+    {
+      "side": 0,
+      "step": 0,
+      "attempt": 1,
+      "status": "invalid-orders",
+      "ms": 1589,
+      "model": "gemini-3.5-flash-lite",
+      "input": 829,
+      "output": 46,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failure": "Slot 1 targets a wall or off-board cell at 10,7."
+    },
+    {
+      "side": 1,
+      "step": 0,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 3319,
+      "model": "gemini-3.5-flash-lite",
+      "input": 845,
+      "output": 81,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 0,
+      "attempt": 2,
+      "status": "accepted",
+      "ms": 2138,
+      "model": "gemini-3.5-flash-lite",
+      "input": 918,
+      "output": 72,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "side": 0,
+      "step": 12,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 2004,
+      "model": "gemini-3.5-flash-lite",
+      "input": 1117,
+      "output": 75,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "side": 1,
+      "step": 12,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 2004,
+      "model": "gemini-3.5-flash-lite",
+      "input": 1153,
+      "output": 79,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 24,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 2021,
+      "model": "gemini-3.5-flash-lite",
+      "input": 1131,
+      "output": 89,
+      "coachingRevision": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "side": 1,
+      "step": 24,
+      "attempt": 1,
+      "status": "invalid-orders",
+      "ms": 2155,
+      "model": "gemini-3.5-flash-lite",
+      "input": 1152,
+      "output": 93,
+      "coachingRevision": "official-sand-v1",
+      "failure": "Slot 2 targets a wall or off-board cell at 13,7."
+    },
+    {
+      "side": 1,
+      "step": 24,
+      "attempt": 2,
+      "status": "invalid-orders",
+      "ms": 1599,
+      "model": "gemini-3.5-flash-lite",
+      "input": 1243,
+      "output": 50,
+      "coachingRevision": "official-sand-v1",
+      "failure": "Slot 2 targets a wall or off-board cell at 12,7."
+    }
+  ],
+  "durationMs": 9505,
+  "model": "gemini-3.5-flash-lite",
+  "error": "A commander returned invalid orders. No winner was declared.",
+  "coaching": "",
+  "variant": "receipts",
+  "exchange": [
+    {
+      "side": 0,
+      "tick": 0,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "",
+        "observation": {
+          "tick": 0,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                3,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                2,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                3,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                2,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                23,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ]
+      },
+      "response": "{\"intent\":\"Advance toward central positions to establish early board control\",\"orders\":[\"10,5\",\"10,7\",\"10,9\",\"10,11\",\"10,13\"],\"pulseSlots\":[]}"
+    },
+    {
+      "side": 1,
+      "tick": 0,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 0,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                23,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                24,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                23,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                24,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                23,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                3,
+                5
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                2,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                3,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                2,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ]
+      },
+      "response": "{\n  \"intent\": \"Advance cautiously toward the center to engage the rival team and secure early combat advantages.\",\n  \"orders\": [\n    \"15,9\",\n    \"15,8\",\n    \"15,7\",\n    \"15,6\",\n    \"15,5\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 0,
+      "tick": 0,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "",
+        "observation": {
+          "tick": 0,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                3,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                2,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                3,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                2,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                23,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "validationFeedback": "Slot 1 targets a wall or off-board cell at 10,7. Nearby legal destinations: 10,5 | 9,6 | 10,6 | 11,6 | 8,7 | 11,7 | 9,8 | 10,8. The rejected slot can also hold. Author a complete replacement plan for the same snapshot."
+      },
+      "response": "{\n  \"intent\": \"Advance and engage the rival team cautiously while avoiding wall collisions\",\n  \"orders\": [\n    \"7,5\",\n    \"8,7\",\n    \"7,7\",\n    \"8,9\",\n    \"7,9\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 0,
+      "tick": 12,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "",
+        "observation": {
+          "tick": 12,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                7,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                7.25,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                7,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                8,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                7,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                15,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                18.5,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                16.75,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                15,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                15,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "ownLastWindow": {
+          "fromTick": 0,
+          "toTick": 12,
+          "authoredIntent": "Advance and engage the rival team cautiously while avoiding wall collisions",
+          "own": [
+            {
+              "slot": 0,
+              "order": "7,5",
+              "movingTicks": 8,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                7,
+                5
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 1,
+              "order": "8,7",
+              "movingTicks": 10,
+              "blockedTicks": 2,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                7.25,
+                6
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 2,
+              "order": "7,7",
+              "movingTicks": 6,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                7,
+                7
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "8,9",
+              "movingTicks": 10,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                8,
+                9
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 4,
+              "order": "7,9",
+              "movingTicks": 6,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                7,
+                9
+              ],
+              "endHp": 100
+            }
+          ],
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "coreBefore": null,
+          "coreAfter": null
+        }
+      },
+      "response": "{\n  \"intent\": \"Advance toward central territory and prepare to engage rivals\",\n  \"orders\": [\n    \"11,5\",\n    \"11,6\",\n    \"11,7\",\n    \"11,9\",\n    \"11,9\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 1,
+      "tick": 12,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 12,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                15,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                18.5,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                16.75,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                15,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                15,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                7,
+                5
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                7.25,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                7,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                8,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                7,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "ownLastWindow": {
+          "fromTick": 0,
+          "toTick": 12,
+          "authoredIntent": "Advance cautiously toward the center to engage the rival team and secure early combat advantages.",
+          "own": [
+            {
+              "slot": 0,
+              "order": "15,9",
+              "movingTicks": 12,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                8
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 1,
+              "order": "15,8",
+              "movingTicks": 10,
+              "blockedTicks": 2,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                18.5,
+                8
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 2,
+              "order": "15,7",
+              "movingTicks": 10,
+              "blockedTicks": 2,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                16.75,
+                8
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "15,6",
+              "movingTicks": 12,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                6
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 4,
+              "order": "15,5",
+              "movingTicks": 11,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                5
+              ],
+              "endHp": 100
+            }
+          ],
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "coreBefore": null,
+          "coreAfter": null
+        }
+      },
+      "response": "{\n  \"intent\": \"Advance further toward the center and prepare to engage the rival team.\",\n  \"orders\": [\n    \"15,10\",\n    \"15,9\",\n    \"15,7\",\n    \"15,6\",\n    \"15,5\"\n  ],\n  \"pulseSlots\": []\n}"
+    },
+    {
+      "side": 0,
+      "tick": 24,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "",
+        "observation": {
+          "tick": 24,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                11,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                11,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                11,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                11,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                10,
+                9
+              ],
+              "hp": 100,
+              "blocked": 7
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                15,
+                10
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                15,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                15,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                15,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                15,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": [
+              15,
+              5
+            ]
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": [
+              15,
+              6
+            ]
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": [
+              15,
+              9
+            ]
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "ownLastWindow": {
+          "fromTick": 12,
+          "toTick": 24,
+          "authoredIntent": "Advance toward central territory and prepare to engage rivals",
+          "own": [
+            {
+              "slot": 0,
+              "order": "11,5",
+              "movingTicks": 6,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                11,
+                5
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 1,
+              "order": "11,6",
+              "movingTicks": 5,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                11,
+                6
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 2,
+              "order": "11,7",
+              "movingTicks": 8,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                11,
+                7
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "11,9",
+              "movingTicks": 4,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                11,
+                9
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 4,
+              "order": "11,9",
+              "movingTicks": 5,
+              "blockedTicks": 7,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                10,
+                9
+              ],
+              "endHp": 100
+            }
+          ],
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "coreBefore": null,
+          "coreAfter": null
+        }
+      },
+      "response": "{\n  \"intent\": \"Engage rivals directly and pulse targets in range\",\n  \"orders\": [\n    \"15,5\",\n    \"15,6\",\n    \"15,7\",\n    \"15,9\",\n    \"15,9\"\n  ],\n  \"pulseSlots\": [\n    0,\n    1,\n    3\n  ]\n}"
+    },
+    {
+      "side": 1,
+      "tick": 24,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 24,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                15,
+                10
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                15,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                15,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                15,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                15,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                11,
+                5
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                11,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                11,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                11,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                10,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": [
+              11,
+              9
+            ]
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": [
+              11,
+              6
+            ]
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": [
+              11,
+              5
+            ]
+          }
+        ],
+        "ownLastWindow": {
+          "fromTick": 12,
+          "toTick": 24,
+          "authoredIntent": "Advance further toward the center and prepare to engage the rival team.",
+          "own": [
+            {
+              "slot": 0,
+              "order": "15,10",
+              "movingTicks": 3,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                10
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 1,
+              "order": "15,9",
+              "movingTicks": 6,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                9
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 2,
+              "order": "15,7",
+              "movingTicks": 4,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                7
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "15,6",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                6
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 4,
+              "order": "15,5",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                5
+              ],
+              "endHp": 100
+            }
+          ],
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "coreBefore": null,
+          "coreAfter": null
+        }
+      },
+      "response": "{\n  \"intent\": \"Engage rival units with pulses and advance to control the center.\",\n  \"orders\": [\n    \"13,10\",\n    \"13,9\",\n    \"13,7\",\n    \"13,6\",\n    \"13,5\"\n  ],\n  \"pulseSlots\": [\n    1,\n    3,\n    4\n  ]\n}"
+    },
+    {
+      "side": 1,
+      "tick": 24,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Team Deathmatch. Race to 8 eliminations. At tick 48 higher score wins; ties draw. Sites are inactive. Defeated units return to their own spawn at least four ticks later and hold until your next checkpoint. Only slots in pulseSlots can emit a pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          }
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Movement orders contain no suffix. In the required pulseSlots array list the zero-based living slots permitted to pulse in this window. Movement alone never pulses. Example for a five-unit team: {\"intent\":\"Send two units with pulse permission\",\"orders\":[\"12,3\",\"-\",\"-\",\"-\",\"-\"],\"pulseSlots\":[0,1]}. An empty pulseSlots array explicitly keeps every unit silent. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 24,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "tdm",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                15,
+                10
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                15,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                15,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                15,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                15,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                11,
+                5
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                11,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                11,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                11,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                10,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": [
+              11,
+              9
+            ]
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": [
+              11,
+              6
+            ]
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": [
+              11,
+              5
+            ]
+          }
+        ],
+        "ownLastWindow": {
+          "fromTick": 12,
+          "toTick": 24,
+          "authoredIntent": "Advance further toward the center and prepare to engage the rival team.",
+          "own": [
+            {
+              "slot": 0,
+              "order": "15,10",
+              "movingTicks": 3,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                10
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 1,
+              "order": "15,9",
+              "movingTicks": 6,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                9
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 2,
+              "order": "15,7",
+              "movingTicks": 4,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                7
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "15,6",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                6
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 4,
+              "order": "15,5",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                15,
+                5
+              ],
+              "endHp": 100
+            }
+          ],
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "coreBefore": null,
+          "coreAfter": null
+        },
+        "validationFeedback": "Slot 2 targets a wall or off-board cell at 13,7. Nearby legal destinations: 13,5 | 12,6 | 13,6 | 14,6 | 11,7 | 15,7 | 12,8 | 13,8. The rejected slot can also hold. Author a complete replacement plan for the same snapshot."
+      },
+      "response": "{\"intent\":\"Engage rivals with coordinated movement and pulse pressure\",\"orders\":[\"12,10\",\"12,9\",\"12,7\",\"12,6\",\"12,5\"],\"pulseSlots\":[1,3,4]}"
+    }
+  ]
+}

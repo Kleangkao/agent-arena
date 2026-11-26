@@ -1,0 +1,179 @@
+{
+  "id": "94c5e9e8-b2cc-4fd1-b261-5aa814be685f",
+  "status": "completed",
+  "replay": {
+    "version": 7,
+    "config": {
+      "mapVersion": "relay-yard-v1",
+      "teamSize": 5,
+      "rulesVersion": "squads-v3",
+      "mode": "bomb"
+    },
+    "source": "operator-attested-gemini",
+    "windows": [
+      [
+        {
+          "intent": "Rush North to link and secure the site while allies spread out for combat dominance.",
+          "orders": [
+            "13,3/link",
+            "12,5",
+            "14,6",
+            "12,8",
+            "14,10"
+          ]
+        },
+        {
+          "intent": "Defend the south and north sites against enemy links",
+          "orders": [
+            "13,11",
+            "13,11",
+            "13,3",
+            "13,3",
+            "13,3"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Attack North relay, slot zero linking and others pulsing",
+          "orders": [
+            "13,3/link",
+            "12,3",
+            "14,3/pulse",
+            "11,3/pulse",
+            "13,5/pulse"
+          ]
+        },
+        {
+          "intent": "Defend the linked site and intercept Blue units.",
+          "orders": [
+            "13,11",
+            "13,3",
+            "15,6",
+            "13,11",
+            "13,3"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Maintain the North site link while pulsing with the rest to secure the countdown victory.",
+          "orders": [
+            "13,3/link",
+            "12,3/pulse",
+            "9,4>10,4/pulse",
+            "11,3/pulse",
+            "13,4>13,3/pulse"
+          ]
+        },
+        {
+          "intent": "Defend the countdown site by attacking rival Blue units and disabling active links.",
+          "orders": [
+            "13,11>13,3/link",
+            "15,7>13,3/link",
+            "15,6>13,3/link",
+            "13,10>13,3/link",
+            "-"
+          ]
+        }
+      ]
+    ],
+    "final": "blue",
+    "interruption": null
+  },
+  "attempts": [
+    {
+      "side": 0,
+      "step": 0,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 1291,
+      "model": "gemini-3.5-flash-lite",
+      "input": 740,
+      "output": 77,
+      "coachingRevision": "2b50e0975f88516fc481714e97a0f290a9d012905860ba9e32373d33faf68ddb"
+    },
+    {
+      "side": 1,
+      "step": 0,
+      "attempt": 1,
+      "status": "invalid-orders",
+      "ms": 1292,
+      "model": "gemini-3.5-flash-lite",
+      "input": 728,
+      "output": 72,
+      "coachingRevision": "official-sand-v1",
+      "failure": "Slot 2 targets a wall or off-board cell at 13,7."
+    },
+    {
+      "side": 1,
+      "step": 0,
+      "attempt": 2,
+      "status": "accepted",
+      "ms": 1737,
+      "model": "gemini-3.5-flash-lite",
+      "input": 760,
+      "output": 71,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 12,
+      "attempt": 1,
+      "status": "invalid-orders",
+      "ms": 1088,
+      "model": "gemini-3.5-flash-lite",
+      "input": 754,
+      "output": 84,
+      "coachingRevision": "2b50e0975f88516fc481714e97a0f290a9d012905860ba9e32373d33faf68ddb",
+      "failure": "Slot 4 targets a wall or off-board cell at 15,13."
+    },
+    {
+      "side": 1,
+      "step": 12,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 2844,
+      "model": "gemini-3.5-flash-lite",
+      "input": 742,
+      "output": 70,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 12,
+      "attempt": 2,
+      "status": "accepted",
+      "ms": 1215,
+      "model": "gemini-3.5-flash-lite",
+      "input": 787,
+      "output": 77,
+      "coachingRevision": "2b50e0975f88516fc481714e97a0f290a9d012905860ba9e32373d33faf68ddb"
+    },
+    {
+      "side": 0,
+      "step": 24,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 1213,
+      "model": "gemini-3.5-flash-lite",
+      "input": 749,
+      "output": 93,
+      "coachingRevision": "2b50e0975f88516fc481714e97a0f290a9d012905860ba9e32373d33faf68ddb"
+    },
+    {
+      "side": 1,
+      "step": 24,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 2222,
+      "model": "gemini-3.5-flash-lite",
+      "input": 748,
+      "output": 98,
+      "coachingRevision": "official-sand-v1"
+    }
+  ],
+  "durationMs": 8126,
+  "model": "gemini-3.5-flash-lite",
+  "coaching": "Favor North, commit one unit to linking and have the rest use their own pulse orders and spread. Adapt to the live Core status."
+}

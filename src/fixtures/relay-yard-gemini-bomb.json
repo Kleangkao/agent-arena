@@ -1,0 +1,80 @@
+{
+  "version": 7,
+  "config": {
+    "mapVersion": "relay-yard-v1",
+    "teamSize": 5,
+    "rulesVersion": "squads-v3",
+    "mode": "bomb"
+  },
+  "source": "operator-attested-gemini",
+  "windows": [
+    [
+      {
+        "intent": "Rush North to link and secure the site while allies spread out for combat dominance.",
+        "orders": [
+          "13,3/link",
+          "12,5",
+          "14,6",
+          "12,8",
+          "14,10"
+        ]
+      },
+      {
+        "intent": "Defend the south and north sites against enemy links",
+        "orders": [
+          "13,11",
+          "13,11",
+          "13,3",
+          "13,3",
+          "13,3"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Attack North relay, slot zero linking and others pulsing",
+        "orders": [
+          "13,3/link",
+          "12,3",
+          "14,3/pulse",
+          "11,3/pulse",
+          "13,5/pulse"
+        ]
+      },
+      {
+        "intent": "Defend the linked site and intercept Blue units.",
+        "orders": [
+          "13,11",
+          "13,3",
+          "15,6",
+          "13,11",
+          "13,3"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Maintain the North site link while pulsing with the rest to secure the countdown victory.",
+        "orders": [
+          "13,3/link",
+          "12,3/pulse",
+          "9,4>10,4/pulse",
+          "11,3/pulse",
+          "13,4>13,3/pulse"
+        ]
+      },
+      {
+        "intent": "Defend the countdown site by attacking rival Blue units and disabling active links.",
+        "orders": [
+          "13,11>13,3/link",
+          "15,7>13,3/link",
+          "15,6>13,3/link",
+          "13,10>13,3/link",
+          "-"
+        ]
+      }
+    ]
+  ],
+  "final": "blue",
+  "interruption": null
+}

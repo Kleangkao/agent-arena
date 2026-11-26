@@ -1,0 +1,156 @@
+{
+  "id": "c2358715-f64c-421e-bbcf-95a8df925a4d",
+  "status": "completed",
+  "replay": {
+    "final": "blue",
+    "config": {
+      "mode": "relay",
+      "teamSize": 5,
+      "mapVersion": "relay-yard-v1",
+      "rulesVersion": "squads-v3"
+    },
+    "source": "operator-attested-gemini",
+    "version": 7,
+    "windows": [
+      [
+        {
+          "intent": "Secure the South relay zone to score early points.",
+          "orders": [
+            "12,11",
+            "13,11",
+            "13,12",
+            "13,10",
+            "12,10"
+          ]
+        },
+        {
+          "intent": "Secure the northern relay and control points for the win",
+          "orders": [
+            "13,3",
+            "12,4",
+            "13,2",
+            "12,3",
+            "13,4"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Advance units into the South relay and pressure rival positions.",
+          "orders": [
+            "12,11",
+            "13,11",
+            "13,12",
+            "13,10",
+            "12,10"
+          ]
+        },
+        {
+          "intent": "Secure the northern relay and control points for the win",
+          "orders": [
+            "13,2",
+            "12,4",
+            "13,2",
+            "13,3",
+            "13,4"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Secure the South relay and hold our lead against rival pressure.",
+          "orders": [
+            "12,11",
+            "13,11",
+            "13,12",
+            "13,10",
+            "12,10"
+          ]
+        },
+        {
+          "intent": "Secure the northern relay and control points to take the lead",
+          "orders": [
+            "13,2",
+            "12,3",
+            "13,2",
+            "13,3",
+            "13,4"
+          ]
+        }
+      ]
+    ],
+    "interruption": null
+  },
+  "attempts": [
+    {
+      "ms": 1405,
+      "side": 0,
+      "step": 0,
+      "input": 1622,
+      "model": "gemini-3.5-flash-lite",
+      "output": 63,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "f79bbe0187238b9c0ec18bb57e1b53e93d3bef1aa8181d173aee8d6815972407"
+    },
+    {
+      "ms": 1396,
+      "side": 1,
+      "step": 0,
+      "input": 1615,
+      "model": "gemini-3.5-flash-lite",
+      "output": 43,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 3153,
+      "side": 0,
+      "step": 12,
+      "input": 1938,
+      "model": "gemini-3.5-flash-lite",
+      "output": 64,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "f79bbe0187238b9c0ec18bb57e1b53e93d3bef1aa8181d173aee8d6815972407"
+    },
+    {
+      "ms": 3249,
+      "side": 1,
+      "step": 12,
+      "input": 1929,
+      "model": "gemini-3.5-flash-lite",
+      "output": 64,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 882,
+      "side": 0,
+      "step": 24,
+      "input": 1928,
+      "model": "gemini-3.5-flash-lite",
+      "output": 65,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "f79bbe0187238b9c0ec18bb57e1b53e93d3bef1aa8181d173aee8d6815972407"
+    },
+    {
+      "ms": 958,
+      "side": 1,
+      "step": 24,
+      "input": 1923,
+      "model": "gemini-3.5-flash-lite",
+      "output": 65,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    }
+  ],
+  "durationMs": 5635,
+  "model": "gemini-3.5-flash-lite",
+  "coaching": "Favor the South relay initially. If Sand contests it, reassign some units to North and defend any lead.",
+  "sameSetup": "67defcc0-3b87-467c-aa2b-8274a7f25251"
+}

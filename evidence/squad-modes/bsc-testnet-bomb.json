@@ -1,0 +1,34 @@
+{
+  "checkedDate": "2026-11-27",
+  "chainId": 97,
+  "verificationRpc": "https://bsc-testnet-rpc.publicnode.com",
+  "registry": "0xbd1a8427da0b2b2d947a391ed117e49ec8801f81",
+  "operator": "0x0f7340C0B93377f4c59d0ACCcc076991bb872E30",
+  "deployment": {
+    "transactionHash": "0x786dee0f5dd9456eca25146b953f9027a911548e3354429de18fc3656ebf9116",
+    "status": "success",
+    "blockNumber": 145018881,
+    "gasUsed": 211949
+  },
+  "replay": {
+    "file": "src/fixtures/relay-yard-gemini-bomb.json",
+    "mode": "bomb",
+    "rulesVersion": "squads-v3",
+    "mapVersion": "relay-yard-v1",
+    "teamSize": 5,
+    "offChainResult": "blue",
+    "matchId": "94c5e9e8-b2cc-4fd1-b261-5aa814be685f",
+    "matchKey": "0x105ab716ea579c79d91f2ba15323f5793f8d70915314048c445320e188e52e6f",
+    "replayHash": "0xea56e3697b2005aed0a13b2d534ce7a4b204cb6c7c59d2e43ef6ffea21f6c279"
+  },
+  "record": {
+    "transactionHash": "0xccd05b0c93c3c7931b9c77575894dc78c7bd9850b6a0e35f760ab2c6e61cacb6",
+    "status": "success",
+    "blockNumber": 145018920,
+    "blockHash": "0xf99c7d3b3d4851222747368d6937d8941483d9db09d1816cb0b5c5b5b68e30fc",
+    "gasUsed": 68461,
+    "confirmationsAtCheck": 147,
+    "storageHashMatches": true,
+    "receiptEventMatches": true
+  }
+}

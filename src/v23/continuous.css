@@ -1,0 +1,8 @@
+@import '../v2/graybox.css';
+.continuous output { color: #edc285; font-family: monospace; }
+.continuous .continuous-key { margin: 14px 0 0; font-size: .85rem; }
+.continuous .graybox-score div:first-child { --health: #6eb7ed; }
+.continuous .graybox-score div:last-child { --health: #efc580; }
+.continuous .core-hud { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; margin-bottom: 12px; color: #edc285; }
+.continuous .core-hud progress { flex-basis: 100%; width: 100%; accent-color: #edc285; }
+.continuous input[type=number] { width: 7.5rem; min-height: 44px; background: #292727; color: #f4e8d7; border: 1px solid #8b7761; padding: 6px 10px; }

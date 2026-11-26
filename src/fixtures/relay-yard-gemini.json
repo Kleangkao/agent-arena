@@ -1,0 +1,79 @@
+{
+  "version": 7,
+  "config": {
+    "rulesVersion": "squads-v2",
+    "mapVersion": "relay-yard-v1",
+    "teamSize": 5
+  },
+  "source": "operator-attested-gemini",
+  "windows": [
+    [
+      {
+        "intent": "Occupy North relay scoring cells with four units and send one unit to South relay to scout and score.",
+        "orders": [
+          "12,3",
+          "13,2",
+          "14,3",
+          "13,4",
+          "13,11"
+        ]
+      },
+      {
+        "intent": "Advance units toward central relays and engagement positions.",
+        "orders": [
+          "13,11",
+          "13,11",
+          "13,3",
+          "13,3",
+          "13,3"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Secure North relay scoring positions and hold the South relay.",
+        "orders": [
+          "-",
+          "13,2",
+          "12,3",
+          "14,3",
+          "13,11"
+        ]
+      },
+      {
+        "intent": "Secure control of the northern relay and press the attack on wounded rivals.",
+        "orders": [
+          "13,11",
+          "13,11",
+          "-",
+          "13,11",
+          "13,3"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Reinforce North relay control and maintain scoring advantage.",
+        "orders": [
+          "-",
+          "13,2",
+          "12,3",
+          "14,3",
+          "-"
+        ]
+      },
+      {
+        "intent": "Defend the southern relay, stabilize remaining health, and secure points to win.",
+        "orders": [
+          "13,11",
+          "13,9",
+          "-",
+          "13,8",
+          "-"
+        ]
+      }
+    ]
+  ],
+  "final": "sand",
+  "interruption": null
+}

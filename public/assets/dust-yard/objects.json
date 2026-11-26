@@ -1,0 +1,32 @@
+[
+  {
+    "key": "north-wall",
+    "left": 95,
+    "top": 0,
+    "foot": 115
+  },
+  {
+    "key": "west-freight",
+    "left": 135,
+    "top": 83,
+    "foot": 128
+  },
+  {
+    "key": "east-freight",
+    "left": 345,
+    "top": 99,
+    "foot": 149
+  },
+  {
+    "key": "front-freight",
+    "left": 231,
+    "top": 192,
+    "foot": 228
+  },
+  {
+    "key": "corner-pier",
+    "left": 372,
+    "top": 148,
+    "foot": 181
+  }
+]

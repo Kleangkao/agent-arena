@@ -1,0 +1,168 @@
+{
+  "id": "ea32cd37-964f-4364-83de-3e717004fa13",
+  "status": "completed",
+  "model": "gemini-3.5-flash-lite",
+  "durationMs": 7461,
+  "attempts": [
+    {
+      "ms": 2679,
+      "side": 0,
+      "step": 0,
+      "input": 1656,
+      "model": "gemini-3.5-flash-lite",
+      "output": 65,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "8dd7ff03f026c19c792b6479424e7ed6f9504373c3832729d0288569872b6062"
+    },
+    {
+      "ms": 2227,
+      "side": 1,
+      "step": 0,
+      "input": 1637,
+      "model": "gemini-3.5-flash-lite",
+      "output": 67,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 3269,
+      "side": 0,
+      "step": 12,
+      "input": 1954,
+      "model": "gemini-3.5-flash-lite",
+      "output": 65,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "8dd7ff03f026c19c792b6479424e7ed6f9504373c3832729d0288569872b6062"
+    },
+    {
+      "ms": 2791,
+      "side": 1,
+      "step": 12,
+      "input": 1930,
+      "model": "gemini-3.5-flash-lite",
+      "output": 83,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 1453,
+      "side": 0,
+      "step": 24,
+      "input": 1948,
+      "model": "gemini-3.5-flash-lite",
+      "output": 68,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "8dd7ff03f026c19c792b6479424e7ed6f9504373c3832729d0288569872b6062"
+    },
+    {
+      "ms": 691,
+      "side": 1,
+      "step": 24,
+      "input": 1953,
+      "model": "gemini-3.5-flash-lite",
+      "output": 62,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    }
+  ],
+  "replay": {
+    "final": "blue",
+    "config": {
+      "mode": "relay",
+      "teamSize": 5,
+      "mapVersion": "relay-yard-v1",
+      "rulesVersion": "squads-v3"
+    },
+    "source": "operator-attested-gemini",
+    "version": 7,
+    "windows": [
+      [
+        {
+          "intent": "Secure the South relay zone using coordinated team movement and checkpoints.",
+          "orders": [
+            "13,10",
+            "13,11",
+            "13,12",
+            "13,13",
+            "12,10"
+          ]
+        },
+        {
+          "intent": "Secure relay control zones and outmaneuver rival forces to win.",
+          "orders": [
+            "24,13",
+            "24,7",
+            "21,7",
+            "24,4",
+            "24,1"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Secure the South relay zone using checkpoints and coordinated team movement.",
+          "orders": [
+            "13,10",
+            "13,11",
+            "13,12",
+            "13,13",
+            "12,10"
+          ]
+        },
+        {
+          "intent": "Advance towards the central relays to contest scoring zones.",
+          "orders": [
+            "18,13>11,13",
+            "18,7>11,7",
+            "18,7>11,7",
+            "18,4>13,4",
+            "18,1>13,1"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Defend the South relay zone and maintain our score lead against rival pressure.",
+          "orders": [
+            "13,10",
+            "13,11",
+            "13,12",
+            "13,13",
+            "12,10"
+          ]
+        },
+        {
+          "intent": "Press forward to contest the southern relay and eliminate remaining rivals.",
+          "orders": [
+            "13,13",
+            "11,7",
+            "-",
+            "13,4",
+            "13,1"
+          ]
+        }
+      ]
+    ],
+    "interruption": null
+  },
+  "proof": {
+    "block": "145034230",
+    "entry": {
+      "mode": "relay",
+      "agentId": "2933",
+      "expires": 1795721314,
+      "matchId": "ea32cd37-964f-4364-83de-3e717004fa13",
+      "audience": "https://agent-arena-preview.vercel.app",
+      "opponent": "official-sand"
+    },
+    "owner": "0x0f7340C0B93377f4c59d0ACCcc076991bb872E30",
+    "signature": "0xe00f59e15eea8e4989d074ce3f309409f2dc4c9867acbfff98f3f0d13e7a5459075187b4d735c0290f50b789ecf83d266637a62e93a4f70e93151dca78ef50661c",
+    "admittedAt": 1795720716
+  }
+}

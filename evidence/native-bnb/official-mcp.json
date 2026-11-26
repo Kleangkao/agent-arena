@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-11-26T17:51:02.498Z",
+  "protocol": "MCP stdio",
+  "officialSourceCommit": "3bd45604ee729857b0f6f114ed08357d8dd8d10e",
+  "toolNames": [
+    "get_chain_info",
+    "get_erc8004_agent",
+    "get_testnet_receipt",
+    "is_contract",
+    "read_contract"
+  ],
+  "rejectedMainnetRequest": true,
+  "rejectedWriteRequest": true,
+  "chain": {
+    "network": "bsc-testnet",
+    "chainId": 97,
+    "blockNumber": "145022585",
+    "rpcUrl": "https://data-seed-prebsc-1-s1.binance.org:8545"
+  },
+  "commitment": {
+    "address": "0xbd1a8427da0b2b2d947a391ed117e49ec8801f81",
+    "matchKey": "0x105ab716ea579c79d91f2ba15323f5793f8d70915314048c445320e188e52e6f",
+    "replayHash": "0xea56e3697b2005aed0a13b2d534ce7a4b204cb6c7c59d2e43ef6ffea21f6c279",
+    "transactionHash": "0xccd05b0c93c3c7931b9c77575894dc78c7bd9850b6a0e35f760ab2c6e61cacb6",
+    "blockNumber": "145018920",
+    "gasUsed": "68461",
+    "confirmations": "3666"
+  },
+  "externalIdentity": {
+    "chainId": 97,
+    "registryAddress": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+    "id": "100",
+    "owner": "0x6A1f369718C2BCF144BafE7453959d93F9B2b772",
+    "uriScheme": "data",
+    "arenaLinked": false
+  },
+  "arenaCommander": {
+    "chainId": 97,
+    "registryAddress": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+    "id": "2933",
+    "owner": "0x0f7340C0B93377f4c59d0ACCcc076991bb872E30",
+    "profile": "https://agent-arena-preview.vercel.app/agent-arena-commander.json",
+    "transactionHash": "0xfaf23fdba98496e60bd637f74ee410f4f64e59d7c7caa7caed9988a7ee08fa7e",
+    "blockNumber": "145022280",
+    "gasUsed": "200640",
+    "confirmations": "306",
+    "eventMatches": true,
+    "matchEvidenceLinked": false
+  }
+}

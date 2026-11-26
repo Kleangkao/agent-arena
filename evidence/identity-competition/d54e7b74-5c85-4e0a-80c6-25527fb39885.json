@@ -1,0 +1,224 @@
+{
+  "id": "d54e7b74-5c85-4e0a-80c6-25527fb39885",
+  "status": "completed",
+  "model": "gemini-3.5-flash-lite",
+  "durationMs": 12232,
+  "attempts": [
+    {
+      "ms": 3429,
+      "side": 0,
+      "step": 0,
+      "input": 1662,
+      "model": "gemini-3.5-flash-lite",
+      "output": 31,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "c3e7375b045ec64cb935f10009e5402b61773d0117f8e0b27ef20822103a60bf"
+    },
+    {
+      "ms": 748,
+      "side": 1,
+      "step": 0,
+      "input": 1637,
+      "model": "gemini-3.5-flash-lite",
+      "output": 67,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 3232,
+      "side": 0,
+      "step": 12,
+      "input": 1941,
+      "model": "gemini-3.5-flash-lite",
+      "output": 68,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "c3e7375b045ec64cb935f10009e5402b61773d0117f8e0b27ef20822103a60bf"
+    },
+    {
+      "ms": 3063,
+      "side": 1,
+      "step": 12,
+      "input": 1939,
+      "model": "gemini-3.5-flash-lite",
+      "output": 63,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 2379,
+      "side": 0,
+      "step": 24,
+      "input": 1963,
+      "model": "gemini-3.5-flash-lite",
+      "output": 75,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "c3e7375b045ec64cb935f10009e5402b61773d0117f8e0b27ef20822103a60bf"
+    },
+    {
+      "ms": 1710,
+      "side": 1,
+      "step": 24,
+      "input": 1939,
+      "model": "gemini-3.5-flash-lite",
+      "output": 63,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 1983,
+      "side": 0,
+      "step": 36,
+      "input": 1952,
+      "model": "gemini-3.5-flash-lite",
+      "output": 66,
+      "status": "invalid-orders",
+      "attempt": 1,
+      "failure": "Slot 2 is defeated and must use \"-\".",
+      "coachingRevision": "c3e7375b045ec64cb935f10009e5402b61773d0117f8e0b27ef20822103a60bf"
+    },
+    {
+      "ms": 3132,
+      "side": 1,
+      "step": 36,
+      "input": 1883,
+      "model": "gemini-3.5-flash-lite",
+      "output": 62,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 583,
+      "side": 0,
+      "step": 36,
+      "input": 1977,
+      "model": "gemini-3.5-flash-lite",
+      "output": 58,
+      "status": "accepted",
+      "attempt": 2,
+      "coachingRevision": "c3e7375b045ec64cb935f10009e5402b61773d0117f8e0b27ef20822103a60bf"
+    }
+  ],
+  "replay": {
+    "final": "sand",
+    "config": {
+      "mode": "relay",
+      "teamSize": 5,
+      "mapVersion": "relay-yard-v1",
+      "rulesVersion": "squads-v3"
+    },
+    "source": "operator-attested-gemini",
+    "version": 7,
+    "windows": [
+      [
+        {
+          "intent": "Split forces to contest both North and South relays simultaneously",
+          "orders": [
+            "2,1",
+            "2,4",
+            "2,7",
+            "2,10",
+            "2,13"
+          ]
+        },
+        {
+          "intent": "Secure the northern relay and advance control points to pressure the rival team.",
+          "orders": [
+            "13,3",
+            "13,2",
+            "13,4",
+            "12,3",
+            "12,2"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Deploy three units to North relay and two to South relay to contest objectives.",
+          "orders": [
+            "13,2",
+            "13,3",
+            "11,7",
+            "13,10",
+            "13,13"
+          ]
+        },
+        {
+          "intent": "Advance to the northern relay zone and establish control.",
+          "orders": [
+            "13,3",
+            "13,2",
+            "13,4",
+            "12,3",
+            "12,2"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Send three units to secure the North relay zone and two units to the South relay to balance the map control.",
+          "orders": [
+            "13,2",
+            "13,3",
+            "11,6",
+            "13,10",
+            "13,13"
+          ]
+        },
+        {
+          "intent": "Hold the northern relay zone and maintain scoring dominance.",
+          "orders": [
+            "13,3",
+            "13,2",
+            "13,4",
+            "12,3",
+            "12,2"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Defend the South zone with surviving units while downed units hold position.",
+          "orders": [
+            "-",
+            "-",
+            "-",
+            "13,10",
+            "13,13"
+          ]
+        },
+        {
+          "intent": "Defend the northern relay zone and close out the victory.",
+          "orders": [
+            "-",
+            "13,2",
+            "13,4",
+            "12,3",
+            "12,2"
+          ]
+        }
+      ]
+    ],
+    "interruption": null
+  },
+  "proof": {
+    "block": "145034676",
+    "entry": {
+      "mode": "relay",
+      "agentId": "2933",
+      "expires": 1795721515,
+      "matchId": "d54e7b74-5c85-4e0a-80c6-25527fb39885",
+      "audience": "https://agent-arena-preview.vercel.app",
+      "opponent": "official-sand"
+    },
+    "owner": "0x0f7340C0B93377f4c59d0ACCcc076991bb872E30",
+    "signature": "0x766c227eecb112f168476db5b061b583fb2b8ddbdc3a82d240b6e8bb1e50f2ab4b0a9285bb16220a8fe5b945d62df6a450d4001198efe2a42dada4ea24fab83b1c",
+    "admittedAt": 1795720917
+  }
+}

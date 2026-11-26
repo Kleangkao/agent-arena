@@ -1,0 +1,2043 @@
+{
+  "id": "5b326dd4-446f-4d48-b9de-95be8562d1f5",
+  "status": "completed",
+  "replay": {
+    "version": 7,
+    "config": {
+      "mapVersion": "relay-yard-v1",
+      "teamSize": 5,
+      "rulesVersion": "squads-v3",
+      "mode": "bomb"
+    },
+    "source": "operator-attested-gemini",
+    "windows": [
+      [
+        {
+          "intent": "Advance units to secure the northern and southern relay sites for activation.",
+          "orders": [
+            "13,3/link",
+            "12,6",
+            "12,8",
+            "13,11/link",
+            "-"
+          ]
+        },
+        {
+          "intent": "Defend the southern relay and block Blue from linking.",
+          "orders": [
+            "21,11",
+            "21,10",
+            "21,9",
+            "21,8",
+            "21,7"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Advance units to secure the northern and southern relay sites for activation.",
+          "orders": [
+            "13,3/link",
+            "12,6",
+            "12,8",
+            "13,11/link",
+            "-"
+          ]
+        },
+        {
+          "intent": "Defend the southern relay and block Blue from linking.",
+          "orders": [
+            "21,11",
+            "21,10",
+            "21,9",
+            "21,8",
+            "21,7"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Secure the northern and southern relay sites for activation.",
+          "orders": [
+            "13,3/link",
+            "12,6",
+            "12,8",
+            "13,11/link",
+            "-"
+          ]
+        },
+        {
+          "intent": "Defend the north relay site and prevent Blue from disabling it.",
+          "orders": [
+            "13,3",
+            "13,4",
+            "12,3",
+            "14,3",
+            "13,2"
+          ]
+        }
+      ]
+    ],
+    "final": "blue",
+    "interruption": null
+  },
+  "attempts": [
+    {
+      "side": 0,
+      "step": 0,
+      "attempt": 1,
+      "status": "invalid-orders",
+      "ms": 2270,
+      "model": "gemini-3.5-flash-lite",
+      "input": 997,
+      "output": 94,
+      "coachingRevision": "b6f5f6fbad3e48295bb3cf8d8fc33db322d01ea15552a1688e9206f545fa8e8e",
+      "failure": "Slot 2 targets a wall or off-board cell at 13,7."
+    },
+    {
+      "side": 1,
+      "step": 0,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 2935,
+      "model": "gemini-3.5-flash-lite",
+      "input": 992,
+      "output": 71,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 0,
+      "attempt": 2,
+      "status": "accepted",
+      "ms": 1593,
+      "model": "gemini-3.5-flash-lite",
+      "input": 1098,
+      "output": 71,
+      "coachingRevision": "b6f5f6fbad3e48295bb3cf8d8fc33db322d01ea15552a1688e9206f545fa8e8e"
+    },
+    {
+      "side": 0,
+      "step": 12,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 2696,
+      "model": "gemini-3.5-flash-lite",
+      "input": 1299,
+      "output": 71,
+      "coachingRevision": "b6f5f6fbad3e48295bb3cf8d8fc33db322d01ea15552a1688e9206f545fa8e8e"
+    },
+    {
+      "side": 1,
+      "step": 12,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 934,
+      "model": "gemini-3.5-flash-lite",
+      "input": 1289,
+      "output": 44,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "side": 0,
+      "step": 24,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 1865,
+      "model": "gemini-3.5-flash-lite",
+      "input": 1322,
+      "output": 68,
+      "coachingRevision": "b6f5f6fbad3e48295bb3cf8d8fc33db322d01ea15552a1688e9206f545fa8e8e"
+    },
+    {
+      "side": 1,
+      "step": 24,
+      "attempt": 1,
+      "status": "accepted",
+      "ms": 1595,
+      "model": "gemini-3.5-flash-lite",
+      "input": 1317,
+      "output": 71,
+      "coachingRevision": "official-sand-v1"
+    }
+  ],
+  "durationMs": 8442,
+  "model": "gemini-3.5-flash-lite",
+  "coaching": "Play to win. Reassess your approach when recent results show that your current plan is not working.",
+  "variant": "receipts",
+  "exchange": [
+    {
+      "side": 0,
+      "tick": 0,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Bomb Mode is an abstract Core game. Blue attacks, Sand defends. Blue can link either site; Sand can disable the linked site. One living /link slot must finish its route and spend 3 ticks undamaged at the site to activate. Then Blue wins after a 10-tick countdown unless one living Sand /link slot at that site stays undamaged for 3 ticks and disables it. Damage or switching actor resets progress. Without activation by tick 48, Sand wins. Before activation elimination ends the game; after activation the countdown continues even if Blue is eliminated. Link slots cannot pulse. Pulses require /pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          },
+          "blockedColumnsByRow": {
+            "0": [
+              11
+            ],
+            "1": [
+              11
+            ],
+            "2": [
+              7,
+              8,
+              11
+            ],
+            "3": [
+              7,
+              8
+            ],
+            "4": [
+              4,
+              7,
+              8
+            ],
+            "5": [
+              4
+            ],
+            "7": [
+              9,
+              10,
+              12,
+              13,
+              14,
+              16,
+              17
+            ],
+            "9": [
+              22
+            ],
+            "10": [
+              18,
+              19,
+              22
+            ],
+            "11": [
+              18,
+              19
+            ],
+            "12": [
+              15,
+              18,
+              19
+            ],
+            "13": [
+              15
+            ],
+            "14": [
+              15
+            ]
+          },
+          "navigationHint": "For target x,y, reject x if named in blockedColumnsByRow[y]. This applies to each waypoint."
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Append /link to a slot order to authorize the site interaction at its final stop, or /pulse to authorize a pulse throughout the window. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Play to win. Reassess your approach when recent results show that your current plan is not working.",
+        "observation": {
+          "tick": 0,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "bomb",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                3,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                2,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                3,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                2,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                23,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ]
+      },
+      "response": "{\n  \"intent\": \"Advance units toward the north relay site to initiate linking and secure the objective.\",\n  \"orders\": [\n    \"13,3/link\",\n    \"13,5>13,3\",\n    \"13,7>13,3\",\n    \"13,9>13,11\",\n    \"13,11/link\"\n  ]\n}"
+    },
+    {
+      "side": 1,
+      "tick": 0,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Bomb Mode is an abstract Core game. Blue attacks, Sand defends. Blue can link either site; Sand can disable the linked site. One living /link slot must finish its route and spend 3 ticks undamaged at the site to activate. Then Blue wins after a 10-tick countdown unless one living Sand /link slot at that site stays undamaged for 3 ticks and disables it. Damage or switching actor resets progress. Without activation by tick 48, Sand wins. Before activation elimination ends the game; after activation the countdown continues even if Blue is eliminated. Link slots cannot pulse. Pulses require /pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          },
+          "blockedColumnsByRow": {
+            "0": [
+              11
+            ],
+            "1": [
+              11
+            ],
+            "2": [
+              7,
+              8,
+              11
+            ],
+            "3": [
+              7,
+              8
+            ],
+            "4": [
+              4,
+              7,
+              8
+            ],
+            "5": [
+              4
+            ],
+            "7": [
+              9,
+              10,
+              12,
+              13,
+              14,
+              16,
+              17
+            ],
+            "9": [
+              22
+            ],
+            "10": [
+              18,
+              19,
+              22
+            ],
+            "11": [
+              18,
+              19
+            ],
+            "12": [
+              15,
+              18,
+              19
+            ],
+            "13": [
+              15
+            ],
+            "14": [
+              15
+            ]
+          },
+          "navigationHint": "For target x,y, reject x if named in blockedColumnsByRow[y]. This applies to each waypoint."
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Append /link to a slot order to authorize the site interaction at its final stop, or /pulse to authorize a pulse throughout the window. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 0,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "bomb",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                23,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                24,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                23,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                24,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                23,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                3,
+                5
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                2,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                3,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                2,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ]
+      },
+      "response": "{\n  \"intent\": \"Defend the southern relay and block Blue from linking.\",\n  \"orders\": [\n    \"21,11\",\n    \"21,10\",\n    \"21,9\",\n    \"21,8\",\n    \"21,7\"\n  ]\n}"
+    },
+    {
+      "side": 0,
+      "tick": 0,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Bomb Mode is an abstract Core game. Blue attacks, Sand defends. Blue can link either site; Sand can disable the linked site. One living /link slot must finish its route and spend 3 ticks undamaged at the site to activate. Then Blue wins after a 10-tick countdown unless one living Sand /link slot at that site stays undamaged for 3 ticks and disables it. Damage or switching actor resets progress. Without activation by tick 48, Sand wins. Before activation elimination ends the game; after activation the countdown continues even if Blue is eliminated. Link slots cannot pulse. Pulses require /pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          },
+          "blockedColumnsByRow": {
+            "0": [
+              11
+            ],
+            "1": [
+              11
+            ],
+            "2": [
+              7,
+              8,
+              11
+            ],
+            "3": [
+              7,
+              8
+            ],
+            "4": [
+              4,
+              7,
+              8
+            ],
+            "5": [
+              4
+            ],
+            "7": [
+              9,
+              10,
+              12,
+              13,
+              14,
+              16,
+              17
+            ],
+            "9": [
+              22
+            ],
+            "10": [
+              18,
+              19,
+              22
+            ],
+            "11": [
+              18,
+              19
+            ],
+            "12": [
+              15,
+              18,
+              19
+            ],
+            "13": [
+              15
+            ],
+            "14": [
+              15
+            ]
+          },
+          "navigationHint": "For target x,y, reject x if named in blockedColumnsByRow[y]. This applies to each waypoint."
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Append /link to a slot order to authorize the site interaction at its final stop, or /pulse to authorize a pulse throughout the window. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Play to win. Reassess your approach when recent results show that your current plan is not working.",
+        "observation": {
+          "tick": 0,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "bomb",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                3,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                2,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                3,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                2,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                23,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "validationFeedback": "Slot 2 targets a wall or off-board cell at 13,7. For that coordinate, use one of these nearby legal destinations verbatim (13,5 | 12,6 | 13,6 | 14,6 | 11,7 | 15,7 | 12,8 | 13,8) or hold that slot with \"-\". Author a complete replacement plan for the same snapshot."
+      },
+      "response": "{\n  \"intent\": \"Advance units to secure the northern and southern relay sites for activation.\",\n  \"orders\": [\n    \"13,3/link\",\n    \"12,6\",\n    \"12,8\",\n    \"13,11/link\",\n    \"-\"\n  ]\n}"
+    },
+    {
+      "side": 1,
+      "tick": 12,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Bomb Mode is an abstract Core game. Blue attacks, Sand defends. Blue can link either site; Sand can disable the linked site. One living /link slot must finish its route and spend 3 ticks undamaged at the site to activate. Then Blue wins after a 10-tick countdown unless one living Sand /link slot at that site stays undamaged for 3 ticks and disables it. Damage or switching actor resets progress. Without activation by tick 48, Sand wins. Before activation elimination ends the game; after activation the countdown continues even if Blue is eliminated. Link slots cannot pulse. Pulses require /pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          },
+          "blockedColumnsByRow": {
+            "0": [
+              11
+            ],
+            "1": [
+              11
+            ],
+            "2": [
+              7,
+              8,
+              11
+            ],
+            "3": [
+              7,
+              8
+            ],
+            "4": [
+              4,
+              7,
+              8
+            ],
+            "5": [
+              4
+            ],
+            "7": [
+              9,
+              10,
+              12,
+              13,
+              14,
+              16,
+              17
+            ],
+            "9": [
+              22
+            ],
+            "10": [
+              18,
+              19,
+              22
+            ],
+            "11": [
+              18,
+              19
+            ],
+            "12": [
+              15,
+              18,
+              19
+            ],
+            "13": [
+              15
+            ],
+            "14": [
+              15
+            ]
+          },
+          "navigationHint": "For target x,y, reject x if named in blockedColumnsByRow[y]. This applies to each waypoint."
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Append /link to a slot order to authorize the site interaction at its final stop, or /pulse to authorize a pulse throughout the window. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 12,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "bomb",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                21,
+                11
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                21,
+                10
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                21,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                21,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                21,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                11,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                9.5,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                9.5,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                11,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "ownLastWindow": {
+          "fromTick": 0,
+          "toTick": 12,
+          "authoredIntent": "Defend the southern relay and block Blue from linking.",
+          "own": [
+            {
+              "slot": 0,
+              "order": "21,11",
+              "movingTicks": 6,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                21,
+                11
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 1,
+              "order": "21,10",
+              "movingTicks": 7,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                21,
+                10
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 2,
+              "order": "21,9",
+              "movingTicks": 7,
+              "blockedTicks": 1,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                21,
+                9
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "21,8",
+              "movingTicks": 8,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                21,
+                8
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 4,
+              "order": "21,7",
+              "movingTicks": 6,
+              "blockedTicks": 1,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                21,
+                7
+              ],
+              "endHp": 100
+            }
+          ],
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "coreBefore": null,
+          "coreAfter": null
+        }
+      },
+      "response": "{\"intent\":\"Defend the southern relay and block Blue from linking.\",\"orders\":[\"21,11\",\"21,10\",\"21,9\",\"21,8\",\"21,7\"]}"
+    },
+    {
+      "side": 0,
+      "tick": 12,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Bomb Mode is an abstract Core game. Blue attacks, Sand defends. Blue can link either site; Sand can disable the linked site. One living /link slot must finish its route and spend 3 ticks undamaged at the site to activate. Then Blue wins after a 10-tick countdown unless one living Sand /link slot at that site stays undamaged for 3 ticks and disables it. Damage or switching actor resets progress. Without activation by tick 48, Sand wins. Before activation elimination ends the game; after activation the countdown continues even if Blue is eliminated. Link slots cannot pulse. Pulses require /pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          },
+          "blockedColumnsByRow": {
+            "0": [
+              11
+            ],
+            "1": [
+              11
+            ],
+            "2": [
+              7,
+              8,
+              11
+            ],
+            "3": [
+              7,
+              8
+            ],
+            "4": [
+              4,
+              7,
+              8
+            ],
+            "5": [
+              4
+            ],
+            "7": [
+              9,
+              10,
+              12,
+              13,
+              14,
+              16,
+              17
+            ],
+            "9": [
+              22
+            ],
+            "10": [
+              18,
+              19,
+              22
+            ],
+            "11": [
+              18,
+              19
+            ],
+            "12": [
+              15,
+              18,
+              19
+            ],
+            "13": [
+              15
+            ],
+            "14": [
+              15
+            ]
+          },
+          "navigationHint": "For target x,y, reject x if named in blockedColumnsByRow[y]. This applies to each waypoint."
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Append /link to a slot order to authorize the site interaction at its final stop, or /pulse to authorize a pulse throughout the window. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Play to win. Reassess your approach when recent results show that your current plan is not working.",
+        "observation": {
+          "tick": 12,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "bomb",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                11,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                9.5,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                9.5,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                11,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                21,
+                11
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                21,
+                10
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                21,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                21,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                21,
+                7
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "ownLastWindow": {
+          "fromTick": 0,
+          "toTick": 12,
+          "authoredIntent": "Advance units to secure the northern and southern relay sites for activation.",
+          "own": [
+            {
+              "slot": 0,
+              "order": "13,3/link",
+              "movingTicks": 12,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                11,
+                6
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 1,
+              "order": "12,6",
+              "movingTicks": 10,
+              "blockedTicks": 2,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                9.5,
+                6
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 2,
+              "order": "12,8",
+              "movingTicks": 11,
+              "blockedTicks": 1,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                9.5,
+                8
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "13,11/link",
+              "movingTicks": 12,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                11,
+                8
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 4,
+              "order": "-",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                3,
+                9
+              ],
+              "endHp": 100
+            }
+          ],
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "coreBefore": null,
+          "coreAfter": null
+        }
+      },
+      "response": "{\n  \"intent\": \"Advance units to secure the northern and southern relay sites for activation.\",\n  \"orders\": [\n    \"13,3/link\",\n    \"12,6\",\n    \"12,8\",\n    \"13,11/link\",\n    \"-\"\n  ]\n}"
+    },
+    {
+      "side": 1,
+      "tick": 24,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Bomb Mode is an abstract Core game. Blue attacks, Sand defends. Blue can link either site; Sand can disable the linked site. One living /link slot must finish its route and spend 3 ticks undamaged at the site to activate. Then Blue wins after a 10-tick countdown unless one living Sand /link slot at that site stays undamaged for 3 ticks and disables it. Damage or switching actor resets progress. Without activation by tick 48, Sand wins. Before activation elimination ends the game; after activation the countdown continues even if Blue is eliminated. Link slots cannot pulse. Pulses require /pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          },
+          "blockedColumnsByRow": {
+            "0": [
+              11
+            ],
+            "1": [
+              11
+            ],
+            "2": [
+              7,
+              8,
+              11
+            ],
+            "3": [
+              7,
+              8
+            ],
+            "4": [
+              4,
+              7,
+              8
+            ],
+            "5": [
+              4
+            ],
+            "7": [
+              9,
+              10,
+              12,
+              13,
+              14,
+              16,
+              17
+            ],
+            "9": [
+              22
+            ],
+            "10": [
+              18,
+              19,
+              22
+            ],
+            "11": [
+              18,
+              19
+            ],
+            "12": [
+              15,
+              18,
+              19
+            ],
+            "13": [
+              15
+            ],
+            "14": [
+              15
+            ]
+          },
+          "navigationHint": "For target x,y, reject x if named in blockedColumnsByRow[y]. This applies to each waypoint."
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Append /link to a slot order to authorize the site interaction at its final stop, or /pulse to authorize a pulse throughout the window. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Spend resources only when they help you win. Keep competing for the lead.",
+        "observation": {
+          "tick": 24,
+          "side": "Sand",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            0,
+            0
+          ],
+          "mode": "bomb",
+          "objective": {
+            "site": 0,
+            "phase": "countdown",
+            "progress": 0,
+            "remaining": 8
+          },
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                21,
+                11
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                21,
+                10
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                21,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                21,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                21,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                13,
+                3
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                12,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                12,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                13,
+                11
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "ownLastWindow": {
+          "fromTick": 12,
+          "toTick": 24,
+          "authoredIntent": "Defend the southern relay and block Blue from linking.",
+          "own": [
+            {
+              "slot": 0,
+              "order": "21,11",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                21,
+                11
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 1,
+              "order": "21,10",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                21,
+                10
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 2,
+              "order": "21,9",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                21,
+                9
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "21,8",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                21,
+                8
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 4,
+              "order": "21,7",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                21,
+                7
+              ],
+              "endHp": 100
+            }
+          ],
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "coreBefore": null,
+          "coreAfter": {
+            "site": "North",
+            "phase": "countdown",
+            "progress": 0,
+            "remaining": 8
+          }
+        }
+      },
+      "response": "{\n  \"intent\": \"Defend the north relay site and prevent Blue from disabling it.\",\n  \"orders\": [\n    \"13,3\",\n    \"13,4\",\n    \"12,3\",\n    \"14,3\",\n    \"13,2\"\n  ]\n}"
+    },
+    {
+      "side": 0,
+      "tick": 24,
+      "input": {
+        "task": "You command an entire team in a fictional geometric arcade board game. Try to win. Respect coaching when it helps. Return a short spectator intent and exactly one order per own unit, in slot order. Return only JSON.",
+        "rules": "Bomb Mode is an abstract Core game. Blue attacks, Sand defends. Blue can link either site; Sand can disable the linked site. One living /link slot must finish its route and spend 3 ticks undamaged at the site to activate. Then Blue wins after a 10-tick countdown unless one living Sand /link slot at that site stays undamaged for 3 ticks and disables it. Damage or switching actor resets progress. Without activation by tick 48, Sand wins. Before activation elimination ends the game; after activation the countdown continues even if Blue is eliminated. Link slots cannot pulse. Pulses require /pulse. Orders run for 12 ticks simultaneously; then you receive a fresh board and may reassign everyone. Units move 0.75 world units per tick via grid-aligned paths. Use distinct goals so units can pass. Both teams start at 100 HP per unit. Pulses deal 20, halved in cover, every second tick. The engine chooses the nearest eligible rival within four world units; walls block sight. You see the whole game board.",
+        "terrain": {
+          "legend": ". floor, # wall, + cover. Coordinates x then y, zero based. y increases down.",
+          "rows": [
+            "...........#...............",
+            "...........#...............",
+            ".......##..#+.+............",
+            ".....+.##..................",
+            "....#..##.+...+..+.........",
+            "....#...............+......",
+            "...........+...............",
+            ".........##.###.##.........",
+            "...............+...........",
+            "......+...............#....",
+            ".........+..+...+.##..#....",
+            "..................##.+.....",
+            "............+.+#..##.......",
+            "...............#...........",
+            "...............#..........."
+          ],
+          "relays": {
+            "north": [
+              13,
+              3
+            ],
+            "south": [
+              13,
+              11
+            ]
+          },
+          "blockedColumnsByRow": {
+            "0": [
+              11
+            ],
+            "1": [
+              11
+            ],
+            "2": [
+              7,
+              8,
+              11
+            ],
+            "3": [
+              7,
+              8
+            ],
+            "4": [
+              4,
+              7,
+              8
+            ],
+            "5": [
+              4
+            ],
+            "7": [
+              9,
+              10,
+              12,
+              13,
+              14,
+              16,
+              17
+            ],
+            "9": [
+              22
+            ],
+            "10": [
+              18,
+              19,
+              22
+            ],
+            "11": [
+              18,
+              19
+            ],
+            "12": [
+              15,
+              18,
+              19
+            ],
+            "13": [
+              15
+            ],
+            "14": [
+              15
+            ]
+          },
+          "navigationHint": "For target x,y, reject x if named in blockedColumnsByRow[y]. This applies to each waypoint."
+        },
+        "format": "For each slot use \"x,y\" for a goal, \"x,y>x,y\" for two sequential waypoints, or \"-\" to hold. Append /link to a slot order to authorize the site interaction at its final stop, or /pulse to authorize a pulse throughout the window. Dead units must have \"-\". All destinations must be floor or cover. Keep intent to 120 characters.",
+        "coaching": "Play to win. Reassess your approach when recent results show that your current plan is not working.",
+        "observation": {
+          "tick": 24,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            0,
+            0
+          ],
+          "mode": "bomb",
+          "objective": {
+            "site": 0,
+            "phase": "countdown",
+            "progress": 0,
+            "remaining": 8
+          },
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                13,
+                3
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                12,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                12,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                13,
+                11
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                21,
+                11
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                21,
+                10
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                21,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                21,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                21,
+                7
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "actionFeedback": "pulseContactNow is an eligible target at this exact snapshot, before movement; a unit might gain or lose contact during execution. Authorizing a pulse enables it when eligible; it does not guarantee one. Last-window counts come from the simulator. Intent text never authorizes actions. Compare the events with your goals and adjust if needed.",
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "ownLastWindow": {
+          "fromTick": 12,
+          "toTick": 24,
+          "authoredIntent": "Advance units to secure the northern and southern relay sites for activation.",
+          "own": [
+            {
+              "slot": 0,
+              "order": "13,3/link",
+              "movingTicks": 7,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 2,
+              "endAt": [
+                13,
+                3
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 1,
+              "order": "12,6",
+              "movingTicks": 4,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                12,
+                6
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 2,
+              "order": "12,8",
+              "movingTicks": 4,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                12,
+                8
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "13,11/link",
+              "movingTicks": 7,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                13,
+                11
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 4,
+              "order": "-",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                3,
+                9
+              ],
+              "endHp": 100
+            }
+          ],
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "coreBefore": null,
+          "coreAfter": {
+            "site": "North",
+            "phase": "countdown",
+            "progress": 0,
+            "remaining": 8
+          }
+        }
+      },
+      "response": "{\n  \"intent\": \"Secure the northern and southern relay sites for activation.\",\n  \"orders\": [\n    \"13,3/link\",\n    \"12,6\",\n    \"12,8\",\n    \"13,11/link\",\n    \"-\"\n  ]\n}"
+    }
+  ]
+}

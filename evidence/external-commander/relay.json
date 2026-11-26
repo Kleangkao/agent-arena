@@ -1,0 +1,3040 @@
+{
+  "version": "arena-commander-stdio/v1",
+  "provenance": "local-deterministic-process",
+  "replay": {
+    "version": 7,
+    "config": {
+      "mapVersion": "relay-yard-v1",
+      "teamSize": 5,
+      "rulesVersion": "squads-v3",
+      "mode": "relay"
+    },
+    "source": "scripted-practice",
+    "windows": [
+      [
+        {
+          "intent": "Allocate the squad to North after checking the receipt.",
+          "orders": [
+            "12,2",
+            "13,2",
+            "14,2",
+            "12,3",
+            "13,3"
+          ]
+        },
+        {
+          "intent": "Arena local scripted opponent.",
+          "orders": [
+            "12,3",
+            "13,11",
+            "14,3",
+            "12,12",
+            "13,4"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Allocate the squad to North after checking the receipt.",
+          "orders": [
+            "12,2",
+            "13,2",
+            "14,2",
+            "12,3",
+            "13,3"
+          ]
+        },
+        {
+          "intent": "Arena local scripted opponent.",
+          "orders": [
+            "12,3",
+            "13,11",
+            "14,3",
+            "12,12",
+            "13,4"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Allocate the squad to South after checking the receipt.",
+          "orders": [
+            "-",
+            "13,10",
+            "14,10",
+            "12,11",
+            "13,11"
+          ]
+        },
+        {
+          "intent": "Arena local scripted opponent.",
+          "orders": [
+            "-",
+            "13,11",
+            "-",
+            "12,12",
+            "-"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Allocate the squad to South after checking the receipt.",
+          "orders": [
+            "-",
+            "13,10",
+            "14,10",
+            "12,11",
+            "13,11"
+          ]
+        },
+        {
+          "intent": "Arena local scripted opponent.",
+          "orders": [
+            "-",
+            "-",
+            "-",
+            "12,12",
+            "-"
+          ]
+        }
+      ]
+    ],
+    "final": "blue",
+    "interruption": null
+  },
+  "trace": [
+    {
+      "request": {
+        "version": "arena-commander-stdio/v1",
+        "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+        "requestId": "6a9ceccb-c87c-4549-b2d4-b08a5a485feb",
+        "side": "Blue",
+        "type": "checkpoint",
+        "config": {
+          "rulesVersion": "squads-v3",
+          "mapVersion": "relay-yard-v1",
+          "teamSize": 5,
+          "mode": "relay"
+        },
+        "observation": {
+          "tick": 0,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "relay",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                3,
+                5
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                2,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                3,
+                7
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                2,
+                8
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                3,
+                9
+              ],
+              "hp": 100,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                23,
+                9
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                7
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                24,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                23,
+                5
+              ],
+              "hp": 100
+            }
+          ]
+        },
+        "destinations": {
+          "columns": [
+            "id",
+            "x",
+            "y",
+            "terrain",
+            "site (only if inside its zone)"
+          ],
+          "options": [
+            [
+              "B2",
+              2,
+              1,
+              "floor"
+            ],
+            [
+              "B5",
+              5,
+              1,
+              "floor"
+            ],
+            [
+              "B8",
+              8,
+              1,
+              "floor"
+            ],
+            [
+              "B13",
+              13,
+              1,
+              "floor"
+            ],
+            [
+              "B15",
+              15,
+              1,
+              "floor"
+            ],
+            [
+              "B18",
+              18,
+              1,
+              "floor"
+            ],
+            [
+              "B21",
+              21,
+              1,
+              "floor"
+            ],
+            [
+              "B24",
+              24,
+              1,
+              "floor"
+            ],
+            [
+              "C12",
+              12,
+              2,
+              "cover",
+              "North"
+            ],
+            [
+              "C13",
+              13,
+              2,
+              "floor",
+              "North"
+            ],
+            [
+              "C14",
+              14,
+              2,
+              "cover",
+              "North"
+            ],
+            [
+              "D5",
+              5,
+              3,
+              "cover"
+            ],
+            [
+              "D12",
+              12,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "D13",
+              13,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "D14",
+              14,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "E2",
+              2,
+              4,
+              "floor"
+            ],
+            [
+              "E5",
+              5,
+              4,
+              "floor"
+            ],
+            [
+              "E10",
+              10,
+              4,
+              "cover"
+            ],
+            [
+              "E11",
+              11,
+              4,
+              "floor"
+            ],
+            [
+              "E12",
+              12,
+              4,
+              "floor",
+              "North"
+            ],
+            [
+              "E13",
+              13,
+              4,
+              "floor",
+              "North"
+            ],
+            [
+              "E14",
+              14,
+              4,
+              "cover",
+              "North"
+            ],
+            [
+              "E15",
+              15,
+              4,
+              "floor"
+            ],
+            [
+              "E17",
+              17,
+              4,
+              "cover"
+            ],
+            [
+              "E18",
+              18,
+              4,
+              "floor"
+            ],
+            [
+              "E21",
+              21,
+              4,
+              "floor"
+            ],
+            [
+              "E24",
+              24,
+              4,
+              "floor"
+            ],
+            [
+              "F20",
+              20,
+              5,
+              "cover"
+            ],
+            [
+              "G11",
+              11,
+              6,
+              "cover"
+            ],
+            [
+              "H2",
+              2,
+              7,
+              "floor"
+            ],
+            [
+              "H5",
+              5,
+              7,
+              "floor"
+            ],
+            [
+              "H8",
+              8,
+              7,
+              "floor"
+            ],
+            [
+              "H11",
+              11,
+              7,
+              "floor"
+            ],
+            [
+              "H15",
+              15,
+              7,
+              "floor"
+            ],
+            [
+              "H18",
+              18,
+              7,
+              "floor"
+            ],
+            [
+              "H21",
+              21,
+              7,
+              "floor"
+            ],
+            [
+              "H24",
+              24,
+              7,
+              "floor"
+            ],
+            [
+              "I15",
+              15,
+              8,
+              "cover"
+            ],
+            [
+              "J6",
+              6,
+              9,
+              "cover"
+            ],
+            [
+              "K2",
+              2,
+              10,
+              "floor"
+            ],
+            [
+              "K5",
+              5,
+              10,
+              "floor"
+            ],
+            [
+              "K8",
+              8,
+              10,
+              "floor"
+            ],
+            [
+              "K9",
+              9,
+              10,
+              "cover"
+            ],
+            [
+              "K11",
+              11,
+              10,
+              "floor"
+            ],
+            [
+              "K12",
+              12,
+              10,
+              "cover",
+              "South"
+            ],
+            [
+              "K13",
+              13,
+              10,
+              "floor",
+              "South"
+            ],
+            [
+              "K14",
+              14,
+              10,
+              "floor",
+              "South"
+            ],
+            [
+              "K15",
+              15,
+              10,
+              "floor"
+            ],
+            [
+              "K16",
+              16,
+              10,
+              "cover"
+            ],
+            [
+              "K21",
+              21,
+              10,
+              "floor"
+            ],
+            [
+              "K24",
+              24,
+              10,
+              "floor"
+            ],
+            [
+              "L12",
+              12,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L13",
+              13,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L14",
+              14,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L21",
+              21,
+              11,
+              "cover"
+            ],
+            [
+              "M12",
+              12,
+              12,
+              "cover",
+              "South"
+            ],
+            [
+              "M13",
+              13,
+              12,
+              "floor",
+              "South"
+            ],
+            [
+              "M14",
+              14,
+              12,
+              "cover",
+              "South"
+            ],
+            [
+              "N2",
+              2,
+              13,
+              "floor"
+            ],
+            [
+              "N5",
+              5,
+              13,
+              "floor"
+            ],
+            [
+              "N8",
+              8,
+              13,
+              "floor"
+            ],
+            [
+              "N11",
+              11,
+              13,
+              "floor"
+            ],
+            [
+              "N13",
+              13,
+              13,
+              "floor"
+            ],
+            [
+              "N18",
+              18,
+              13,
+              "floor"
+            ],
+            [
+              "N21",
+              21,
+              13,
+              "floor"
+            ],
+            [
+              "N24",
+              24,
+              13,
+              "floor"
+            ]
+          ]
+        },
+        "availableActions": [
+          "move",
+          "hold",
+          "automatic pulse"
+        ],
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "previous": null
+      },
+      "response": {
+        "version": "arena-commander-stdio/v1",
+        "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+        "requestId": "6a9ceccb-c87c-4549-b2d4-b08a5a485feb",
+        "side": "Blue",
+        "type": "orders",
+        "intent": "Allocate the squad to North after checking the receipt.",
+        "orders": [
+          "C12",
+          "C13",
+          "C14",
+          "D12",
+          "D13"
+        ]
+      },
+      "receipt": {
+        "fromTick": 0,
+        "toTick": 12,
+        "authoredIntent": "Allocate the squad to North after checking the receipt.",
+        "own": [
+          {
+            "slot": 0,
+            "order": "C12",
+            "movingTicks": 12,
+            "blockedTicks": 0,
+            "pulses": 1,
+            "linkTicks": 0,
+            "endAt": [
+              11,
+              6
+            ],
+            "endHp": 80
+          },
+          {
+            "slot": 1,
+            "order": "C13",
+            "movingTicks": 10,
+            "blockedTicks": 2,
+            "pulses": 0,
+            "linkTicks": 0,
+            "endAt": [
+              9.5,
+              6
+            ],
+            "endHp": 100
+          },
+          {
+            "slot": 2,
+            "order": "C14",
+            "movingTicks": 10,
+            "blockedTicks": 2,
+            "pulses": 0,
+            "linkTicks": 0,
+            "endAt": [
+              8,
+              6.75
+            ],
+            "endHp": 100
+          },
+          {
+            "slot": 3,
+            "order": "D12",
+            "movingTicks": 12,
+            "blockedTicks": 0,
+            "pulses": 1,
+            "linkTicks": 0,
+            "endAt": [
+              11,
+              8
+            ],
+            "endHp": 80
+          },
+          {
+            "slot": 4,
+            "order": "D13",
+            "movingTicks": 11,
+            "blockedTicks": 1,
+            "pulses": 0,
+            "linkTicks": 0,
+            "endAt": [
+              11,
+              9
+            ],
+            "endHp": 100
+          }
+        ],
+        "score": {
+          "own": 0,
+          "rival": 0
+        },
+        "coreBefore": null,
+        "coreAfter": null
+      }
+    },
+    {
+      "request": {
+        "version": "arena-commander-stdio/v1",
+        "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+        "requestId": "968c766f-50d3-4231-b3b1-052738fea07d",
+        "side": "Blue",
+        "type": "checkpoint",
+        "config": {
+          "rulesVersion": "squads-v3",
+          "mapVersion": "relay-yard-v1",
+          "teamSize": 5,
+          "mode": "relay"
+        },
+        "observation": {
+          "tick": 12,
+          "side": "Blue",
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "control": [
+            null,
+            null
+          ],
+          "mode": "relay",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                11,
+                6
+              ],
+              "hp": 80,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                9.5,
+                6
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                8,
+                6.75
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                11,
+                8
+              ],
+              "hp": 80,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                11,
+                9
+              ],
+              "hp": 100,
+              "blocked": 1
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                15,
+                8
+              ],
+              "hp": 90
+            },
+            {
+              "at": [
+                18.5,
+                8
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                16.75,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                15,
+                6
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                14,
+                5
+              ],
+              "hp": 80
+            }
+          ]
+        },
+        "destinations": {
+          "columns": [
+            "id",
+            "x",
+            "y",
+            "terrain",
+            "site (only if inside its zone)"
+          ],
+          "options": [
+            [
+              "B2",
+              2,
+              1,
+              "floor"
+            ],
+            [
+              "B5",
+              5,
+              1,
+              "floor"
+            ],
+            [
+              "B8",
+              8,
+              1,
+              "floor"
+            ],
+            [
+              "B13",
+              13,
+              1,
+              "floor"
+            ],
+            [
+              "B15",
+              15,
+              1,
+              "floor"
+            ],
+            [
+              "B18",
+              18,
+              1,
+              "floor"
+            ],
+            [
+              "B21",
+              21,
+              1,
+              "floor"
+            ],
+            [
+              "B24",
+              24,
+              1,
+              "floor"
+            ],
+            [
+              "C12",
+              12,
+              2,
+              "cover",
+              "North"
+            ],
+            [
+              "C13",
+              13,
+              2,
+              "floor",
+              "North"
+            ],
+            [
+              "C14",
+              14,
+              2,
+              "cover",
+              "North"
+            ],
+            [
+              "D5",
+              5,
+              3,
+              "cover"
+            ],
+            [
+              "D12",
+              12,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "D13",
+              13,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "D14",
+              14,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "E2",
+              2,
+              4,
+              "floor"
+            ],
+            [
+              "E5",
+              5,
+              4,
+              "floor"
+            ],
+            [
+              "E10",
+              10,
+              4,
+              "cover"
+            ],
+            [
+              "E11",
+              11,
+              4,
+              "floor"
+            ],
+            [
+              "E12",
+              12,
+              4,
+              "floor",
+              "North"
+            ],
+            [
+              "E13",
+              13,
+              4,
+              "floor",
+              "North"
+            ],
+            [
+              "E14",
+              14,
+              4,
+              "cover",
+              "North"
+            ],
+            [
+              "E15",
+              15,
+              4,
+              "floor"
+            ],
+            [
+              "E17",
+              17,
+              4,
+              "cover"
+            ],
+            [
+              "E18",
+              18,
+              4,
+              "floor"
+            ],
+            [
+              "E21",
+              21,
+              4,
+              "floor"
+            ],
+            [
+              "E24",
+              24,
+              4,
+              "floor"
+            ],
+            [
+              "F20",
+              20,
+              5,
+              "cover"
+            ],
+            [
+              "G11",
+              11,
+              6,
+              "cover"
+            ],
+            [
+              "H2",
+              2,
+              7,
+              "floor"
+            ],
+            [
+              "H5",
+              5,
+              7,
+              "floor"
+            ],
+            [
+              "H8",
+              8,
+              7,
+              "floor"
+            ],
+            [
+              "H11",
+              11,
+              7,
+              "floor"
+            ],
+            [
+              "H15",
+              15,
+              7,
+              "floor"
+            ],
+            [
+              "H18",
+              18,
+              7,
+              "floor"
+            ],
+            [
+              "H21",
+              21,
+              7,
+              "floor"
+            ],
+            [
+              "H24",
+              24,
+              7,
+              "floor"
+            ],
+            [
+              "I15",
+              15,
+              8,
+              "cover"
+            ],
+            [
+              "J6",
+              6,
+              9,
+              "cover"
+            ],
+            [
+              "K2",
+              2,
+              10,
+              "floor"
+            ],
+            [
+              "K5",
+              5,
+              10,
+              "floor"
+            ],
+            [
+              "K8",
+              8,
+              10,
+              "floor"
+            ],
+            [
+              "K9",
+              9,
+              10,
+              "cover"
+            ],
+            [
+              "K11",
+              11,
+              10,
+              "floor"
+            ],
+            [
+              "K12",
+              12,
+              10,
+              "cover",
+              "South"
+            ],
+            [
+              "K13",
+              13,
+              10,
+              "floor",
+              "South"
+            ],
+            [
+              "K14",
+              14,
+              10,
+              "floor",
+              "South"
+            ],
+            [
+              "K15",
+              15,
+              10,
+              "floor"
+            ],
+            [
+              "K16",
+              16,
+              10,
+              "cover"
+            ],
+            [
+              "K21",
+              21,
+              10,
+              "floor"
+            ],
+            [
+              "K24",
+              24,
+              10,
+              "floor"
+            ],
+            [
+              "L12",
+              12,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L13",
+              13,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L14",
+              14,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L21",
+              21,
+              11,
+              "cover"
+            ],
+            [
+              "M12",
+              12,
+              12,
+              "cover",
+              "South"
+            ],
+            [
+              "M13",
+              13,
+              12,
+              "floor",
+              "South"
+            ],
+            [
+              "M14",
+              14,
+              12,
+              "cover",
+              "South"
+            ],
+            [
+              "N2",
+              2,
+              13,
+              "floor"
+            ],
+            [
+              "N5",
+              5,
+              13,
+              "floor"
+            ],
+            [
+              "N8",
+              8,
+              13,
+              "floor"
+            ],
+            [
+              "N11",
+              11,
+              13,
+              "floor"
+            ],
+            [
+              "N13",
+              13,
+              13,
+              "floor"
+            ],
+            [
+              "N18",
+              18,
+              13,
+              "floor"
+            ],
+            [
+              "N21",
+              21,
+              13,
+              "floor"
+            ],
+            [
+              "N24",
+              24,
+              13,
+              "floor"
+            ]
+          ]
+        },
+        "availableActions": [
+          "move",
+          "hold",
+          "automatic pulse"
+        ],
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": [
+              14,
+              5
+            ]
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": [
+              15,
+              8
+            ]
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "previous": {
+          "fromTick": 0,
+          "toTick": 12,
+          "authoredIntent": "Allocate the squad to North after checking the receipt.",
+          "own": [
+            {
+              "slot": 0,
+              "order": "C12",
+              "movingTicks": 12,
+              "blockedTicks": 0,
+              "pulses": 1,
+              "linkTicks": 0,
+              "endAt": [
+                11,
+                6
+              ],
+              "endHp": 80
+            },
+            {
+              "slot": 1,
+              "order": "C13",
+              "movingTicks": 10,
+              "blockedTicks": 2,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                9.5,
+                6
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 2,
+              "order": "C14",
+              "movingTicks": 10,
+              "blockedTicks": 2,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                8,
+                6.75
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "D12",
+              "movingTicks": 12,
+              "blockedTicks": 0,
+              "pulses": 1,
+              "linkTicks": 0,
+              "endAt": [
+                11,
+                8
+              ],
+              "endHp": 80
+            },
+            {
+              "slot": 4,
+              "order": "D13",
+              "movingTicks": 11,
+              "blockedTicks": 1,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                11,
+                9
+              ],
+              "endHp": 100
+            }
+          ],
+          "score": {
+            "own": 0,
+            "rival": 0
+          },
+          "coreBefore": null,
+          "coreAfter": null
+        }
+      },
+      "response": {
+        "version": "arena-commander-stdio/v1",
+        "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+        "requestId": "968c766f-50d3-4231-b3b1-052738fea07d",
+        "side": "Blue",
+        "type": "orders",
+        "intent": "Allocate the squad to North after checking the receipt.",
+        "orders": [
+          "C12",
+          "C13",
+          "C14",
+          "D12",
+          "D13"
+        ]
+      },
+      "receipt": {
+        "fromTick": 12,
+        "toTick": 24,
+        "authoredIntent": "Allocate the squad to North after checking the receipt.",
+        "own": [
+          {
+            "slot": 0,
+            "order": "C12",
+            "movingTicks": 4,
+            "blockedTicks": 0,
+            "pulses": 3,
+            "linkTicks": 0,
+            "endAt": [
+              12,
+              4
+            ],
+            "endHp": 0
+          },
+          {
+            "slot": 1,
+            "order": "C13",
+            "movingTicks": 10,
+            "blockedTicks": 0,
+            "pulses": 4,
+            "linkTicks": 0,
+            "endAt": [
+              13,
+              2
+            ],
+            "endHp": 40
+          },
+          {
+            "slot": 2,
+            "order": "C14",
+            "movingTicks": 10,
+            "blockedTicks": 2,
+            "pulses": 4,
+            "linkTicks": 0,
+            "endAt": [
+              11,
+              3.75
+            ],
+            "endHp": 100
+          },
+          {
+            "slot": 3,
+            "order": "D12",
+            "movingTicks": 9,
+            "blockedTicks": 1,
+            "pulses": 6,
+            "linkTicks": 0,
+            "endAt": [
+              12,
+              3
+            ],
+            "endHp": 80
+          },
+          {
+            "slot": 4,
+            "order": "D13",
+            "movingTicks": 10,
+            "blockedTicks": 2,
+            "pulses": 5,
+            "linkTicks": 0,
+            "endAt": [
+              13,
+              4
+            ],
+            "endHp": 40
+          }
+        ],
+        "score": {
+          "own": 5,
+          "rival": 7
+        },
+        "coreBefore": null,
+        "coreAfter": null
+      }
+    },
+    {
+      "request": {
+        "version": "arena-commander-stdio/v1",
+        "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+        "requestId": "e62e59f7-bc34-43fb-81fe-ec867673aba1",
+        "side": "Blue",
+        "type": "checkpoint",
+        "config": {
+          "rulesVersion": "squads-v3",
+          "mapVersion": "relay-yard-v1",
+          "teamSize": 5,
+          "mode": "relay"
+        },
+        "observation": {
+          "tick": 24,
+          "side": "Blue",
+          "score": {
+            "own": 5,
+            "rival": 7
+          },
+          "control": [
+            0,
+            1
+          ],
+          "mode": "relay",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                12,
+                4
+              ],
+              "hp": 0,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                13,
+                2
+              ],
+              "hp": 40,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                11,
+                3.75
+              ],
+              "hp": 100,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                12,
+                3
+              ],
+              "hp": 80,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                13,
+                4
+              ],
+              "hp": 40,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                13,
+                11
+              ],
+              "hp": 100
+            },
+            {
+              "at": [
+                12,
+                11
+              ],
+              "hp": 90
+            }
+          ]
+        },
+        "destinations": {
+          "columns": [
+            "id",
+            "x",
+            "y",
+            "terrain",
+            "site (only if inside its zone)"
+          ],
+          "options": [
+            [
+              "B2",
+              2,
+              1,
+              "floor"
+            ],
+            [
+              "B5",
+              5,
+              1,
+              "floor"
+            ],
+            [
+              "B8",
+              8,
+              1,
+              "floor"
+            ],
+            [
+              "B13",
+              13,
+              1,
+              "floor"
+            ],
+            [
+              "B15",
+              15,
+              1,
+              "floor"
+            ],
+            [
+              "B18",
+              18,
+              1,
+              "floor"
+            ],
+            [
+              "B21",
+              21,
+              1,
+              "floor"
+            ],
+            [
+              "B24",
+              24,
+              1,
+              "floor"
+            ],
+            [
+              "C12",
+              12,
+              2,
+              "cover",
+              "North"
+            ],
+            [
+              "C13",
+              13,
+              2,
+              "floor",
+              "North"
+            ],
+            [
+              "C14",
+              14,
+              2,
+              "cover",
+              "North"
+            ],
+            [
+              "D5",
+              5,
+              3,
+              "cover"
+            ],
+            [
+              "D12",
+              12,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "D13",
+              13,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "D14",
+              14,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "E2",
+              2,
+              4,
+              "floor"
+            ],
+            [
+              "E5",
+              5,
+              4,
+              "floor"
+            ],
+            [
+              "E10",
+              10,
+              4,
+              "cover"
+            ],
+            [
+              "E11",
+              11,
+              4,
+              "floor"
+            ],
+            [
+              "E12",
+              12,
+              4,
+              "floor",
+              "North"
+            ],
+            [
+              "E13",
+              13,
+              4,
+              "floor",
+              "North"
+            ],
+            [
+              "E14",
+              14,
+              4,
+              "cover",
+              "North"
+            ],
+            [
+              "E15",
+              15,
+              4,
+              "floor"
+            ],
+            [
+              "E17",
+              17,
+              4,
+              "cover"
+            ],
+            [
+              "E18",
+              18,
+              4,
+              "floor"
+            ],
+            [
+              "E21",
+              21,
+              4,
+              "floor"
+            ],
+            [
+              "E24",
+              24,
+              4,
+              "floor"
+            ],
+            [
+              "F20",
+              20,
+              5,
+              "cover"
+            ],
+            [
+              "G11",
+              11,
+              6,
+              "cover"
+            ],
+            [
+              "H2",
+              2,
+              7,
+              "floor"
+            ],
+            [
+              "H5",
+              5,
+              7,
+              "floor"
+            ],
+            [
+              "H8",
+              8,
+              7,
+              "floor"
+            ],
+            [
+              "H11",
+              11,
+              7,
+              "floor"
+            ],
+            [
+              "H15",
+              15,
+              7,
+              "floor"
+            ],
+            [
+              "H18",
+              18,
+              7,
+              "floor"
+            ],
+            [
+              "H21",
+              21,
+              7,
+              "floor"
+            ],
+            [
+              "H24",
+              24,
+              7,
+              "floor"
+            ],
+            [
+              "I15",
+              15,
+              8,
+              "cover"
+            ],
+            [
+              "J6",
+              6,
+              9,
+              "cover"
+            ],
+            [
+              "K2",
+              2,
+              10,
+              "floor"
+            ],
+            [
+              "K5",
+              5,
+              10,
+              "floor"
+            ],
+            [
+              "K8",
+              8,
+              10,
+              "floor"
+            ],
+            [
+              "K9",
+              9,
+              10,
+              "cover"
+            ],
+            [
+              "K11",
+              11,
+              10,
+              "floor"
+            ],
+            [
+              "K12",
+              12,
+              10,
+              "cover",
+              "South"
+            ],
+            [
+              "K13",
+              13,
+              10,
+              "floor",
+              "South"
+            ],
+            [
+              "K14",
+              14,
+              10,
+              "floor",
+              "South"
+            ],
+            [
+              "K15",
+              15,
+              10,
+              "floor"
+            ],
+            [
+              "K16",
+              16,
+              10,
+              "cover"
+            ],
+            [
+              "K21",
+              21,
+              10,
+              "floor"
+            ],
+            [
+              "K24",
+              24,
+              10,
+              "floor"
+            ],
+            [
+              "L12",
+              12,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L13",
+              13,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L14",
+              14,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L21",
+              21,
+              11,
+              "cover"
+            ],
+            [
+              "M12",
+              12,
+              12,
+              "cover",
+              "South"
+            ],
+            [
+              "M13",
+              13,
+              12,
+              "floor",
+              "South"
+            ],
+            [
+              "M14",
+              14,
+              12,
+              "cover",
+              "South"
+            ],
+            [
+              "N2",
+              2,
+              13,
+              "floor"
+            ],
+            [
+              "N5",
+              5,
+              13,
+              "floor"
+            ],
+            [
+              "N8",
+              8,
+              13,
+              "floor"
+            ],
+            [
+              "N11",
+              11,
+              13,
+              "floor"
+            ],
+            [
+              "N13",
+              13,
+              13,
+              "floor"
+            ],
+            [
+              "N18",
+              18,
+              13,
+              "floor"
+            ],
+            [
+              "N21",
+              21,
+              13,
+              "floor"
+            ],
+            [
+              "N24",
+              24,
+              13,
+              "floor"
+            ]
+          ]
+        },
+        "availableActions": [
+          "move",
+          "hold",
+          "automatic pulse"
+        ],
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": null
+          }
+        ],
+        "previous": {
+          "fromTick": 12,
+          "toTick": 24,
+          "authoredIntent": "Allocate the squad to North after checking the receipt.",
+          "own": [
+            {
+              "slot": 0,
+              "order": "C12",
+              "movingTicks": 4,
+              "blockedTicks": 0,
+              "pulses": 3,
+              "linkTicks": 0,
+              "endAt": [
+                12,
+                4
+              ],
+              "endHp": 0
+            },
+            {
+              "slot": 1,
+              "order": "C13",
+              "movingTicks": 10,
+              "blockedTicks": 0,
+              "pulses": 4,
+              "linkTicks": 0,
+              "endAt": [
+                13,
+                2
+              ],
+              "endHp": 40
+            },
+            {
+              "slot": 2,
+              "order": "C14",
+              "movingTicks": 10,
+              "blockedTicks": 2,
+              "pulses": 4,
+              "linkTicks": 0,
+              "endAt": [
+                11,
+                3.75
+              ],
+              "endHp": 100
+            },
+            {
+              "slot": 3,
+              "order": "D12",
+              "movingTicks": 9,
+              "blockedTicks": 1,
+              "pulses": 6,
+              "linkTicks": 0,
+              "endAt": [
+                12,
+                3
+              ],
+              "endHp": 80
+            },
+            {
+              "slot": 4,
+              "order": "D13",
+              "movingTicks": 10,
+              "blockedTicks": 2,
+              "pulses": 5,
+              "linkTicks": 0,
+              "endAt": [
+                13,
+                4
+              ],
+              "endHp": 40
+            }
+          ],
+          "score": {
+            "own": 5,
+            "rival": 7
+          },
+          "coreBefore": null,
+          "coreAfter": null
+        }
+      },
+      "response": {
+        "version": "arena-commander-stdio/v1",
+        "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+        "requestId": "e62e59f7-bc34-43fb-81fe-ec867673aba1",
+        "side": "Blue",
+        "type": "orders",
+        "intent": "Allocate the squad to South after checking the receipt.",
+        "orders": [
+          "-",
+          "K13",
+          "K14",
+          "L12",
+          "L13"
+        ]
+      },
+      "receipt": {
+        "fromTick": 24,
+        "toTick": 36,
+        "authoredIntent": "Allocate the squad to South after checking the receipt.",
+        "own": [
+          {
+            "slot": 0,
+            "order": "-",
+            "movingTicks": 0,
+            "blockedTicks": 0,
+            "pulses": 0,
+            "linkTicks": 0,
+            "endAt": [
+              12,
+              4
+            ],
+            "endHp": 0
+          },
+          {
+            "slot": 1,
+            "order": "K13",
+            "movingTicks": 12,
+            "blockedTicks": 0,
+            "pulses": 0,
+            "linkTicks": 0,
+            "endAt": [
+              14,
+              8
+            ],
+            "endHp": 40
+          },
+          {
+            "slot": 2,
+            "order": "K14",
+            "movingTicks": 12,
+            "blockedTicks": 0,
+            "pulses": 4,
+            "linkTicks": 0,
+            "endAt": [
+              14,
+              9.75
+            ],
+            "endHp": 20
+          },
+          {
+            "slot": 3,
+            "order": "L12",
+            "movingTicks": 12,
+            "blockedTicks": 0,
+            "pulses": 3,
+            "linkTicks": 0,
+            "endAt": [
+              12,
+              10
+            ],
+            "endHp": 70
+          },
+          {
+            "slot": 4,
+            "order": "L13",
+            "movingTicks": 12,
+            "blockedTicks": 0,
+            "pulses": 3,
+            "linkTicks": 0,
+            "endAt": [
+              13,
+              9
+            ],
+            "endHp": 40
+          }
+        ],
+        "score": {
+          "own": 2,
+          "rival": 11
+        },
+        "coreBefore": null,
+        "coreAfter": null
+      }
+    },
+    {
+      "request": {
+        "version": "arena-commander-stdio/v1",
+        "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+        "requestId": "55f78e9e-b5af-45b1-a454-bb8a74f854c4",
+        "side": "Blue",
+        "type": "checkpoint",
+        "config": {
+          "rulesVersion": "squads-v3",
+          "mapVersion": "relay-yard-v1",
+          "teamSize": 5,
+          "mode": "relay"
+        },
+        "observation": {
+          "tick": 36,
+          "side": "Blue",
+          "score": {
+            "own": 7,
+            "rival": 18
+          },
+          "control": [
+            null,
+            "contested"
+          ],
+          "mode": "relay",
+          "objective": null,
+          "own": [
+            {
+              "slot": 0,
+              "at": [
+                12,
+                4
+              ],
+              "hp": 0,
+              "blocked": 0
+            },
+            {
+              "slot": 1,
+              "at": [
+                14,
+                8
+              ],
+              "hp": 40,
+              "blocked": 0
+            },
+            {
+              "slot": 2,
+              "at": [
+                14,
+                9.75
+              ],
+              "hp": 20,
+              "blocked": 0
+            },
+            {
+              "slot": 3,
+              "at": [
+                12,
+                10
+              ],
+              "hp": 70,
+              "blocked": 0
+            },
+            {
+              "slot": 4,
+              "at": [
+                13,
+                9
+              ],
+              "hp": 40,
+              "blocked": 0
+            }
+          ],
+          "rival": [
+            {
+              "at": [
+                12,
+                12
+              ],
+              "hp": 60
+            }
+          ]
+        },
+        "destinations": {
+          "columns": [
+            "id",
+            "x",
+            "y",
+            "terrain",
+            "site (only if inside its zone)"
+          ],
+          "options": [
+            [
+              "B2",
+              2,
+              1,
+              "floor"
+            ],
+            [
+              "B5",
+              5,
+              1,
+              "floor"
+            ],
+            [
+              "B8",
+              8,
+              1,
+              "floor"
+            ],
+            [
+              "B13",
+              13,
+              1,
+              "floor"
+            ],
+            [
+              "B15",
+              15,
+              1,
+              "floor"
+            ],
+            [
+              "B18",
+              18,
+              1,
+              "floor"
+            ],
+            [
+              "B21",
+              21,
+              1,
+              "floor"
+            ],
+            [
+              "B24",
+              24,
+              1,
+              "floor"
+            ],
+            [
+              "C12",
+              12,
+              2,
+              "cover",
+              "North"
+            ],
+            [
+              "C13",
+              13,
+              2,
+              "floor",
+              "North"
+            ],
+            [
+              "C14",
+              14,
+              2,
+              "cover",
+              "North"
+            ],
+            [
+              "D5",
+              5,
+              3,
+              "cover"
+            ],
+            [
+              "D12",
+              12,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "D13",
+              13,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "D14",
+              14,
+              3,
+              "floor",
+              "North"
+            ],
+            [
+              "E2",
+              2,
+              4,
+              "floor"
+            ],
+            [
+              "E5",
+              5,
+              4,
+              "floor"
+            ],
+            [
+              "E10",
+              10,
+              4,
+              "cover"
+            ],
+            [
+              "E11",
+              11,
+              4,
+              "floor"
+            ],
+            [
+              "E12",
+              12,
+              4,
+              "floor",
+              "North"
+            ],
+            [
+              "E13",
+              13,
+              4,
+              "floor",
+              "North"
+            ],
+            [
+              "E14",
+              14,
+              4,
+              "cover",
+              "North"
+            ],
+            [
+              "E15",
+              15,
+              4,
+              "floor"
+            ],
+            [
+              "E17",
+              17,
+              4,
+              "cover"
+            ],
+            [
+              "E18",
+              18,
+              4,
+              "floor"
+            ],
+            [
+              "E21",
+              21,
+              4,
+              "floor"
+            ],
+            [
+              "E24",
+              24,
+              4,
+              "floor"
+            ],
+            [
+              "F20",
+              20,
+              5,
+              "cover"
+            ],
+            [
+              "G11",
+              11,
+              6,
+              "cover"
+            ],
+            [
+              "H2",
+              2,
+              7,
+              "floor"
+            ],
+            [
+              "H5",
+              5,
+              7,
+              "floor"
+            ],
+            [
+              "H8",
+              8,
+              7,
+              "floor"
+            ],
+            [
+              "H11",
+              11,
+              7,
+              "floor"
+            ],
+            [
+              "H15",
+              15,
+              7,
+              "floor"
+            ],
+            [
+              "H18",
+              18,
+              7,
+              "floor"
+            ],
+            [
+              "H21",
+              21,
+              7,
+              "floor"
+            ],
+            [
+              "H24",
+              24,
+              7,
+              "floor"
+            ],
+            [
+              "I15",
+              15,
+              8,
+              "cover"
+            ],
+            [
+              "J6",
+              6,
+              9,
+              "cover"
+            ],
+            [
+              "K2",
+              2,
+              10,
+              "floor"
+            ],
+            [
+              "K5",
+              5,
+              10,
+              "floor"
+            ],
+            [
+              "K8",
+              8,
+              10,
+              "floor"
+            ],
+            [
+              "K9",
+              9,
+              10,
+              "cover"
+            ],
+            [
+              "K11",
+              11,
+              10,
+              "floor"
+            ],
+            [
+              "K12",
+              12,
+              10,
+              "cover",
+              "South"
+            ],
+            [
+              "K13",
+              13,
+              10,
+              "floor",
+              "South"
+            ],
+            [
+              "K14",
+              14,
+              10,
+              "floor",
+              "South"
+            ],
+            [
+              "K15",
+              15,
+              10,
+              "floor"
+            ],
+            [
+              "K16",
+              16,
+              10,
+              "cover"
+            ],
+            [
+              "K21",
+              21,
+              10,
+              "floor"
+            ],
+            [
+              "K24",
+              24,
+              10,
+              "floor"
+            ],
+            [
+              "L12",
+              12,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L13",
+              13,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L14",
+              14,
+              11,
+              "floor",
+              "South"
+            ],
+            [
+              "L21",
+              21,
+              11,
+              "cover"
+            ],
+            [
+              "M12",
+              12,
+              12,
+              "cover",
+              "South"
+            ],
+            [
+              "M13",
+              13,
+              12,
+              "floor",
+              "South"
+            ],
+            [
+              "M14",
+              14,
+              12,
+              "cover",
+              "South"
+            ],
+            [
+              "N2",
+              2,
+              13,
+              "floor"
+            ],
+            [
+              "N5",
+              5,
+              13,
+              "floor"
+            ],
+            [
+              "N8",
+              8,
+              13,
+              "floor"
+            ],
+            [
+              "N11",
+              11,
+              13,
+              "floor"
+            ],
+            [
+              "N13",
+              13,
+              13,
+              "floor"
+            ],
+            [
+              "N18",
+              18,
+              13,
+              "floor"
+            ],
+            [
+              "N21",
+              21,
+              13,
+              "floor"
+            ],
+            [
+              "N24",
+              24,
+              13,
+              "floor"
+            ]
+          ]
+        },
+        "availableActions": [
+          "move",
+          "hold",
+          "automatic pulse"
+        ],
+        "capabilities": [
+          {
+            "slot": 0,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 1,
+            "pulseContactNow": null
+          },
+          {
+            "slot": 2,
+            "pulseContactNow": [
+              12,
+              12
+            ]
+          },
+          {
+            "slot": 3,
+            "pulseContactNow": [
+              12,
+              12
+            ]
+          },
+          {
+            "slot": 4,
+            "pulseContactNow": [
+              12,
+              12
+            ]
+          }
+        ],
+        "previous": {
+          "fromTick": 24,
+          "toTick": 36,
+          "authoredIntent": "Allocate the squad to South after checking the receipt.",
+          "own": [
+            {
+              "slot": 0,
+              "order": "-",
+              "movingTicks": 0,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                12,
+                4
+              ],
+              "endHp": 0
+            },
+            {
+              "slot": 1,
+              "order": "K13",
+              "movingTicks": 12,
+              "blockedTicks": 0,
+              "pulses": 0,
+              "linkTicks": 0,
+              "endAt": [
+                14,
+                8
+              ],
+              "endHp": 40
+            },
+            {
+              "slot": 2,
+              "order": "K14",
+              "movingTicks": 12,
+              "blockedTicks": 0,
+              "pulses": 4,
+              "linkTicks": 0,
+              "endAt": [
+                14,
+                9.75
+              ],
+              "endHp": 20
+            },
+            {
+              "slot": 3,
+              "order": "L12",
+              "movingTicks": 12,
+              "blockedTicks": 0,
+              "pulses": 3,
+              "linkTicks": 0,
+              "endAt": [
+                12,
+                10
+              ],
+              "endHp": 70
+            },
+            {
+              "slot": 4,
+              "order": "L13",
+              "movingTicks": 12,
+              "blockedTicks": 0,
+              "pulses": 3,
+              "linkTicks": 0,
+              "endAt": [
+                13,
+                9
+              ],
+              "endHp": 40
+            }
+          ],
+          "score": {
+            "own": 2,
+            "rival": 11
+          },
+          "coreBefore": null,
+          "coreAfter": null
+        }
+      },
+      "response": {
+        "version": "arena-commander-stdio/v1",
+        "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+        "requestId": "55f78e9e-b5af-45b1-a454-bb8a74f854c4",
+        "side": "Blue",
+        "type": "orders",
+        "intent": "Allocate the squad to South after checking the receipt.",
+        "orders": [
+          "-",
+          "K13",
+          "K14",
+          "L12",
+          "L13"
+        ]
+      },
+      "receipt": {
+        "fromTick": 36,
+        "toTick": 40,
+        "authoredIntent": "Allocate the squad to South after checking the receipt.",
+        "own": [
+          {
+            "slot": 0,
+            "order": "-",
+            "movingTicks": 0,
+            "blockedTicks": 0,
+            "pulses": 0,
+            "linkTicks": 0,
+            "endAt": [
+              12,
+              4
+            ],
+            "endHp": 0
+          },
+          {
+            "slot": 1,
+            "order": "K13",
+            "movingTicks": 4,
+            "blockedTicks": 0,
+            "pulses": 2,
+            "linkTicks": 0,
+            "endAt": [
+              13,
+              10
+            ],
+            "endHp": 40
+          },
+          {
+            "slot": 2,
+            "order": "K14",
+            "movingTicks": 1,
+            "blockedTicks": 0,
+            "pulses": 2,
+            "linkTicks": 0,
+            "endAt": [
+              14,
+              10
+            ],
+            "endHp": 20
+          },
+          {
+            "slot": 3,
+            "order": "L12",
+            "movingTicks": 2,
+            "blockedTicks": 0,
+            "pulses": 2,
+            "linkTicks": 0,
+            "endAt": [
+              12,
+              11
+            ],
+            "endHp": 30
+          },
+          {
+            "slot": 4,
+            "order": "L13",
+            "movingTicks": 3,
+            "blockedTicks": 0,
+            "pulses": 2,
+            "linkTicks": 0,
+            "endAt": [
+              13,
+              11
+            ],
+            "endHp": 40
+          }
+        ],
+        "score": {
+          "own": 1,
+          "rival": 0
+        },
+        "coreBefore": null,
+        "coreAfter": null
+      }
+    }
+  ],
+  "terminal": {
+    "version": "arena-commander-stdio/v1",
+    "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+    "requestId": "2de300ae-4494-47ee-9c28-fb9300a4aadf",
+    "side": "Blue",
+    "type": "finished",
+    "outcome": "blue",
+    "tick": 40,
+    "score": [
+      8,
+      18
+    ],
+    "previous": {
+      "fromTick": 36,
+      "toTick": 40,
+      "authoredIntent": "Allocate the squad to South after checking the receipt.",
+      "own": [
+        {
+          "slot": 0,
+          "order": "-",
+          "movingTicks": 0,
+          "blockedTicks": 0,
+          "pulses": 0,
+          "linkTicks": 0,
+          "endAt": [
+            12,
+            4
+          ],
+          "endHp": 0
+        },
+        {
+          "slot": 1,
+          "order": "K13",
+          "movingTicks": 4,
+          "blockedTicks": 0,
+          "pulses": 2,
+          "linkTicks": 0,
+          "endAt": [
+            13,
+            10
+          ],
+          "endHp": 40
+        },
+        {
+          "slot": 2,
+          "order": "K14",
+          "movingTicks": 1,
+          "blockedTicks": 0,
+          "pulses": 2,
+          "linkTicks": 0,
+          "endAt": [
+            14,
+            10
+          ],
+          "endHp": 20
+        },
+        {
+          "slot": 3,
+          "order": "L12",
+          "movingTicks": 2,
+          "blockedTicks": 0,
+          "pulses": 2,
+          "linkTicks": 0,
+          "endAt": [
+            12,
+            11
+          ],
+          "endHp": 30
+        },
+        {
+          "slot": 4,
+          "order": "L13",
+          "movingTicks": 3,
+          "blockedTicks": 0,
+          "pulses": 2,
+          "linkTicks": 0,
+          "endAt": [
+            13,
+            11
+          ],
+          "endHp": 40
+        }
+      ],
+      "score": {
+        "own": 1,
+        "rival": 0
+      },
+      "coreBefore": null,
+      "coreAfter": null
+    }
+  },
+  "acknowledged": {
+    "version": "arena-commander-stdio/v1",
+    "matchId": "9209336b-0b54-40dd-bcd3-1a823723f4f7",
+    "requestId": "2de300ae-4494-47ee-9c28-fb9300a4aadf",
+    "side": "Blue",
+    "type": "acknowledged",
+    "outcome": "blue"
+  }
+}

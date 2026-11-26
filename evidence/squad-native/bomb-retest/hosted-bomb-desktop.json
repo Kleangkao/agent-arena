@@ -1,0 +1,155 @@
+{
+  "id": "71850951-2613-488a-9aef-ca92a52166d5",
+  "status": "completed",
+  "replay": {
+    "final": "blue",
+    "config": {
+      "mode": "bomb",
+      "teamSize": 5,
+      "mapVersion": "relay-yard-v1",
+      "rulesVersion": "squads-v3"
+    },
+    "source": "operator-attested-gemini",
+    "version": 7,
+    "windows": [
+      [
+        {
+          "intent": "Advance toward the North relay to establish a link and put pressure on Sand.",
+          "orders": [
+            "8,1",
+            "5,1",
+            "13,2/link",
+            "2,1",
+            "5,4"
+          ]
+        },
+        {
+          "intent": "Defend the North and South relays against Blue attackers by positioning our units firmly at key defensive chokepoints.",
+          "orders": [
+            "21,10",
+            "21,7",
+            "21,7",
+            "21,4",
+            "21,4"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Push toward the North relay to establish a link and begin activating the site.",
+          "orders": [
+            "13,2/link",
+            "13,3/link",
+            "12,2",
+            "8,1",
+            "12,4/link"
+          ]
+        },
+        {
+          "intent": "Defend the South relay and block incoming Blue attackers by fortifying key choke points around K14 and L13.",
+          "orders": [
+            "14,10/link",
+            "13,11/link",
+            "12,10/link",
+            "12,11/link",
+            "13,12/link"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Maintain the North relay link and keep pressure on the site to advance activation progress.",
+          "orders": [
+            "13,2/link",
+            "13,3/link",
+            "12,2",
+            "8,1",
+            "12,4/link"
+          ]
+        },
+        {
+          "intent": "Maintain defense on the South relay and secure link positioning to disable Blue's activation.",
+          "orders": [
+            "14,10/link",
+            "13,11/link",
+            "12,10/link",
+            "12,11/link",
+            "13,12/link"
+          ]
+        }
+      ]
+    ],
+    "interruption": null
+  },
+  "attempts": [
+    {
+      "ms": 3369,
+      "side": 0,
+      "step": 0,
+      "input": 1747,
+      "model": "gemini-3.5-flash-lite",
+      "output": 66,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "d8f05d45b41dd0a5ed7e624c92324255f0610fe8e5a97b0fc6018aa43efc8fdd"
+    },
+    {
+      "ms": 995,
+      "side": 1,
+      "step": 0,
+      "input": 1745,
+      "model": "gemini-3.5-flash-lite",
+      "output": 76,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 1813,
+      "side": 0,
+      "step": 12,
+      "input": 2032,
+      "model": "gemini-3.5-flash-lite",
+      "output": 73,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "d8f05d45b41dd0a5ed7e624c92324255f0610fe8e5a97b0fc6018aa43efc8fdd"
+    },
+    {
+      "ms": 2461,
+      "side": 1,
+      "step": 12,
+      "input": 2040,
+      "model": "gemini-3.5-flash-lite",
+      "output": 88,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 2946,
+      "side": 0,
+      "step": 24,
+      "input": 2086,
+      "model": "gemini-3.5-flash-lite",
+      "output": 74,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "d8f05d45b41dd0a5ed7e624c92324255f0610fe8e5a97b0fc6018aa43efc8fdd"
+    },
+    {
+      "ms": 3170,
+      "side": 1,
+      "step": 24,
+      "input": 2108,
+      "model": "gemini-3.5-flash-lite",
+      "output": 80,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    }
+  ],
+  "durationMs": 9039,
+  "model": "gemini-3.5-flash-lite",
+  "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress."
+}

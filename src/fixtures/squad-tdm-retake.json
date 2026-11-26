@@ -1,0 +1,102 @@
+{
+  "version": 7,
+  "config": {
+    "mapVersion": "relay-yard-v1",
+    "teamSize": 5,
+    "rulesVersion": "squads-v3",
+    "mode": "tdm"
+  },
+  "source": "operator-attested-gemini",
+  "windows": [
+    [
+      {
+        "intent": "Advance cautiously toward cover and setup positions.",
+        "orders": [
+          "5,5",
+          "5,6",
+          "5,7",
+          "5,8",
+          "5,9"
+        ]
+      },
+      {
+        "intent": "Advance cautiously toward cover and rivals",
+        "orders": [
+          "20,9",
+          "20,8",
+          "20,7",
+          "20,6",
+          "20,5"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Advance cautiously toward cover",
+        "orders": [
+          "7,5",
+          "7,6",
+          "7,7",
+          "7,8",
+          "7,9"
+        ]
+      },
+      {
+        "intent": "Advance units into defensive cover and prepare positions.",
+        "orders": [
+          "15,9",
+          "15,8",
+          "15,7",
+          "15,6",
+          "15,5"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Advance cautiously toward cover and enemies while keeping pulses silent.",
+        "orders": [
+          "11,5",
+          "11,6",
+          "11,7",
+          "11,8",
+          "11,9"
+        ]
+      },
+      {
+        "intent": "Advance team toward central territory to engage rivals and establish positioning",
+        "orders": [
+          "11,9",
+          "11,8",
+          "12,8",
+          "11,6",
+          "11,5"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Reposition to cover and prepare defensive pulses.",
+        "orders": [
+          "9,5/pulse",
+          "9,6/pulse",
+          "8,6/pulse",
+          "9,8/pulse",
+          "9,9/pulse"
+        ]
+      },
+      {
+        "intent": "Engage rivals and secure elimination lead",
+        "orders": [
+          "10,9/pulse",
+          "10,8/pulse",
+          "9,8/pulse",
+          "10,6/pulse",
+          "10,5/pulse"
+        ]
+      }
+    ]
+  ],
+  "final": "draw",
+  "interruption": null
+}

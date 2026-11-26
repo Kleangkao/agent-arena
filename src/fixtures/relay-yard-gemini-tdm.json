@@ -1,0 +1,102 @@
+{
+  "version": 7,
+  "config": {
+    "mapVersion": "relay-yard-v1",
+    "teamSize": 5,
+    "rulesVersion": "squads-v3",
+    "mode": "tdm"
+  },
+  "source": "operator-attested-gemini",
+  "windows": [
+    [
+      {
+        "intent": "Advance cautiously toward the right side to engage rival units.",
+        "orders": [
+          "6,5",
+          "6,6",
+          "6,7",
+          "6,8",
+          "6,9"
+        ]
+      },
+      {
+        "intent": "Advance cautiously toward the center to engage the enemy team.",
+        "orders": [
+          "18,9",
+          "18,8",
+          "18,7",
+          "18,6",
+          "18,5"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Advance cautiously toward the right side cover and prepare defensive pulses.",
+        "orders": [
+          "11,5",
+          "11,6",
+          "11,7",
+          "11,8",
+          "11,9"
+        ]
+      },
+      {
+        "intent": "Advance cautiously and establish crossfire positions to engage rival units.",
+        "orders": [
+          "15,9",
+          "15,8",
+          "15,7",
+          "15,6",
+          "15,5"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Reposition units to avoid invalid wall targets and engage rivals cautiously.",
+        "orders": [
+          "13,5",
+          "13,6",
+          "12,6",
+          "13,8",
+          "13,9"
+        ]
+      },
+      {
+        "intent": "Engage rivals and maintain pressure to secure eliminations.",
+        "orders": [
+          "11,9",
+          "11,8",
+          "11,6",
+          "11,6",
+          "11,5"
+        ]
+      }
+    ],
+    [
+      {
+        "intent": "Maintain defensive positions and exchange fire.",
+        "orders": [
+          "12,5",
+          "12,6",
+          "11,6",
+          "12,8",
+          "12,9"
+        ]
+      },
+      {
+        "intent": "Maintain defensive posture and secure the lead.",
+        "orders": [
+          "14,9",
+          "14,8",
+          "15,6",
+          "14,6",
+          "14,5"
+        ]
+      }
+    ]
+  ],
+  "final": "draw",
+  "interruption": null
+}

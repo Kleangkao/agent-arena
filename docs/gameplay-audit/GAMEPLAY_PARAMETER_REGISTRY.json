@@ -1,0 +1,1608 @@
+{
+  "ruleset": "arcade-v2.5",
+  "rows": [
+    {
+      "name": "map version",
+      "value": "dust-yard-grid-v2.0",
+      "unit": "ID",
+      "source": "src/v2/yard.ts",
+      "location": "WIDTH, HEIGHT, walls, crates, spawns",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Lock geometry",
+      "dependencies": "replay, all placement",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "One flat static map, full-cell obstacles."
+    },
+    {
+      "name": "map dimensions",
+      "value": [
+        9,
+        7
+      ],
+      "unit": "world tiles",
+      "source": "src/v2/yard.ts",
+      "location": "WIDTH, HEIGHT, walls, crates, spawns",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Finite arena",
+      "dependencies": "fixed-point conversion; extent 53460 × 41580 units",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "One flat static map, full-cell obstacles."
+    },
+    {
+      "name": "walls",
+      "value": [
+        13,
+        22,
+        40,
+        49
+      ],
+      "unit": "zero-based row-major cells",
+      "source": "src/v2/yard.ts",
+      "location": "WIDTH, HEIGHT, walls, crates, spawns",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Solid and opaque",
+      "dependencies": "collision, visibility, navigation",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "One flat static map, full-cell obstacles."
+    },
+    {
+      "name": "crates",
+      "value": [
+        20,
+        24,
+        38,
+        42
+      ],
+      "unit": "cells",
+      "source": "src/v2/yard.ts",
+      "location": "WIDTH, HEIGHT, walls, crates, spawns",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Solid and opaque",
+      "dependencies": "same geometry as walls",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "One flat static map, full-cell obstacles."
+    },
+    {
+      "name": "initial spawn cells",
+      "value": [
+        28,
+        34
+      ],
+      "unit": "cells",
+      "source": "src/v2/yard.ts",
+      "location": "WIDTH, HEIGHT, walls, crates, spawns",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Mirrored homes",
+      "dependencies": "centers at (8910,20790), (44550,20790)",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "One flat static map, full-cell obstacles."
+    },
+    {
+      "name": "nav neighbor traversal",
+      "value": [
+        "up",
+        "across",
+        "reverse-across",
+        "down"
+      ],
+      "unit": "ordered cardinal edges",
+      "source": "src/v2/yard.ts",
+      "location": "WIDTH, HEIGHT, walls, crates, spawns",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Bounded BFS",
+      "dependencies": "horizontal preference mirrored by side",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "One flat static map, full-cell obstacles."
+    },
+    {
+      "name": "position scale",
+      "value": 5940,
+      "unit": "integer units/world tile",
+      "source": "src/v23/space.ts",
+      "location": "unit, radius, gap, intersects, toward, route, cellAt",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Continuous x/y",
+      "dependencies": "fractional tile centers stored at 2970 offset",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "No physical height, sliding or cross-corner penetration. Intersections inclusive."
+    },
+    {
+      "name": "fighter half-width",
+      "value": 900,
+      "unit": "units (0.151515 world tiles)",
+      "source": "src/v23/space.ts",
+      "location": "unit, radius, gap, intersects, toward, route, cellAt",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Square footprint",
+      "dependencies": "bounds and terrain; no height",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "No physical height, sliding or cross-corner penetration. Intersections inclusive."
+    },
+    {
+      "name": "pair overlap half-extent",
+      "value": 1800,
+      "unit": "units (0.303030 world tiles)",
+      "source": "src/v23/space.ts",
+      "location": "unit, radius, gap, intersects, toward, route, cellAt",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Relative sweep box",
+      "dependencies": "twice fighter radius",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "No physical height, sliding or cross-corner penetration. Intersections inclusive."
+    },
+    {
+      "name": "center bounds",
+      "value": [
+        [
+          900,
+          52560
+        ],
+        [
+          900,
+          40680
+        ]
+      ],
+      "unit": "integer units (x,y allowed ranges)",
+      "source": "src/v23/space.ts",
+      "location": "unit, radius, gap, intersects, toward, route, cellAt",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Inside world",
+      "dependencies": "inclusive; also terrain checks",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "No physical height, sliding or cross-corner penetration. Intersections inclusive."
+    },
+    {
+      "name": "distance metric",
+      "value": "L1",
+      "unit": "Manhattan world units",
+      "source": "src/v23/space.ts",
+      "location": "unit, radius, gap, intersects, toward, route, cellAt",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Routing, speed, vision, attack, objective radius",
+      "dependencies": "|dx|+|dy|",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "No physical height, sliding or cross-corner penetration. Intersections inclusive."
+    },
+    {
+      "name": "route maximum cell edges",
+      "value": {
+        "walk": 3,
+        "run": 4,
+        "crouch": 2,
+        "jump": 1
+      },
+      "unit": "cells",
+      "source": "src/v23/space.ts",
+      "location": "unit, radius, gap, intersects, toward, route, cellAt",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Bound individual target intents",
+      "dependencies": "rules.modes.steps, center BFS and radius",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "No physical height, sliding or cross-corner penetration. Intersections inclusive."
+    },
+    {
+      "name": "blocked-movement displacement",
+      "value": 0,
+      "unit": "units in blocked step",
+      "source": "src/v23/space.ts",
+      "location": "unit, radius, gap, intersects, toward, route, cellAt",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Prevent penetration",
+      "dependencies": "reject candidate, clears motion",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "No physical height, sliding or cross-corner penetration. Intersections inclusive."
+    },
+    {
+      "name": "mirrored cell boundary bias",
+      "value": 1,
+      "unit": "unit from x before floor for Sand",
+      "source": "src/v23/space.ts",
+      "location": "unit, radius, gap, intersects, toward, route, cellAt",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Consistent left/right snapping",
+      "dependencies": "cellAt",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.geometry"
+      ],
+      "limitations": "No physical height, sliding or cross-corner penetration. Intersections inclusive."
+    },
+    {
+      "name": "clock scale",
+      "value": 3000,
+      "unit": "integer time units/s",
+      "source": "src/v23/game.ts",
+      "location": "rates, inputMotion, stepWorld, advance, permissions",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Exact deterministic timestamps",
+      "dependencies": "world, Core, score, replay, AI",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "gameplay-v25",
+        "diagnostics.matrix"
+      ],
+      "limitations": "One command per side per tick, indefinite non-jump steering until stop, collision or end."
+    },
+    {
+      "name": "V2.5 step",
+      "value": 100,
+      "unit": "time units (33⅓ ms)",
+      "source": "src/v23/game.ts",
+      "location": "rates, inputMotion, stepWorld, advance, permissions",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "30 Hz world",
+      "dependencies": "V2.3 baseline/60Hz standalone only",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "gameplay-v25",
+        "diagnostics.matrix"
+      ],
+      "limitations": "One command per side per tick, indefinite non-jump steering until stop, collision or end."
+    },
+    {
+      "name": "final step",
+      "value": "min(deadline, prior + 100)",
+      "unit": "time units",
+      "source": "src/v23/game.ts",
+      "location": "rates, inputMotion, stepWorld, advance, permissions",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Clamp at deadline",
+      "dependencies": "19.36s gives 80-unit last remainder if reached directly",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "gameplay-v25",
+        "diagnostics.matrix"
+      ],
+      "limitations": "One command per side per tick, indefinite non-jump steering until stop, collision or end."
+    },
+    {
+      "name": "steer component values",
+      "value": [
+        -1,
+        0,
+        1
+      ],
+      "unit": "direction components",
+      "source": "src/v23/game.ts",
+      "location": "rates, inputMotion, stepWorld, advance, permissions",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Eight nonzero combined directions",
+      "dependencies": "L1-normalized; movement validation",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "gameplay-v25",
+        "diagnostics.matrix"
+      ],
+      "limitations": "One command per side per tick, indefinite non-jump steering until stop, collision or end."
+    },
+    {
+      "name": "move rates",
+      "value": {
+        "walk": 3,
+        "run": 6,
+        "crouch": 2,
+        "jump": 3
+      },
+      "unit": "world units/time unit",
+      "source": "src/v23/game.ts",
+      "location": "rates, inputMotion, stepWorld, advance, permissions",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Motion speed and displacement budget",
+      "dependencies": "equivalent 1.5152/3.0303/1.0101/1.5152 world tiles/s",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "gameplay-v25",
+        "diagnostics.matrix"
+      ],
+      "limitations": "One command per side per tick, indefinite non-jump steering until stop, collision or end."
+    },
+    {
+      "name": "jump length",
+      "value": 5940,
+      "unit": "world units (1 tile L1)",
+      "source": "src/v23/game.ts",
+      "location": "rates, inputMotion, stepWorld, advance, permissions",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "One committed segment",
+      "dependencies": "660 ms nominal, 666⅔ ms boundary aligned in full steps; early terrain/agent stop",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "gameplay-v25",
+        "diagnostics.matrix"
+      ],
+      "limitations": "One command per side per tick, indefinite non-jump steering until stop, collision or end."
+    },
+    {
+      "name": "elimination clock",
+      "value": 58080,
+      "unit": "time units (19.36 s)",
+      "source": "src/v23/game.ts",
+      "location": "rates, inputMotion, stepWorld, advance, permissions",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Health comparison on timeout, early defeat settlement",
+      "dependencies": "581 ticks maximum",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "gameplay-v25",
+        "diagnostics.matrix"
+      ],
+      "limitations": "One command per side per tick, indefinite non-jump steering until stop, collision or end."
+    },
+    {
+      "name": "default pose / run or jump pose",
+      "value": "upright",
+      "unit": "state",
+      "source": "src/v23/game.ts",
+      "location": "rates, inputMotion, stepWorld, advance, permissions",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Equal start and motion semantics",
+      "dependencies": "walk preserves prior posture; crouch sets crouch",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "gameplay-v25",
+        "diagnostics.matrix"
+      ],
+      "limitations": "One command per side per tick, indefinite non-jump steering until stop, collision or end."
+    },
+    {
+      "name": "attack near split",
+      "value": 11880,
+      "unit": "world units (2 tiles L1)",
+      "source": "src/v23/game.ts",
+      "location": "rates, inputMotion, stepWorld, advance, permissions",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Select arcade odds bin",
+      "dependencies": "inclusive distance check at resolution",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "gameplay-v25",
+        "diagnostics.matrix"
+      ],
+      "limitations": "One command per side per tick, indefinite non-jump steering until stop, collision or end."
+    },
+    {
+      "name": "HP / ammo capacity",
+      "value": [
+        100,
+        4
+      ],
+      "unit": "points / shots",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Equal start and fresh score life",
+      "dependencies": "1 ammo at launch, reload to cap",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "base passive vision",
+      "value": 4,
+      "unit": "tiles L1 (23760 units)",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Rival center visibility",
+      "dependencies": "continuous ray; exact inclusive",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "crouched target vision delta",
+      "value": -1,
+      "unit": "tile (−5940 units)",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Reduce passive acquisition",
+      "dependencies": "evaluated on rival posture",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "run target vision delta",
+      "value": 2,
+      "unit": "tiles (+11880 units)",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Temporary exposure",
+      "dependencies": "strict greater-than expiry",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "observe and peek focus",
+      "value": [
+        5,
+        6
+      ],
+      "unit": "tiles L1 (29700/35640 units)",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "One sample on completion",
+      "dependencies": "max(passive, focus); landing also observe focus",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "last-seen age",
+      "value": 6600,
+      "unit": "time units (2200 ms)",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Retain authorized position/time",
+      "dependencies": "inclusive expiry; native 20×330",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "run exposure",
+      "value": 2640,
+      "unit": "time units (880 ms)",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Retain passive bonus after run",
+      "dependencies": "native 8×330; refreshed at current boundary",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "attack range",
+      "value": 4,
+      "unit": "tiles L1 (23760 units)",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Maximum fictional attack reach",
+      "dependencies": "must also be passively visible",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "action timers native",
+      "value": {
+        "attack": 7,
+        "precision": 7,
+        "reload": 12,
+        "observe": 4,
+        "peek": 8
+      },
+      "unit": "legacy 110 ms ticks",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Source timing",
+      "dependencies": "conversion multiplier 330",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "action timers normalized",
+      "value": {
+        "attack": [
+          2310,
+          770,
+          800
+        ],
+        "precision": [
+          2310,
+          770,
+          800
+        ],
+        "reload": [
+          3960,
+          1320,
+          1333.333
+        ],
+        "observe": [
+          1320,
+          440,
+          466.667
+        ],
+        "peek": [
+          2640,
+          880,
+          900
+        ]
+      },
+      "unit": "[time units, nominal ms, V2.5 full-step ms]",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Mark due, then resolve",
+      "dependencies": "deadline clamp can prevent completion",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "damage",
+      "value": {
+        "standard": 18,
+        "precision": 34,
+        "miss": 0
+      },
+      "unit": "HP",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Fixed damage outcome",
+      "dependencies": "HP floor 0",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "base odds",
+      "value": {
+        "standard": {
+          "near": 76,
+          "far": 60
+        },
+        "precision": {
+          "near": 40,
+          "far": 30
+        }
+      },
+      "unit": "percent thresholds",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Roll < threshold",
+      "dependencies": "nominal, deterministic modulo bucket",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "accuracy offsets",
+      "value": {
+        "upright": 0,
+        "crouch": 4,
+        "walk": -8,
+        "movingCrouch": -4
+      },
+      "unit": "percentage points",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Movement overrides posture modifier",
+      "dependencies": "evaluate at completion before displacement",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "roll key",
+      "value": {
+        "seedMask": "0x7fffffff",
+        "side": "side XOR high seed bit",
+        "time": "scheduled due",
+        "multipliers": [
+          "0x9e3779b9",
+          "0x85ebca6b",
+          "0xc2b2ae35"
+        ],
+        "shifts": [
+          16,
+          13,
+          16
+        ],
+        "modulus": 100
+      },
+      "unit": "uint32 mix / roll 0–99",
+      "source": "src/v2/game.ts and src/v23/game.ts",
+      "location": "rules, realtimeRules, actionTime, realtimeOdds, draw, visible",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Stable outcomes and mirrored replay",
+      "dependencies": "uses due, not tick index; no separate cooldown",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v23",
+        "diagnostics.postureRng",
+        "diagnostics.focus"
+      ],
+      "limitations": "Timings derived from V2.2 ×330; effect completion at first boundary on/after due. Perception and attack both use passive visibility."
+    },
+    {
+      "name": "Core location",
+      "value": {
+        "x": 26730,
+        "y": 20790
+      },
+      "unit": "units (4.5,3.5 world tiles)",
+      "source": "src/v25/game.ts and src/v24/objective.ts",
+      "location": "variants, configure, eligible, interrupts, advanceCore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "objective-duel"
+      ],
+      "purpose": "Single public site",
+      "dependencies": "center(31)",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v24",
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "Role assigned in config. Damage interruption only contestable variant. World resolves before channel/deadline."
+    },
+    {
+      "name": "Core radius",
+      "value": 4000,
+      "unit": "units L1 (0.6734 tiles)",
+      "source": "src/v25/game.ts and src/v24/objective.ts",
+      "location": "variants, configure, eligible, interrupts, advanceCore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "objective-duel"
+      ],
+      "purpose": "Inclusive interaction diamond",
+      "dependencies": "position and explicit phase role",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v24",
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "Role assigned in config. Damage interruption only contestable variant. World resolves before channel/deadline."
+    },
+    {
+      "name": "common pending",
+      "value": 58080,
+      "unit": "time units (19.36 s)",
+      "source": "src/v25/game.ts and src/v24/objective.ts",
+      "location": "variants, configure, eligible, interrupts, advanceCore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "objective-duel"
+      ],
+      "purpose": "Activate before pending settles",
+      "dependencies": "all variants",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v24",
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "Role assigned in config. Damage interruption only contestable variant. World resolves before channel/deadline."
+    },
+    {
+      "name": "Objective variant table",
+      "value": {
+        "reference": [
+          18000,
+          2700,
+          2700,
+          false
+        ],
+        "reference-live": [
+          18000,
+          2700,
+          2700,
+          false
+        ],
+        "long-activation": [
+          18000,
+          9000,
+          2700,
+          false
+        ],
+        "long-active": [
+          36000,
+          2700,
+          2700,
+          false
+        ],
+        "compact-duel": [
+          24000,
+          9000,
+          6000,
+          false
+        ],
+        "long-disable": [
+          24000,
+          9000,
+          9000,
+          false
+        ],
+        "long-interactions": [
+          36000,
+          9000,
+          6000,
+          false
+        ],
+        "contestable-core": [
+          36000,
+          9000,
+          6000,
+          true
+        ]
+      },
+      "unit": "[active, activate, disable time units / divide by 3000 for seconds, damage cancel]",
+      "source": "src/v25/game.ts and src/v24/objective.ts",
+      "location": "variants, configure, eligible, interrupts, advanceCore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "objective-duel"
+      ],
+      "purpose": "Closed experiment set",
+      "dependencies": "default long-disable = 8s/3s/3s, live agents only except exact reference",
+      "configuration": "Validated preset",
+      "tests": [
+        "gameplay-v24",
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "Role assigned in config. Damage interruption only contestable variant. World resolves before channel/deadline."
+    },
+    {
+      "name": "Objective bound",
+      "value": "ceil(pending/100)+ceil(active/100)",
+      "unit": "world updates",
+      "source": "src/v25/game.ts and src/v24/objective.ts",
+      "location": "variants, configure, eligible, interrupts, advanceCore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "objective-duel"
+      ],
+      "purpose": "Terminate bounded record",
+      "dependencies": "821 default, max 941",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v24",
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "Role assigned in config. Damage interruption only contestable variant. World resolves before channel/deadline."
+    },
+    {
+      "name": "cancellation progress retention",
+      "value": 0,
+      "unit": "time units",
+      "source": "src/v25/game.ts and src/v24/objective.ts",
+      "location": "variants, configure, eligible, interrupts, advanceCore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "objective-duel"
+      ],
+      "purpose": "Fresh start after cancel",
+      "dependencies": "exit, defeat, incompatible input, explicit cancel, configured HP loss",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v24",
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "Role assigned in config. Damage interruption only contestable variant. World resolves before channel/deadline."
+    },
+    {
+      "name": "score targets",
+      "value": [
+        5,
+        10,
+        20
+      ],
+      "unit": "points",
+      "source": "src/v25/game.ts",
+      "location": "targets, clocks, configure, spawnCells, advanceScore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "score-deathmatch"
+      ],
+      "purpose": "Score settlement",
+      "dependencies": "default 5",
+      "configuration": "Validated preset",
+      "tests": [
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "No invulnerability. If no spawn passes, due remains and is retried at later boundaries."
+    },
+    {
+      "name": "score deadlines",
+      "value": [
+        45,
+        75,
+        120
+      ],
+      "unit": "seconds (135000/225000/360000 time units)",
+      "source": "src/v25/game.ts",
+      "location": "targets, clocks, configure, spawnCells, advanceScore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "score-deathmatch"
+      ],
+      "purpose": "Clock settlement",
+      "dependencies": "default 75; max 3600 updates",
+      "configuration": "Validated preset",
+      "tests": [
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "No invulnerability. If no spawn passes, due remains and is retried at later boundaries."
+    },
+    {
+      "name": "score per defeat",
+      "value": 1,
+      "unit": "point",
+      "source": "src/v25/game.ts",
+      "location": "targets, clocks, configure, spawnCells, advanceScore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "score-deathmatch"
+      ],
+      "purpose": "Opposing side credited once",
+      "dependencies": "both simultaneous defeats before terminal check",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "No invulnerability. If no spawn passes, due remains and is retried at later boundaries."
+    },
+    {
+      "name": "respawn delay",
+      "value": 3600,
+      "unit": "time units (1200 ms, 36 full ticks)",
+      "source": "src/v25/game.ts",
+      "location": "targets, clocks, configure, spawnCells, advanceScore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "score-deathmatch"
+      ],
+      "purpose": "Return fresh after defeat",
+      "dependencies": "first eligible boundary after due; only nonterminal",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "No invulnerability. If no spawn passes, due remains and is retried at later boundaries."
+    },
+    {
+      "name": "respawn ordered cells",
+      "value": [
+        [
+          28,
+          10,
+          46,
+          27,
+          9,
+          45
+        ],
+        [
+          34,
+          16,
+          52,
+          35,
+          17,
+          53
+        ]
+      ],
+      "unit": "cell IDs by side",
+      "source": "src/v25/game.ts",
+      "location": "targets, clocks, configure, spawnCells, advanceScore",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "score-deathmatch"
+      ],
+      "purpose": "Try home then mirrored alternatives",
+      "dependencies": "relative footprint check against living rival",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "No invulnerability. If no spawn passes, due remains and is retried at later boundaries."
+    },
+    {
+      "name": "seed",
+      "value": [
+        0,
+        4294967295
+      ],
+      "unit": "uint32 inclusive",
+      "source": "src/v25/game.ts and src/v25/replay.ts",
+      "location": "assertConfig, record, load",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Replay and roll identity",
+      "dependencies": "top bit flips roll lane",
+      "configuration": "Validated config",
+      "tests": [
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "Full reconstructed frames held in memory. Unauthenticated source text is merely a label."
+    },
+    {
+      "name": "participant count and ID limit",
+      "value": [
+        2,
+        64
+      ],
+      "unit": "distinct IDs, max ASCII chars each",
+      "source": "src/v25/game.ts and src/v25/replay.ts",
+      "location": "assertConfig, record, load",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Lock participants",
+      "dependencies": "case-sensitive uniqueness, /[a-z0-9_-]/i",
+      "configuration": "Validated config",
+      "tests": [
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "Full reconstructed frames held in memory. Unauthenticated source text is merely a label."
+    },
+    {
+      "name": "replay / observation schemas",
+      "value": [
+        5,
+        1
+      ],
+      "unit": "version IDs",
+      "source": "src/v25/game.ts and src/v25/replay.ts",
+      "location": "assertConfig, record, load",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Mode-specific replay and filtered view",
+      "dependencies": "ordered sparse transcript, canonical replay",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "Full reconstructed frames held in memory. Unauthenticated source text is merely a label."
+    },
+    {
+      "name": "input slots per tick",
+      "value": 2,
+      "unit": "commands maximum total",
+      "source": "src/v25/game.ts and src/v25/replay.ts",
+      "location": "assertConfig, record, load",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "One optional command per agent",
+      "dependencies": "no combined command payload",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "Full reconstructed frames held in memory. Unauthenticated source text is merely a label."
+    },
+    {
+      "name": "development decision cadence",
+      "value": 1320,
+      "unit": "time units (440 ms nominal)",
+      "source": "src/v23/development.ts, src/v24/development.ts and src/v25/development.ts",
+      "location": "local controller policy",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "First boundary at/after each phase",
+      "dependencies": "about 433⅓/466⅔ ms apart",
+      "configuration": "Hardcoded",
+      "tests": [
+        "evaluate-gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "These defaults generate development traces only. They do not change authoritative eligibility."
+    },
+    {
+      "name": "base phase cycle",
+      "value": 11,
+      "unit": "cadence intervals",
+      "source": "src/v23/development.ts, src/v24/development.ts and src/v25/development.ts",
+      "location": "local controller policy",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Deterministic choice mix",
+      "dependencies": "(floor(time/1320)+(seed & 0x7fffffff)) %11; phases <3 favor precision with ammo >1, =1 observe, =3 jump, <4 crouch, <8 walk, otherwise run; moving reconsiders every third phase",
+      "configuration": "Hardcoded",
+      "tests": [
+        "evaluate-gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "These defaults generate development traces only. They do not change authoritative eligibility."
+    },
+    {
+      "name": "development Core aim offset",
+      "value": 2000,
+      "unit": "world units (0.3367 tiles)",
+      "source": "src/v23/development.ts, src/v24/development.ts and src/v25/development.ts",
+      "location": "local controller policy",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Approach near edge by side",
+      "dependencies": "default pending Defender earlier pressure disabled",
+      "configuration": "Hardcoded",
+      "tests": [
+        "evaluate-gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "These defaults generate development traces only. They do not change authoritative eligibility."
+    },
+    {
+      "name": "score control aim cells",
+      "value": [
+        [
+          30,
+          32
+        ],
+        [
+          32,
+          30
+        ]
+      ],
+      "unit": "cells by side",
+      "source": "src/v23/development.ts, src/v24/development.ts and src/v25/development.ts",
+      "location": "local controller policy",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Seek mutual contact without private data",
+      "dependencies": "alternate at 12000 units = 4s",
+      "configuration": "Hardcoded",
+      "tests": [
+        "evaluate-gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "These defaults generate development traces only. They do not change authoritative eligibility."
+    },
+    {
+      "name": "score reload policy",
+      "value": {
+        "seek": 0,
+        "roam": 1
+      },
+      "unit": "ammo threshold",
+      "source": "src/v23/development.ts, src/v24/development.ts and src/v25/development.ts",
+      "location": "local controller policy",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Different policy priorities",
+      "dependencies": "Roam stops for precision; Seek runs without contact",
+      "configuration": "Hardcoded",
+      "tests": [
+        "evaluate-gameplay-v25",
+        "diagnostics.replays"
+      ],
+      "limitations": "These defaults generate development traces only. They do not change authoritative eligibility."
+    },
+    {
+      "name": "checkpoint formulas",
+      "value": {
+        "objective": 4000,
+        "score": "ceil(clock seconds*1000/9)"
+      },
+      "unit": "simulation ms",
+      "source": "server/gameplay-v25.ts",
+      "location": "prompt, minimumCheckpointMs, playModeTrial",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "protected objective-duel",
+        "protected score-deathmatch"
+      ],
+      "purpose": "Bound prompts independent of tick",
+      "dependencies": "5000/8334/13334 ms score, rounded upward by ticks",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v25-server",
+        "diagnostics.prompt"
+      ],
+      "limitations": "No genuine V2.5 run in audited assets. No event-triggered provider call, no model fallback."
+    },
+    {
+      "name": "picks and repeats",
+      "value": [
+        4,
+        1,
+        3
+      ],
+      "unit": "max picks / min and max per pick repeats",
+      "source": "server/gameplay-v25.ts",
+      "location": "prompt, minimumCheckpointMs, playModeTrial",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "protected objective-duel",
+        "protected score-deathmatch"
+      ],
+      "purpose": "Bounded priority queue",
+      "dependencies": "distinct indexes; permits empty; expiry next checkpoint or own defeat",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v25-server",
+        "diagnostics.prompt"
+      ],
+      "limitations": "No genuine V2.5 run in audited assets. No event-triggered provider call, no model fallback."
+    },
+    {
+      "name": "request limits",
+      "value": {
+        "total": 20,
+        "perSide": 10,
+        "attemptsPerCheckpoint": 2,
+        "requestMs": 8000,
+        "overallMs": 60000
+      },
+      "unit": "requests / wall milliseconds",
+      "source": "server/gameplay-v25.ts",
+      "location": "prompt, minimumCheckpointMs, playModeTrial",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "protected objective-duel",
+        "protected score-deathmatch"
+      ],
+      "purpose": "Limit time and quota",
+      "dependencies": "HTTP 429 aborts; SDK attempts 1",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v25-server",
+        "diagnostics.prompt"
+      ],
+      "limitations": "No genuine V2.5 run in audited assets. No event-triggered provider call, no model fallback."
+    },
+    {
+      "name": "response and coach caps",
+      "value": {
+        "jsonChars": 1500,
+        "outputTokens": 256,
+        "coachingChars": 500,
+        "lessons": 3,
+        "lessonChars": 160
+      },
+      "unit": "chars, tokens, count",
+      "source": "server/gameplay-v25.ts",
+      "location": "prompt, minimumCheckpointMs, playModeTrial",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "protected objective-duel",
+        "protected score-deathmatch"
+      ],
+      "purpose": "Bound the payload",
+      "dependencies": "compatible rules-version memory only, API passes none for V2.5",
+      "configuration": "Hardcoded",
+      "tests": [
+        "gameplay-v25-server",
+        "diagnostics.prompt"
+      ],
+      "limitations": "No genuine V2.5 run in audited assets. No event-triggered provider call, no model fallback."
+    },
+    {
+      "name": "manual input buffer and polling",
+      "value": [
+        64,
+        5
+      ],
+      "unit": "browser events / wall ms",
+      "source": "src/v23/sandbox.tsx",
+      "location": "manual timer, replay timer and Board.update",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Sample once per authoritative boundary",
+      "dependencies": "event keydown repeats excluded",
+      "configuration": "Hardcoded",
+      "tests": [
+        "browser",
+        "gameplay-v25-browser"
+      ],
+      "limitations": "Presentation/input transport only, no simulation values changed."
+    },
+    {
+      "name": "replay 1× clock scale",
+      "value": 3,
+      "unit": "game units/wall ms",
+      "source": "src/v23/sandbox.tsx",
+      "location": "manual timer, replay timer and Board.update",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Advance by recorded time",
+      "dependencies": "renderer interpolates adjacent frames",
+      "configuration": "Hardcoded",
+      "tests": [
+        "browser",
+        "gameplay-v25-browser"
+      ],
+      "limitations": "Presentation/input transport only, no simulation values changed."
+    },
+    {
+      "name": "attack flash",
+      "value": 240,
+      "unit": "wall ms",
+      "source": "src/v23/sandbox.tsx",
+      "location": "manual timer, replay timer and Board.update",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Visual acknowledgment",
+      "dependencies": "Phaser flash per displayed attack event",
+      "configuration": "Hardcoded",
+      "tests": [
+        "browser",
+        "gameplay-v25-browser"
+      ],
+      "limitations": "Presentation/input transport only, no simulation values changed."
+    },
+    {
+      "name": "import byte cap",
+      "value": 1000000,
+      "unit": "bytes",
+      "source": "src/v23/sandbox.tsx",
+      "location": "manual timer, replay timer and Board.update",
+      "ruleset": "arcade-v2.5",
+      "modes": [
+        "elimination",
+        "objective-duel",
+        "score-deathmatch"
+      ],
+      "purpose": "Bound local file chooser load",
+      "dependencies": "unified route only accepts replay v5",
+      "configuration": "Hardcoded",
+      "tests": [
+        "browser",
+        "gameplay-v25-browser"
+      ],
+      "limitations": "Presentation/input transport only, no simulation values changed."
+    }
+  ]
+}

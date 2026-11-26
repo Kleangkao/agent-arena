@@ -1,0 +1,142 @@
+{
+  "id": "6fb1e322-0a8b-41c8-b571-e2de1576ff96",
+  "status": "interrupted",
+  "replay": {
+    "final": null,
+    "config": {
+      "mode": "bomb",
+      "teamSize": 5,
+      "mapVersion": "relay-yard-v1",
+      "rulesVersion": "squads-v3"
+    },
+    "source": "operator-attested-gemini",
+    "version": 7,
+    "windows": [
+      [
+        {
+          "intent": "Advance toward the North site to initiate linking and secure the objective.",
+          "orders": [
+            "5,7>13,2/link",
+            "5,7>13,2/link",
+            "8,7>13,2/link",
+            "8,7>13,2/link",
+            "8,7>13,2/link"
+          ]
+        },
+        {
+          "intent": "Interception and defense of the South site against the Blue advance.",
+          "orders": [
+            "21,10>12,11/link",
+            "21,7>13,10/link",
+            "21,7>14,10/link",
+            "21,4>14,11/link",
+            "21,4>13,11/link"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Advance units toward the North site to initiate linking.",
+          "orders": [
+            "5,7>13,2/link",
+            "5,7>13,2/link",
+            "8,7>13,2/link",
+            "8,7>13,2/link",
+            "8,7>13,2/link"
+          ]
+        },
+        {
+          "intent": "Defend the North and South sites and intercept Blue units.",
+          "orders": [
+            "12,10/link",
+            "12,11/link",
+            "13,12/link",
+            "13,2/link",
+            "13,3/link"
+          ]
+        }
+      ]
+    ],
+    "interruption": "invalid-orders"
+  },
+  "attempts": [
+    {
+      "ms": 1412,
+      "side": 0,
+      "step": 0,
+      "input": 1725,
+      "model": "gemini-3.5-flash-lite",
+      "output": 91,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "d8f05d45b41dd0a5ed7e624c92324255f0610fe8e5a97b0fc6018aa43efc8fdd"
+    },
+    {
+      "ms": 1467,
+      "side": 1,
+      "step": 0,
+      "input": 1723,
+      "model": "gemini-3.5-flash-lite",
+      "output": 97,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 5201,
+      "side": 0,
+      "step": 12,
+      "input": 2064,
+      "model": "gemini-3.5-flash-lite",
+      "output": 88,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "d8f05d45b41dd0a5ed7e624c92324255f0610fe8e5a97b0fc6018aa43efc8fdd"
+    },
+    {
+      "ms": 1039,
+      "side": 1,
+      "step": 12,
+      "input": 2084,
+      "model": "gemini-3.5-flash-lite",
+      "output": 75,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 2073,
+      "side": 0,
+      "step": 24,
+      "input": 2072,
+      "model": "gemini-3.5-flash-lite",
+      "output": 91,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "d8f05d45b41dd0a5ed7e624c92324255f0610fe8e5a97b0fc6018aa43efc8fdd"
+    },
+    {
+      "ms": 2261,
+      "side": 1,
+      "step": 24,
+      "status": "503",
+      "attempt": 1
+    },
+    {
+      "ms": 4050,
+      "side": 1,
+      "step": 24,
+      "input": 2050,
+      "model": "gemini-3.5-flash-lite",
+      "output": 78,
+      "status": "invalid-orders",
+      "attempt": 2,
+      "failure": "Slot 3 must use an ID in destinations.options, two IDs joined by \">\", or \"-\".",
+      "coachingRevision": "official-sand-v1"
+    }
+  ],
+  "durationMs": 13769,
+  "model": "gemini-3.5-flash-lite",
+  "error": "A commander returned invalid orders. No winner was declared.",
+  "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress."
+}

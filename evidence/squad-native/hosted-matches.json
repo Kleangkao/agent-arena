@@ -1,0 +1,209 @@
+{
+  "origin": "https://agent-arena-preview.vercel.app",
+  "startedAt": "2026-11-26T17:50:22.734Z",
+  "checks": {
+    "coachingAfterReload": true,
+    "sameSetup": true,
+    "sameGuest": true,
+    "thirdMatchAdmitted": true,
+    "thirdMatchCompleted": true
+  },
+  "attempts": [
+    {
+      "name": "bomb-desktop",
+      "at": "2026-11-26T17:50:32.075Z",
+      "http": 202,
+      "route": "/api/matches",
+      "input": {
+        "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress.",
+        "opponent": "official-sand",
+        "rulesVersion": "squads-v3",
+        "mode": "bomb"
+      },
+      "id": "6fb1e322-0a8b-41c8-b571-e2de1576ff96"
+    },
+    {
+      "name": "tdm-mobile",
+      "at": "2026-11-26T17:51:38.235Z",
+      "http": 202,
+      "route": "/api/matches",
+      "input": {
+        "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress.",
+        "opponent": "official-sand",
+        "rulesVersion": "squads-v3",
+        "mode": "tdm"
+      },
+      "id": "f04637fc-d7d3-4955-98a8-068329208880"
+    },
+    {
+      "name": "relay-mobile",
+      "at": "2026-11-26T17:52:44.069Z",
+      "http": 202,
+      "route": "/api/matches",
+      "input": {
+        "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress.",
+        "opponent": "official-sand",
+        "rulesVersion": "squads-v3",
+        "mode": "relay"
+      },
+      "id": "67defcc0-3b87-467c-aa2b-8274a7f25251"
+    },
+    {
+      "name": "same-setup-mobile",
+      "at": "2026-11-26T17:53:50.091Z",
+      "http": 202,
+      "route": "/api/matches",
+      "input": {
+        "coaching": "Favor the South relay initially. If Sand contests it, reassign some units to North and defend any lead.",
+        "opponent": "official-sand",
+        "rulesVersion": "squads-v3",
+        "mode": "relay",
+        "sameSetup": "67defcc0-3b87-467c-aa2b-8274a7f25251"
+      },
+      "id": "c2358715-f64c-421e-bbcf-95a8df925a4d"
+    }
+  ],
+  "matches": [
+    {
+      "name": "bomb-desktop",
+      "id": "6fb1e322-0a8b-41c8-b571-e2de1576ff96",
+      "mode": "bomb",
+      "status": "interrupted",
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ],
+      "durationMs": 13769,
+      "error": "A commander returned invalid orders. No winner was declared.",
+      "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress.",
+      "result": null,
+      "interruption": "invalid-orders",
+      "score": [
+        0,
+        0
+      ],
+      "finalTick": 24,
+      "pulses": 0,
+      "core": [],
+      "attempts": [
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "503",
+        "invalid-orders"
+      ],
+      "pollRoute": "/api/matches/6fb1e322-0a8b-41c8-b571-e2de1576ff96",
+      "resultScreenshot": "evidence/squad-native/public-bomb-desktop-result.png",
+      "noHorizontalOverflow": true
+    },
+    {
+      "name": "tdm-mobile",
+      "id": "f04637fc-d7d3-4955-98a8-068329208880",
+      "mode": "tdm",
+      "status": "completed",
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ],
+      "durationMs": 22151,
+      "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress.",
+      "result": "blue",
+      "interruption": null,
+      "score": [
+        2,
+        1
+      ],
+      "finalTick": 48,
+      "pulses": 25,
+      "core": [],
+      "attempts": [
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "invalid-orders",
+        "accepted"
+      ],
+      "pollRoute": "/api/matches/f04637fc-d7d3-4955-98a8-068329208880",
+      "battleScreenshot": "evidence/squad-native/public-tdm-mobile-battle.png",
+      "resultScreenshot": "evidence/squad-native/public-tdm-mobile-result.png",
+      "noHorizontalOverflow": true
+    },
+    {
+      "name": "relay-mobile",
+      "id": "67defcc0-3b87-467c-aa2b-8274a7f25251",
+      "mode": "relay",
+      "status": "completed",
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ],
+      "durationMs": 14588,
+      "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress.",
+      "result": "blue",
+      "interruption": null,
+      "score": [
+        24,
+        14
+      ],
+      "finalTick": 41,
+      "pulses": 41,
+      "core": [],
+      "attempts": [
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "503",
+        "accepted",
+        "accepted"
+      ],
+      "pollRoute": "/api/matches/67defcc0-3b87-467c-aa2b-8274a7f25251",
+      "battleScreenshot": "evidence/squad-native/public-relay-mobile-battle.png",
+      "resultScreenshot": "evidence/squad-native/public-relay-mobile-result.png",
+      "noHorizontalOverflow": true
+    },
+    {
+      "name": "same-setup-mobile",
+      "id": "c2358715-f64c-421e-bbcf-95a8df925a4d",
+      "mode": "relay",
+      "status": "completed",
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ],
+      "durationMs": 5635,
+      "coaching": "Favor the South relay initially. If Sand contests it, reassign some units to North and defend any lead.",
+      "sameSetup": "67defcc0-3b87-467c-aa2b-8274a7f25251",
+      "result": "blue",
+      "interruption": null,
+      "score": [
+        24,
+        23
+      ],
+      "finalTick": 36,
+      "pulses": 8,
+      "core": [],
+      "attempts": [
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted"
+      ],
+      "pollRoute": "/api/matches/c2358715-f64c-421e-bbcf-95a8df925a4d",
+      "battleScreenshot": "evidence/squad-native/public-same-setup-mobile-battle.png",
+      "resultScreenshot": "evidence/squad-native/public-same-setup-mobile-result.png",
+      "noHorizontalOverflow": true
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,122 @@
+{
+  "movement": {
+    "source": "Same genuine archived opening executed offline under two rules",
+    "v2": {
+      "ticks": 12,
+      "score": [
+        2,
+        2
+      ],
+      "worldDistance": 108,
+      "fractional": 0,
+      "sampledLiveUnitTicks": 118,
+      "blocked": 10,
+      "pulses": 18,
+      "respawns": 0,
+      "objectiveStatusTicks": {}
+    },
+    "v3": {
+      "ticks": 12,
+      "score": [
+        0,
+        0
+      ],
+      "worldDistance": 81.85,
+      "fractional": 86,
+      "sampledLiveUnitTicks": 120,
+      "blocked": 8,
+      "pulses": 6,
+      "respawns": 0,
+      "objectiveStatusTicks": {}
+    }
+  },
+  "practice": [
+    {
+      "mode": "bomb",
+      "source": "scripted-practice",
+      "result": "blue",
+      "ticks": 32,
+      "score": [
+        0,
+        0
+      ],
+      "worldDistance": 151.98,
+      "fractional": 158,
+      "sampledLiveUnitTicks": 287,
+      "blocked": 10,
+      "pulses": 50,
+      "respawns": 0,
+      "objectiveStatusTicks": {
+        "activate": 2,
+        "countdown": 8,
+        "disable": 3
+      }
+    },
+    {
+      "mode": "tdm",
+      "source": "scripted-practice",
+      "result": "draw",
+      "ticks": 48,
+      "score": [
+        5,
+        5
+      ],
+      "worldDistance": 201.17,
+      "fractional": 207,
+      "sampledLiveUnitTicks": 444,
+      "blocked": 6,
+      "pulses": 72,
+      "respawns": 8,
+      "objectiveStatusTicks": {}
+    },
+    {
+      "mode": "relay",
+      "source": "scripted-practice",
+      "result": "sand",
+      "ticks": 41,
+      "score": [
+        21,
+        24
+      ],
+      "worldDistance": 141.81,
+      "fractional": 146,
+      "sampledLiveUnitTicks": 296,
+      "blocked": 6,
+      "pulses": 41,
+      "respawns": 0,
+      "objectiveStatusTicks": {}
+    }
+  ],
+  "pulseControl": [
+    {
+      "order": "-",
+      "ticks": 12,
+      "score": [
+        0,
+        0
+      ],
+      "worldDistance": 0,
+      "fractional": 0,
+      "sampledLiveUnitTicks": 120,
+      "blocked": 0,
+      "pulses": 0,
+      "respawns": 0,
+      "objectiveStatusTicks": {}
+    },
+    {
+      "order": "-/pulse",
+      "ticks": 12,
+      "score": [
+        1,
+        1
+      ],
+      "worldDistance": 0,
+      "fractional": 0,
+      "sampledLiveUnitTicks": 112,
+      "blocked": 0,
+      "pulses": 2,
+      "respawns": 2,
+      "objectiveStatusTicks": {}
+    }
+  ]
+}

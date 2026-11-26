@@ -1,0 +1,369 @@
+{
+  "origin": "https://agent-arena-preview.vercel.app",
+  "kind": "hosted-live",
+  "shots": [
+    "evidence/challenge-release/relay-normal/hosted-live-play-desktop.png",
+    "evidence/challenge-release/relay-normal/hosted-live-play-mobile.png",
+    "evidence/challenge-release/relay-normal/hosted-live-agent-mobile.png",
+    "evidence/challenge-release/relay-normal/hosted-live-prepare-mobile.png",
+    "evidence/challenge-release/relay-normal/hosted-live-prepare-desktop.png",
+    "evidence/challenge-release/relay-normal/hosted-live-battle-desktop.png",
+    "evidence/challenge-release/relay-normal/hosted-live-battle-mobile.png",
+    "evidence/challenge-release/relay-normal/hosted-live-review-mobile.png",
+    "evidence/challenge-release/relay-normal/hosted-live-review-desktop.png",
+    "evidence/challenge-release/relay-normal/hosted-live-rematch-setup.png",
+    "evidence/challenge-release/relay-normal/hosted-live-rematch-comparison.png",
+    "evidence/challenge-release/relay-normal/hosted-live-public-verified.png"
+  ],
+  "recording": "evidence/challenge-release/relay-normal/hosted-live.webm",
+  "errors": [],
+  "failure": null,
+  "startStatuses": [
+    202,
+    202
+  ],
+  "runs": [
+    {
+      "id": "a8cd83a8-0308-4e8e-9a24-ebabdc8dc529",
+      "status": "completed",
+      "model": "gemini-3.5-flash-lite",
+      "guidance": {
+        "strategy": "proactive",
+        "autonomy": "coach-led",
+        "coaching": "Secure one relay early. If it keeps scoring, look for opportunities to expand.",
+        "revision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a",
+        "requests": 3,
+        "received": {
+          "autonomy": "Give the coach’s guidance strong weight where practical. Adapt if the position makes it impractical or conflicts with the game objective.",
+          "coaching": "Secure one relay early. If it keeps scoring, look for opportunities to expand.",
+          "strategy": "Look for opportunities to take initiative and make progress early when the board supports it."
+        }
+      },
+      "attempts": [
+        {
+          "ms": 1232,
+          "side": 0,
+          "step": 0,
+          "input": 1897,
+          "model": "gemini-3.5-flash-lite",
+          "output": 73,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a"
+        },
+        {
+          "ms": 2,
+          "side": 1,
+          "step": 0,
+          "status": "accepted",
+          "attempt": 1
+        },
+        {
+          "ms": 2474,
+          "side": 0,
+          "step": 12,
+          "input": 2210,
+          "model": "gemini-3.5-flash-lite",
+          "output": 78,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 12,
+          "status": "accepted",
+          "attempt": 1
+        },
+        {
+          "ms": 754,
+          "side": 0,
+          "step": 24,
+          "input": 2178,
+          "model": "gemini-3.5-flash-lite",
+          "output": 69,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 24,
+          "status": "accepted",
+          "attempt": 1
+        }
+      ],
+      "durationMs": 4508,
+      "replay": {
+        "final": "sand",
+        "config": {
+          "mode": "relay",
+          "teamSize": 5,
+          "mapVersion": "relay-yard-v1",
+          "rulesVersion": "squads-v4"
+        },
+        "source": "arena-challenge",
+        "version": 7,
+        "windows": [
+          [
+            {
+              "intent": "Secure the north relay early and hold the line against incoming rivals.",
+              "orders": [
+                "13,2",
+                "13,3",
+                "13,4",
+                "11,7",
+                "11,10"
+              ]
+            },
+            {
+              "intent": "Secure both relays and respond to pressure.",
+              "orders": [
+                "14,3/pulse",
+                "14,11/pulse",
+                "13,2/pulse",
+                "13,10/pulse",
+                "13,4/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Secure the north relay and press forward.",
+              "orders": [
+                "13,2/pulse",
+                "13,3",
+                "13,4",
+                "13,2/pulse",
+                "13,10"
+              ]
+            },
+            {
+              "intent": "Secure both relays and respond to pressure.",
+              "orders": [
+                "14,3/pulse",
+                "14,11/pulse",
+                "13,2/pulse",
+                "13,10/pulse",
+                "13,4/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Secure the north relay and hold our ground.",
+              "orders": [
+                "-",
+                "-",
+                "13,2/pulse",
+                "13,2/pulse",
+                "-"
+              ]
+            },
+            {
+              "intent": "Secure both relays and respond to pressure.",
+              "orders": [
+                "14,3/pulse",
+                "14,11/pulse",
+                "13,2/pulse",
+                "13,10/pulse",
+                "-"
+              ]
+            }
+          ]
+        ],
+        "challenge": {
+          "format": "challenge",
+          "policy": "arena-bot/v2",
+          "opponent": "arena-normal",
+          "difficulty": "normal"
+        },
+        "interruption": null
+      },
+      "terminal": {
+        "score": [
+          9,
+          13
+        ],
+        "tick": 28,
+        "result": "sand"
+      }
+    },
+    {
+      "id": "fac38e2e-e90c-40d3-8642-dea6b0e7b167",
+      "status": "completed",
+      "model": "gemini-3.5-flash-lite",
+      "guidance": {
+        "strategy": "proactive",
+        "autonomy": "coach-led",
+        "coaching": "Check where we are falling behind before sending units away from owned territory.",
+        "revision": "a293e3b834af509cbf730398116ae9c4b3badefed0d30ffbb27749013751f543",
+        "requests": 3,
+        "received": {
+          "autonomy": "Give the coach’s guidance strong weight where practical. Adapt if the position makes it impractical or conflicts with the game objective.",
+          "coaching": "Check where we are falling behind before sending units away from owned territory.",
+          "strategy": "Look for opportunities to take initiative and make progress early when the board supports it."
+        }
+      },
+      "attempts": [
+        {
+          "ms": 786,
+          "side": 0,
+          "step": 0,
+          "input": 1895,
+          "model": "gemini-3.5-flash-lite",
+          "output": 89,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "a293e3b834af509cbf730398116ae9c4b3badefed0d30ffbb27749013751f543"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 0,
+          "status": "accepted",
+          "attempt": 1
+        },
+        {
+          "ms": 1008,
+          "side": 0,
+          "step": 12,
+          "input": 2209,
+          "model": "gemini-3.5-flash-lite",
+          "output": 76,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "a293e3b834af509cbf730398116ae9c4b3badefed0d30ffbb27749013751f543"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 12,
+          "status": "accepted",
+          "attempt": 1
+        },
+        {
+          "ms": 802,
+          "side": 0,
+          "step": 24,
+          "input": 2180,
+          "model": "gemini-3.5-flash-lite",
+          "output": 62,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "a293e3b834af509cbf730398116ae9c4b3badefed0d30ffbb27749013751f543"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 24,
+          "status": "accepted",
+          "attempt": 1
+        }
+      ],
+      "durationMs": 2612,
+      "replay": {
+        "final": "sand",
+        "config": {
+          "mode": "relay",
+          "teamSize": 5,
+          "mapVersion": "relay-yard-v1",
+          "rulesVersion": "squads-v4"
+        },
+        "source": "arena-challenge",
+        "version": 7,
+        "windows": [
+          [
+            {
+              "intent": "Secure north relay and advance forces",
+              "orders": [
+                "13,2/pulse",
+                "12,3/pulse",
+                "12,4/pulse",
+                "13,10/pulse",
+                "13,11/pulse"
+              ]
+            },
+            {
+              "intent": "Secure both relays and respond to pressure.",
+              "orders": [
+                "14,3/pulse",
+                "14,11/pulse",
+                "13,2/pulse",
+                "13,10/pulse",
+                "13,4/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Secure north relay and pressure rival forces",
+              "orders": [
+                "13,2/pulse",
+                "12,3",
+                "12,4",
+                "13,10/pulse",
+                "13,11/pulse"
+              ]
+            },
+            {
+              "intent": "Secure both relays and respond to pressure.",
+              "orders": [
+                "14,3/pulse",
+                "14,11/pulse",
+                "13,2/pulse",
+                "13,10/pulse",
+                "13,4/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Defend north relay and counter rival forces",
+              "orders": [
+                "-",
+                "13,2/pulse",
+                "-",
+                "-",
+                "-"
+              ]
+            },
+            {
+              "intent": "Secure both relays and respond to pressure.",
+              "orders": [
+                "14,3/pulse",
+                "14,11/pulse",
+                "13,2/pulse",
+                "13,10/pulse",
+                "13,4/pulse"
+              ]
+            }
+          ]
+        ],
+        "challenge": {
+          "format": "challenge",
+          "policy": "arena-bot/v2",
+          "opponent": "arena-normal",
+          "difficulty": "normal"
+        },
+        "interruption": null
+      },
+      "terminal": {
+        "score": [
+          6,
+          6
+        ],
+        "tick": 26,
+        "result": "sand"
+      }
+    }
+  ],
+  "practiced": [
+    "Bomb Mode",
+    "Team Deathmatch",
+    "Relay"
+  ],
+  "publicVerificationRequested": true
+}

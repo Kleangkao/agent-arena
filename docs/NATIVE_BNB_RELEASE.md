@@ -1,0 +1,25 @@
+# Native BNB agent identity and live Arena
+
+AGENT ARENA uses the official ERC-8004 Identity Registry on BSC Testnet, chain 97. In **My Agent → Agent Passport**, find the Arena Commander or look up another registered agent by ID. The app verifies `ownerOf` and `tokenURI` at the same confirmed block and can compare the owner to a connected Testnet wallet. This is a read-only comparison, with no Arena account binding or delegated signing. Agent #100 is an unrelated external discovery fixture. [Official tooling, source review and trust boundaries](BNB_AGENT_TOOLING.md) · [Desktop/mobile browser proof](../evidence/native-bnb/passport-browser.json)
+
+The owner authorized one registration for **Arena Commander #2933** under the existing Testnet signer. The transaction cost 0.000020064 tBNB and was confirmed on block 145022280. The registry's owner, metadata URI and `Registered` event agreed. The earlier Bomb replay is linked as historical Arena evidence. It predates registration and the match did not authenticate ERC-8004 identities as participants. [Registration transaction](https://testnet.bscscan.com/tx/0xfaf23fdba98496e60bd637f74ee410f4f64e59d7c7caa7caed9988a7ee08fa7e) · [Registration profile](https://agent-arena-preview.vercel.app/agent-arena-commander.json) · [Official MCP evidence](../evidence/native-bnb/official-mcp.json)
+
+Identity certifies ownership at the checked block. The operator supplies model provenance. The replay player independently recomputes the squad result off-chain. The historical Bomb commitment matches the published replay hash and successful chain-97 receipt. The separate legacy duel is the contract-computed result. Portable match attribution, external agent competition and Arena-backed ERC-8004 reputation remain open. Agent Studio, ERC-8183, x402 and custody tools were assessed and are outside the runtime. [BNB Chain and squad replays](SQUAD_BLOCKCHAIN.md)
+
+## Live capacity and gameplay
+
+The original hosted storage introduced `>=2` reservations in 24 hours, enforced both globally and per guest. It was an application rule. Both hosted and SQLite daily limits, including the special local developer allowance, were retired. The hosted SQL migration retains compatibility with older builds and both RPC overloads restrict execution to the service role. An active job keeps the shared slot. The minimum start interval defaults to 60 seconds, is configurable from 1 to 3600 seconds based on provider capacity, and returns `Retry-After` when appropriate. Provider quotas, match decision budgets, guest authentication and request throttling remain in place. The same public Chromium guest admitted four matches in the initial run and completed three of them. Supabase was migrated and public deployment `dpl_7KE52DysiwnwBrZgv6p3BnpFPx5m` includes the final prompt correction.
+
+The model now chooses from 66 connected floor destination IDs in all three modes. An exact ID resolves to its canonical coordinate. Invalid IDs are rejected and the model authors any correction. A follow-up fixed the receipt prompt to echo IDs and report TDM pulse authorization separately. A prior Bomb run experienced a 503 and its only retry had invalid order syntax. The raw rejected response was unavailable, so the receipt contradiction is a confirmed code defect and an unconfirmed cause of that particular rejection. Path congestion and tactical decision quality still vary. The engine, rules and replay encoding retain the existing implementation.
+
+| Public match | Outcome | Model decisions and preparation |
+| --- | --- | --- |
+| Initial desktop Bomb | Interrupted at tick 24 | 5 accepted of 7 attempts, 13.769 s. A 503 preceded the rejected order. |
+| Mobile TDM | Blue 2–1, 25 explicitly authorized pulses | 22.151 s. |
+| Mobile Relay | Blue 24–14 at tick 41, 41 pulses under Relay rules | 8 accepted of 9 attempts, 14.588 s. |
+| Mobile Relay same-setup rematch | Blue 24–23 at tick 36, 8 pulses under Relay rules | 6 accepted of 6 attempts, 5.635 s. New coaching persisted through reload. Different behavior from one pair cannot isolate the coaching effect. |
+| Desktop Bomb retest on final build | Blue wins at tick 36 after North Core activation, zero pulses | 6 accepted of 6 attempts, 9.039 s. |
+
+All five starts used `gemini-3.5-flash-lite`. [Same-guest public cohort and replay paths](../evidence/squad-native/hosted-matches.json) · [Final Bomb retest](../evidence/squad-native/bomb-retest/hosted-matches.json) · [Final Bomb gameplay](../evidence/squad-native/bomb-retest/public-bomb-desktop-battle.png) · [Mobile Passport](../evidence/native-bnb/passport-390.png)
+
+Verification included 169 tests across 34 files with Hardhat parity enabled, a production build, and zero reported production dependency findings. Desktop and mobile Chromium used the real Testnet registry for both identity and the linked Bomb record. The wallet comparison used an injected browser fixture and requested no signature. Versioned squad replays preserve accepted deterministic orders. Human game feel, controlled coaching sensitivity across repeated trials, and larger genuine model-run teams remain unevaluated in this release.

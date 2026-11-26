@@ -1,0 +1,78 @@
+# Dust Yard autonomous gameplay research
+
+26 November 2026 · Local experiments on `arcade-v2.6`
+
+## Decision
+
+Continue exploring human coaching on the existing deterministic engine. Clear coaching changed the first accepted action across two Objective Duel situations. Models completed multi-decision duels, and a typed completion condition let one model act on a new opportunity without requesting another decision first. General coaching, uncoached reliability, and spectator appeal remain open. Repeat the typed checkpoint probe over new runs and expose decision cues to human playtesters before selecting a wider controller change.
+
+## Evidence and hypotheses
+
+| Priority | Hypothesis | Evidence and remaining test |
+| --- | --- | --- |
+| 1 | The provider schema changes which intentions Gemini can express reliably. | A movement-only named packet shape yielded movement in nine of nine responses even with other choices legal. Adding named Core and tag fields surfaced the expected coached intentions. Naming `until` also produced checkpoint-bearing plans. |
+| 2 | Explicit natural-language coaching can change play. | Repeated Core-first and tag-first choices executed on both Activator and Defender snapshots. Next compare adaptive and corrective guidance with general philosophy across maps and ordinary starts. |
+| 3 | An unfinished authorized stage can suppress a useful new decision. | In both baseline duels Blue could start Core by tick 24 and next received inference at tick 149. Coverage counts this stretch as covered. A model-authored checkpoint enabled Core at the first eligible boundary in the typed run. Repeat that result and measure request cost. |
+| 4 | Repeated approach to the same point makes the match harder to read and may reduce available choices. | The two first duels logged one and five collisions. The swapped replay showed both agents stopped 2,040 world units apart while pursuing the same site. A held-out fixture shows Core and a tag have different consequences under frozen rules. Test alternative legitimate destinations and map design separately from controller changes. |
+| 5 | Saved reflection improves decisions beyond coaching alone. | A saved revision was sent in later genuine requests. The pilot cannot resolve a performance benefit and exposed a misleading generalization in one lesson. |
+
+## Experiment journal
+
+The archived V2.8 pair established numeric movement compatibility. Both accepted plans chose the only obvious opening route, traveled 15,420 world units, and produced identical replays. That fixture had no current contact and Core was unavailable at the request. It gave little information about preference between legitimate actions.
+
+This research froze the engine, seed, replay format, model and generation settings within each cohort. The model was `gemini-3.5-flash-lite`, with application/json, one candidate, a 512-token output limit, provider-default sampling and one SDK attempt per request. The matched comparison rotates commit, contest and empty coaching through three blocks. At tick 47 in the Activator snapshot and tick 187 in the held-out Defender snapshot, both Core and standard tag were individually eligible. Acceptance was scored from the first accepted non-movement receipt at that boundary, with rejected plans, rejected channels, movement and objective events retained. A snapshot fork can carry movement from the scripted prefix. The harness cancels that prior movement lease when its first model plan grants no movement.
+
+| Cohort | Attempts | Accepted plans | Result |
+| --- | ---: | ---: | --- |
+| Movement-named schema, Activator | 11 | 6 | All nine responses proposed travel to the same Core, including three rejected for an unguarded alternative. Two HTTP 503s. |
+| Core and tag named in schema, same Activator | 10 | 5 | Every commit response attempted Core and every contest response attempted a tag first. Four responses had an unguarded alternative. Three locally valid plans lost their Core input at the game boundary because the same packet requested travel. One contest response tagged first and its second stage started Core at tick 122. One HTTP 503. |
+| Explicit packet compatibility wording, same Activator | 9 | 8 | Accepted Core-first in 3/3 commit plans and tag-first in 2/2 contest plans. All 3 uncoached plans combined Core with travel and the game rejected the Core channel. The third contest slot received HTTP 429. |
+| Held-out active Defender, explicit contract | 10 | 9 | Core-first in 3/3 commit plans and tag-first in 3/3 contest plans. Uncoached opened with two tags and one rejected Core attempt. One HTTP 503. |
+
+The earliest demonstrated bottleneck moved. With only movement named in the transport schema, the different coaching instructions never surfaced as different action intents. Naming the other fields surfaced those differences. Some plans then requested incompatible actions in the same packet or started Core during another action. The authoritative input receipts located these failures. Clearer instructions plus coaching produced repeatable legal opening choices. Uncoached plans show that the compatibility wording alone leaves a reliability problem. The cohorts ran sequentially with provider-default sampling. These are small samples from one model and one map, and provider drift, wording, and ordinary output variance remain possible contributors.
+
+The Activator commit runs activated Core and ended in Sand's disable at tick 273. The two valid contest runs ended in Sand eliminations at ticks 519 and 567. On the held-out Defender snapshot, immediate Core disabled it at tick 277 in all three trials. Contest plans delayed disable to ticks 307 and 337 in two runs. One ran out of authored behavior and Blue completed Core at tick 371. These snapshots replay a scripted prefix and use a scripted opponent. Only the tested participant's post-fork decision came from Gemini. The fixed scripted baseline at tick 47 opened with Core and also reached a disable at tick 273. Six separate scripted-vs-scripted controls across three seeds and mirrored Activator roles ended in four Defender wins and two Activator wins, with three disables and three eliminations. This sample leaves role balance open.
+
+### Continuous multi-decision play
+
+The local CLI passed each side's filtered view and recent feedback into the existing finite paced runner. Each accepted response was authorized and executed by that runner. These matches started from the initial state with Gemini on both sides. They are operator-attested local research recordings with genuine decisions for both participants throughout.
+
+| Same seed, different coaching assignment | Blue / Sand attempts | Accepted | Wall preparation | Simulated result |
+| --- | --- | ---: | ---: | --- |
+| Commit / contest | 4 / 5 | 9 | 15.30 s | Sand disabled Core at tick 374, 12.47 s |
+| Contest / commit | 4 / 4 | 7 | 18.07 s | Sand disabled Core at tick 418, 13.93 s. One recovered HTTP 503. |
+| Commit / contest, checkpoint wording | 4 / 8 | 10 | 26.31 s | Blue completed Core at tick 629, 20.97 s. Two recovered HTTP 503s. |
+| Commit / contest, checkpoint wording and typed `until` | 5 / 4 | 8 | 21.54 s | Sand disabled Core at tick 320, 10.67 s. One recovered HTTP 503. |
+
+In the first match, Blue started Core at tick 150 and activated it at tick 239. Sand tagged during the approach and later authored a tag-then-Core plan after observing the active phase. The Core start at tick 285 disabled it at tick 374. In the coaching swap, Blue authored a tag then started Core at tick 225. Sand received an eligible active Defender observation at tick 328 and began the disable at tick 329. The accepted decisions, pre-step observations and authoritative receipts are in the duel journals. Differences in opening durations and trajectories remain entangled with model sampling and the evolving opponent, even with unchanged seed and roles.
+
+The first duel had full plan coverage on both sides. Executable activity occupied 44.9% of eligible Blue time and 57.8% of eligible Sand time. The remaining covered time was plan idle, with zero explicit wait and zero uncovered infrastructure idle. The normal runner waits for a wave of network requests before advancing simulation. Its simulated idle figures therefore exclude wall-clock inference. In the swapped replay, five collisions were visible in the transcript. The graybox uses colored discs and compact status text. Close overlap and stationary stretches make intent hard to read in playback, even when the result is technically faithful. This needs a human viewing and coaching test with a clear explanation of which accepted decision caused each visible action.
+
+### Checkpoint ablation
+
+The checkpoint wording described the existing `until` mechanism without changing the scheduler. The model omitted it from all ten accepted responses. Blue's opening requested a ten-second approach and its first Core packet arrived at tick 299. The second run kept the same wording and exposed `until` as an optional string in the provider schema. All eight accepted plans used it. Blue's opening authored “approach until Core is available,” then a second stage with Core start. The engine accepted the second stage at input boundary tick 24 and emitted the start at tick 25. Blue's next generation came at tick 114, after activation. This directly ties the earlier action to a valid model-authored condition. Some conditions still have weak semantics in context. Sand attempted an early start at tick 134 while Core was unavailable and received a rejection. The one match per variant cannot estimate normal checkpoint uptake or a preparation-time gain. This result supports testing the typed interface before changing schedulers or executor structure.
+
+### Reflection and reuse
+
+The same model reflected on Blue's completed duel using filtered events. The resulting bounded revision was written to disk, reopened, checked against the participant and rules version, and sent through the normal strategic prompt builder. The matched local follow-up used an identical snapshot and empty human coaching throughout, alternating memory revision 1 with no memory. The memory arm started Core in two of two accepted plans. The no-memory arm started Core in one of three accepted plans. A third memory request hit a 503. Each accepted decision was executed and reconstructed against the fixed scripted opponent. Sand won every follow-up. In both arms, accepted Core could still be followed by two rejected inputs while Core was held.
+
+The first lesson said early activation would “unlock movement and attack channels.” Both can already be legal in the pending phase. Core temporarily locks them during commitment. Schema validity therefore certifies the size and shape of memory, while the claim in the lesson still requires checking. This is local evidence for persistence and actual reuse, with a possible action-level effect. It leaves performance improvement and hosted V2.6 memory unresolved. The production API currently pins V2.6 memory revisions to zero and skips Gemini reflection for V6 recordings.
+
+## Architecture and product implications
+
+- Keep finite paced renewal as the comparison baseline. The injected benchmark favored persistent ordered reentry over more complex state machines and Behavior Trees on stressed Score conditions, but ordinary Score had little infrastructure idle to recover. Four genuine Objective duels completed on finite plans. The typed checkpoint case shows one way for a model to delegate a state transition to the existing executor without granting the executor a strategic choice.
+- Keep the game authoritative over time, collision, input eligibility and outcomes. Strict plan parsing catches an unguarded alternative, while the game catches the state-dependent Core conflicts and interactions. Better transport guidance is useful precisely because it preserves the model's responsibility for selecting inputs and the engine's authority over them. A movement goal interrupted by collision does not regain motion through the steer-only lease resumption path. Core and airborne progress are outside the current `action-finished` guard.
+- The research schema and prompt live in a local CLI. The production Gemini adapter sends a different prompt with JSON MIME type. Bringing changes into that route would require its own verification. The study does not establish genuine Score play, newer model comparisons, general philosophy adherence, or human enjoyment. Current V2.6 graybox replay playback establishes event presentation integrity. The original visual and guest-first product acceptance remains a separate question.
+
+## Usage and operational limits
+
+85 generation attempts yielded 74 plan responses and one reflection response. The strict parser accepted 67 plans. Nine requests received HTTP 503 and one received HTTP 429. Successful generation reported 102,233 input tokens and 8,863 output tokens across plan and reflection. Successful plan requests ranged from 1.03 to 6.59 seconds, median 2.23 seconds. The 429 identified the model's 15-request-per-minute Free Tier quota. The first duel started about 15 seconds after the 429, before the requested 31.72-second wait had fully elapsed. It completed on the same key. The harness now checks the persisted provider retry guidance before starting another cohort. The held-out and memory comparisons used 4.25-second request spacing. The API evidence shows the quota tier for the rejected request. It supplies no billing statement. [Official pricing](https://ai.google.dev/gemini-api/docs/pricing?frmapp=yes)
+
+## Reproduce
+
+- Offline fixture and matched prompt checks: `npm exec --offline -- tsx scripts/dust-yard-research.ts inspect`.
+- Offline replay reconstruction and scripted controls: `npm exec --offline -- tsx scripts/dust-yard-research.ts verify evidence/dust-yard-research`.
+- The same CLI takes `coaching`, `choice`, `contract`, `holdout`, `duel`, `duel-swap`, `memory`, `duel-checkpoint` or `duel-typed-checkpoint` and an authorized private credential-file path. Those modes make actual provider calls and preserve old run files on rerun. Offline mode needs no credentials.
+- Watch the [browser video](../evidence/dust-yard-research/duel-playback.webm), or import the [stored duel](../evidence/dust-yard-research/duel-replay.json) and [coaching swap](../evidence/dust-yard-research/duel-swap-replay.json) under `/?arena-v26`. Playwright rendered 14/14 events and the correct result with zero page errors or API requests. [In progress](../evidence/dust-yard-research/duel-in-progress.png) · [Result](../evidence/dust-yard-research/duel-result.png)
+- Review the original sanitized responses and request context in [movement schema](../evidence/dust-yard-research/coaching.jsonl), [named choices](../evidence/dust-yard-research/choice.jsonl), [explicit contract](../evidence/dust-yard-research/contract.jsonl), [held-out Defender](../evidence/dust-yard-research/holdout.jsonl), [duel](../evidence/dust-yard-research/duel.jsonl), [swap](../evidence/dust-yard-research/duel-swap.jsonl), [checkpoint wording](../evidence/dust-yard-research/duel-checkpoint.jsonl), [typed checkpoint](../evidence/dust-yard-research/duel-typed-checkpoint.jsonl), and [memory](../evidence/dust-yard-research/memory.jsonl). [Replay checks](../evidence/dust-yard-research/replay-verification.json)
+- The build passed with the existing bundle and externalization warnings. All 132 tests passed using the existing loopback Hardhat chain, including Solidity parity. The research runner also passed strict standalone TypeScript checking.

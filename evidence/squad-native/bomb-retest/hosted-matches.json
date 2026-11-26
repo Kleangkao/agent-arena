@@ -1,0 +1,63 @@
+{
+  "origin": "https://agent-arena-preview.vercel.app",
+  "startedAt": "2026-11-26T18:54:48.107Z",
+  "checks": {
+    "sameGuest": true,
+    "thirdMatchAdmitted": false,
+    "thirdMatchCompleted": false
+  },
+  "attempts": [
+    {
+      "name": "bomb-desktop",
+      "at": "2026-11-26T18:55:03.385Z",
+      "http": 202,
+      "route": "/api/matches",
+      "input": {
+        "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress.",
+        "opponent": "official-sand",
+        "rulesVersion": "squads-v3",
+        "mode": "bomb"
+      },
+      "id": "71850951-2613-488a-9aef-ca92a52166d5"
+    }
+  ],
+  "matches": [
+    {
+      "name": "bomb-desktop",
+      "id": "71850951-2613-488a-9aef-ca92a52166d5",
+      "mode": "bomb",
+      "status": "completed",
+      "model": "gemini-3.5-flash-lite",
+      "models": [
+        "gemini-3.5-flash-lite"
+      ],
+      "durationMs": 9039,
+      "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress.",
+      "result": "blue",
+      "interruption": null,
+      "score": [
+        0,
+        0
+      ],
+      "finalTick": 36,
+      "pulses": 0,
+      "core": [
+        "North activation started",
+        "North Core activated"
+      ],
+      "attempts": [
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted",
+        "accepted"
+      ],
+      "pollRoute": "/api/matches/71850951-2613-488a-9aef-ca92a52166d5",
+      "battleScreenshot": "evidence/squad-native/bomb-retest/public-bomb-desktop-battle.png",
+      "resultScreenshot": "evidence/squad-native/bomb-retest/public-bomb-desktop-result.png",
+      "noHorizontalOverflow": true
+    }
+  ],
+  "pageErrors": []
+}

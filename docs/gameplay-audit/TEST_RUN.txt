@@ -1,0 +1,13 @@
+
+> bnb-chain@1.0.0 test
+> vitest run
+
+
+ RUN  v5.1.2 F:/James/codex project file/AI game/BNB chain
+
+
+ Test Files  20 passed (20)
+      Tests  100 passed (100)
+   Start at  15:38:26
+   Duration  2.81s (import 63%, tests 32%, worker 3%, transform 2%)
+

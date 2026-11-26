@@ -1,0 +1,19 @@
+{
+  "source": "Project-scoped official BNB Chain MCP Testnet read tools",
+  "chainId": 97,
+  "identityRegistry": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+  "reputationRegistry": "0x8004B663056A597Dffe9eCcC1965A193B7388713",
+  "agentId": "2933",
+  "owner": "0x0f7340C0B93377f4c59d0ACCcc076991bb872E30",
+  "reputationClientsAtRead": [],
+  "replayRegistry": "0xbd1a8427da0b2b2d947a391ed117e49ec8801f81",
+  "matchKey": "0x4c19883ebdb539e0657b1c30372854513b18a7e16c00b54f273a79fe2df0a675",
+  "storedEvidenceHash": "0xadd6160b9499c74448219c3b1b1bd332cb4f51f70b156e991dc7414cb1d2a9f0",
+  "receiptStatus": "success",
+  "receiptBlock": 145034610,
+  "receiptBlockHash": "0xc8312bdb06c5afa5d109af9ac3b79ba043ddc60eee0f59c857c9b8f9829665ba",
+  "transactionHash": "0x2c36b996f25a4b06e0764ce81947af7883830757a94ead7b03969fd6bc193e8f",
+  "gasUsed": 68449,
+  "effectiveGasPriceWei": "100000000",
+  "feeWei": "6844900000000"
+}

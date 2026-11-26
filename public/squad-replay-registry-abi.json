@@ -1,0 +1,66 @@
+[
+  {
+    "name": "operator",
+    "type": "function",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "address"
+      }
+    ]
+  },
+  {
+    "name": "records",
+    "type": "function",
+    "stateMutability": "view",
+    "inputs": [
+      {
+        "type": "bytes32",
+        "name": "matchKey"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "bytes32",
+        "name": "replayHash"
+      },
+      {
+        "type": "uint64",
+        "name": "blockNumber"
+      }
+    ]
+  },
+  {
+    "name": "recordReplay",
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "type": "bytes32",
+        "name": "matchKey"
+      },
+      {
+        "type": "bytes32",
+        "name": "replayHash"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "name": "ReplayRecorded",
+    "type": "event",
+    "inputs": [
+      {
+        "type": "bytes32",
+        "name": "matchKey",
+        "indexed": true
+      },
+      {
+        "type": "bytes32",
+        "name": "replayHash",
+        "indexed": true
+      }
+    ]
+  }
+]

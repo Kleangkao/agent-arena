@@ -1,0 +1,211 @@
+{
+  "id": "f04637fc-d7d3-4955-98a8-068329208880",
+  "status": "completed",
+  "replay": {
+    "final": "blue",
+    "config": {
+      "mode": "tdm",
+      "teamSize": 5,
+      "mapVersion": "relay-yard-v1",
+      "rulesVersion": "squads-v3"
+    },
+    "source": "operator-attested-gemini",
+    "version": 7,
+    "windows": [
+      [
+        {
+          "intent": "Advance cautiously towards central cover and prepare for engagement.",
+          "orders": [
+            "8,7",
+            "5,7",
+            "11,7",
+            "8,10",
+            "5,10"
+          ]
+        },
+        {
+          "intent": "Advance cautiously toward the center to engage the rival team and secure early eliminations.",
+          "orders": [
+            "24,13>24,7",
+            "24,7>24,4",
+            "21,7>21,4",
+            "18,7>18,4",
+            "15,7>15,4"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Advance units toward central cover positions to engage the rival team.",
+          "orders": [
+            "11,7",
+            "8,7",
+            "11,7",
+            "11,10",
+            "8,10"
+          ]
+        },
+        {
+          "intent": "Advance toward rival positions to initiate combat and secure eliminations.",
+          "orders": [
+            "24,13>24,7/pulse",
+            "24,4>24,7/pulse",
+            "21,4>21,7/pulse",
+            "18,4>18,7/pulse",
+            "15,4>15,7/pulse"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Advance to central positions and engage rivals.",
+          "orders": [
+            "11,7/pulse",
+            "8,7/pulse",
+            "12,3/pulse",
+            "11,10/pulse",
+            "8,10/pulse"
+          ]
+        },
+        {
+          "intent": "Engage rival units in combat and secure eliminations.",
+          "orders": [
+            "24,7>11,6/pulse",
+            "24,7>11,6/pulse",
+            "21,7>11,6/pulse",
+            "18,7>11,7/pulse",
+            "15,7>11,7/pulse"
+          ]
+        }
+      ],
+      [
+        {
+          "intent": "Finish off weakened rivals near the center and hold positions.",
+          "orders": [
+            "11,7",
+            "8,7",
+            "-",
+            "11,10>12,11/pulse",
+            "8,10"
+          ]
+        },
+        {
+          "intent": "Reposition and engage rivals for eliminations.",
+          "orders": [
+            "18,7>11,7",
+            "15,7>11,7",
+            "11,7",
+            "11,7/pulse",
+            "21,7>11,7"
+          ]
+        }
+      ]
+    ],
+    "interruption": null
+  },
+  "attempts": [
+    {
+      "ms": 4560,
+      "side": 0,
+      "step": 0,
+      "input": 1672,
+      "model": "gemini-3.5-flash-lite",
+      "output": 66,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "d8f05d45b41dd0a5ed7e624c92324255f0610fe8e5a97b0fc6018aa43efc8fdd"
+    },
+    {
+      "ms": 4410,
+      "side": 1,
+      "step": 0,
+      "input": 1670,
+      "model": "gemini-3.5-flash-lite",
+      "output": 97,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 3817,
+      "side": 0,
+      "step": 12,
+      "input": 1965,
+      "model": "gemini-3.5-flash-lite",
+      "output": 70,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "d8f05d45b41dd0a5ed7e624c92324255f0610fe8e5a97b0fc6018aa43efc8fdd"
+    },
+    {
+      "ms": 4044,
+      "side": 1,
+      "step": 12,
+      "input": 2003,
+      "model": "gemini-3.5-flash-lite",
+      "output": 114,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 4653,
+      "side": 0,
+      "step": 24,
+      "input": 1966,
+      "model": "gemini-3.5-flash-lite",
+      "output": 88,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "d8f05d45b41dd0a5ed7e624c92324255f0610fe8e5a97b0fc6018aa43efc8fdd"
+    },
+    {
+      "ms": 990,
+      "side": 1,
+      "step": 24,
+      "input": 2003,
+      "model": "gemini-3.5-flash-lite",
+      "output": 113,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 4365,
+      "side": 0,
+      "step": 36,
+      "input": 1975,
+      "model": "gemini-3.5-flash-lite",
+      "output": 76,
+      "status": "accepted",
+      "attempt": 1,
+      "coachingRevision": "d8f05d45b41dd0a5ed7e624c92324255f0610fe8e5a97b0fc6018aa43efc8fdd"
+    },
+    {
+      "ms": 4550,
+      "side": 1,
+      "step": 36,
+      "input": 1994,
+      "model": "gemini-3.5-flash-lite",
+      "output": 97,
+      "status": "invalid-orders",
+      "attempt": 1,
+      "failure": "Return movement-only orders and a pulseSlots array of distinct living slot numbers.",
+      "coachingRevision": "official-sand-v1"
+    },
+    {
+      "ms": 4296,
+      "side": 1,
+      "step": 36,
+      "input": 2024,
+      "model": "gemini-3.5-flash-lite",
+      "output": 87,
+      "status": "accepted",
+      "attempt": 2,
+      "coachingRevision": "official-sand-v1"
+    }
+  ],
+  "durationMs": 22151,
+  "model": "gemini-3.5-flash-lite",
+  "coaching": "Reassess every window. Choose a concrete objective and review which authorized orders made progress."
+}

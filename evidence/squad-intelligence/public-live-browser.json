@@ -1,0 +1,43 @@
+{
+  "origin": "https://agent-arena-preview.vercel.app",
+  "results": [
+    {
+      "width": 1180,
+      "practice": [
+        "bomb",
+        "tdm",
+        "relay"
+      ],
+      "tdmScore": [
+        "2",
+        "2"
+      ],
+      "bombCommitment": "https://testnet.bscscan.com/tx/0xccd05b0c93c3c7931b9c77575894dc78c7bd9850b6a0e35f760ab2c6e61cacb6",
+      "replayPosts": [],
+      "coachingPosts": [
+        "https://agent-arena-preview.vercel.app/api/guest",
+        "https://agent-arena-preview.vercel.app/api/coaching"
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "practice": [
+        "bomb",
+        "tdm",
+        "relay"
+      ],
+      "tdmScore": [
+        "2",
+        "2"
+      ],
+      "bombCommitment": "https://testnet.bscscan.com/tx/0xccd05b0c93c3c7931b9c77575894dc78c7bd9850b6a0e35f760ab2c6e61cacb6",
+      "replayPosts": [],
+      "coachingPosts": [
+        "https://agent-arena-preview.vercel.app/api/guest",
+        "https://agent-arena-preview.vercel.app/api/coaching"
+      ],
+      "errors": []
+    }
+  ]
+}

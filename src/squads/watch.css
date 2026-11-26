@@ -1,0 +1,28 @@
+.relay-wall{fill:#43576c;stroke:#617b94;stroke-width:1}
+.relay-cover{fill:#2c4357;stroke:#6c899e;stroke-width:1}
+.relay-neutral{color:#82e5d1}
+.relay-alert{color:#ffd078}
+.relay-unit{transition:transform 320ms linear}
+.relay-match .arena-grid{display:block;width:100%;height:auto}
+.relay-caption,.relay-scoreboard,.relay-orders,.relay-controls{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem 1rem;padding:.7rem clamp(.65rem,2vw,1.3rem)}
+.relay-caption{background:#172333;color:#c4d4e1;font-size:.78rem}
+.relay-scoreboard>div{display:flex;align-items:center;gap:.65rem;font-weight:750}
+.relay-scoreboard .team-emblem{width:2.1rem;height:2.1rem}
+.relay-scoreboard small{display:block;font-size:.68rem;color:#bec8d6;font-weight:500}
+.relay-scoreboard strong{font-size:1.65rem;margin-inline:.25rem}
+.bomb-status{display:flex;align-items:center;flex-wrap:wrap;gap:.3rem .6rem;color:#ffd078;font-variant-numeric:tabular-nums}
+.bomb-status progress{width:3rem;height:.55rem;accent-color:currentColor}
+.relay-orders{align-items:start;font-size:.85rem;border-top:1px solid #314255}
+.relay-orders>div{flex:1 1 14rem}
+.relay-order{min-width:0;overflow-wrap:anywhere}
+.relay-order dl,.relay-order dd,.relay-core-events{margin:0}
+.relay-order dl{display:grid;gap:.3rem;margin-top:.5rem;font-size:.76rem;color:#becbd8}
+.relay-order dl>div{display:grid;grid-template-columns:4.25rem 1fr;gap:.25rem}
+.relay-order dt,.relay-core-events b{font-weight:700;color:#edf4fb}
+.relay-core-events{width:100%;font-size:.76rem;color:#c4d4e1}
+.relay-core-events b{display:inline-block;min-width:4.5rem}
+.relay-controls label{display:flex;flex:1 1 9rem;align-items:center;gap:.65rem;font-size:.8rem}
+.relay-controls input{min-width:3rem;flex:1;accent-color:#82e5d1}
+.relay-match .battlefooter h2,.relay-match .battlefooter p{margin:.2rem 0}
+.relay-lede{max-width:40ch}
+@media(prefers-reduced-motion:reduce){.relay-unit{transition:none}}

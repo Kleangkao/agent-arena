@@ -1,0 +1,337 @@
+{
+  "origin": "https://agent-arena-preview.vercel.app",
+  "kind": "hosted-live",
+  "shots": [
+    "evidence/human-strategy/final/hosted-live-play-desktop.png",
+    "evidence/human-strategy/final/hosted-live-play-mobile.png",
+    "evidence/human-strategy/final/hosted-live-agent-mobile.png",
+    "evidence/human-strategy/final/hosted-live-prepare-mobile.png",
+    "evidence/human-strategy/final/hosted-live-prepare-desktop.png",
+    "evidence/human-strategy/final/hosted-live-battle-desktop.png",
+    "evidence/human-strategy/final/hosted-live-battle-mobile.png",
+    "evidence/human-strategy/final/hosted-live-review-mobile.png",
+    "evidence/human-strategy/final/hosted-live-review-desktop.png",
+    "evidence/human-strategy/final/hosted-live-rematch-setup.png",
+    "evidence/human-strategy/final/hosted-live-public-verified.png"
+  ],
+  "recording": "evidence/human-strategy/final/hosted-live.webm",
+  "errors": [],
+  "failure": null,
+  "startStatuses": [
+    202
+  ],
+  "runs": [
+    {
+      "id": "58939564-df7b-4f34-ab00-606200e32650",
+      "status": "completed",
+      "model": "gemini-3.5-flash-lite",
+      "guidance": {
+        "strategy": "proactive",
+        "autonomy": "coach-led",
+        "coaching": "Secure one relay early. If it keeps scoring, look for opportunities to expand.",
+        "revision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a",
+        "requests": 6,
+        "received": {
+          "autonomy": "Give the coach’s guidance strong weight where practical. Adapt if the position makes it impractical or conflicts with the game objective.",
+          "coaching": "Secure one relay early. If it keeps scoring, look for opportunities to expand.",
+          "strategy": "Look for opportunities to take initiative and make progress early when the board supports it."
+        }
+      },
+      "attempts": [
+        {
+          "ms": 818,
+          "side": 0,
+          "step": 0,
+          "input": 1897,
+          "model": "gemini-3.5-flash-lite",
+          "output": 87,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a"
+        },
+        {
+          "ms": 888,
+          "side": 1,
+          "step": 0,
+          "input": 1845,
+          "model": "gemini-3.5-flash-lite",
+          "output": 108,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "official-sand-v1"
+        },
+        {
+          "ms": 789,
+          "side": 0,
+          "step": 12,
+          "input": 2220,
+          "model": "gemini-3.5-flash-lite",
+          "output": 91,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a"
+        },
+        {
+          "ms": 697,
+          "side": 1,
+          "step": 12,
+          "input": 2189,
+          "model": "gemini-3.5-flash-lite",
+          "output": 100,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "official-sand-v1"
+        },
+        {
+          "ms": 782,
+          "side": 0,
+          "step": 24,
+          "input": 2209,
+          "model": "gemini-3.5-flash-lite",
+          "output": 95,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a"
+        },
+        {
+          "ms": 695,
+          "side": 1,
+          "step": 24,
+          "input": 2177,
+          "model": "gemini-3.5-flash-lite",
+          "output": 102,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "official-sand-v1"
+        },
+        {
+          "ms": 661,
+          "side": 0,
+          "step": 36,
+          "input": 2206,
+          "model": "gemini-3.5-flash-lite",
+          "output": 97,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a"
+        },
+        {
+          "ms": 726,
+          "side": 1,
+          "step": 36,
+          "input": 2166,
+          "model": "gemini-3.5-flash-lite",
+          "output": 102,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "official-sand-v1"
+        },
+        {
+          "ms": 727,
+          "side": 0,
+          "step": 48,
+          "input": 2198,
+          "model": "gemini-3.5-flash-lite",
+          "output": 102,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a"
+        },
+        {
+          "ms": 797,
+          "side": 1,
+          "step": 48,
+          "input": 2170,
+          "model": "gemini-3.5-flash-lite",
+          "output": 85,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "official-sand-v1"
+        },
+        {
+          "ms": 763,
+          "side": 0,
+          "step": 60,
+          "input": 2199,
+          "model": "gemini-3.5-flash-lite",
+          "output": 99,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "57665f92fdd0fe1fc109795f37d14aa3689e44f32e7b1cb2ec846d8ef277672a"
+        },
+        {
+          "ms": 725,
+          "side": 1,
+          "step": 60,
+          "input": 2149,
+          "model": "gemini-3.5-flash-lite",
+          "output": 89,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "official-sand-v1"
+        }
+      ],
+      "durationMs": 4825,
+      "replay": {
+        "final": "blue",
+        "config": {
+          "mode": "relay",
+          "teamSize": 5,
+          "mapVersion": "relay-yard-v1",
+          "rulesVersion": "squads-v4"
+        },
+        "source": "operator-attested-gemini",
+        "version": 7,
+        "windows": [
+          [
+            {
+              "intent": "Secure the northern relay early to start scoring points and establish control.",
+              "orders": [
+                "13,3/pulse",
+                "13,2/pulse",
+                "13,4/pulse",
+                "12,3/pulse",
+                "12,2/pulse"
+              ]
+            },
+            {
+              "intent": "Capture southern and northern relays",
+              "orders": [
+                "24,10>12,11/pulse",
+                "24,7>13,11/pulse",
+                "21,7>14,11/pulse",
+                "18,7>13,10/pulse",
+                "24,4>13,3/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Secure the northern relay quickly to begin scoring.",
+              "orders": [
+                "13,3/pulse",
+                "13,2/pulse",
+                "13,4/pulse",
+                "12,3/pulse",
+                "12,2/pulse"
+              ]
+            },
+            {
+              "intent": "Capture southern and northern relays",
+              "orders": [
+                "24,10>12,11/pulse",
+                "24,7>13,11/pulse",
+                "21,7>14,11/pulse",
+                "18,7>13,10/pulse",
+                "24,4>13,3/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Hold the northern relay and secure control while watching for rival advances.",
+              "orders": [
+                "13,3/pulse",
+                "13,2/pulse",
+                "13,4/pulse",
+                "12,3/pulse",
+                "12,2/pulse"
+              ]
+            },
+            {
+              "intent": "Capture southern relay",
+              "orders": [
+                "24,10>12,11/pulse",
+                "24,7>13,11/pulse",
+                "21,7>14,11/pulse",
+                "13,10/pulse",
+                "24,4>13,3/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Maintain control of the northern relay and defend our territory against approaching rivals.",
+              "orders": [
+                "13,3/pulse",
+                "13,2/pulse",
+                "13,4/pulse",
+                "12,3/pulse",
+                "12,2/pulse"
+              ]
+            },
+            {
+              "intent": "Defend the southern relay and push against rival forces.",
+              "orders": [
+                "21,10>12,11/pulse",
+                "18,7>13,11/pulse",
+                "15,10>14,11/pulse",
+                "13,10/pulse",
+                "18,4>13,3/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Defend the northern relay, hold positions, and secure our point lead to win the match.",
+              "orders": [
+                "13,3/pulse",
+                "13,2/pulse",
+                "13,4/pulse",
+                "12,3/pulse",
+                "12,2/pulse"
+              ]
+            },
+            {
+              "intent": "Secure the southern relay and contest control before time expires.",
+              "orders": [
+                "21,10/pulse",
+                "13,11/pulse",
+                "14,11/pulse",
+                "13,10/pulse",
+                "-"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Maintain defensive posture around the northern relay to secure our point lead and finish the match.",
+              "orders": [
+                "13,3/pulse",
+                "13,2/pulse",
+                "13,4/pulse",
+                "12,3/pulse",
+                "12,2/pulse"
+              ]
+            },
+            {
+              "intent": "Defend the southern relay and hold position to secure points as time expires.",
+              "orders": [
+                "21,10/pulse",
+                "13,11/pulse",
+                "14,11/pulse",
+                "13,10/pulse",
+                "-"
+              ]
+            }
+          ]
+        ],
+        "interruption": null
+      },
+      "terminal": {
+        "score": [
+          54,
+          46
+        ],
+        "tick": 72,
+        "result": "blue"
+      }
+    }
+  ],
+  "practiced": [
+    "Bomb Mode",
+    "Team Deathmatch",
+    "Relay"
+  ],
+  "publicVerificationRequested": true
+}

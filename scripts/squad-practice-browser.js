@@ -1,0 +1,31 @@
+async page=>{
+ const out='evidence/squads/';
+ const errors=[],generated=[];
+ page.on('pageerror',error=>errors.push(error.message));
+ page.on('request',r=>{if(r.method()==='POST'&&r.url().endsWith('/api/matches'))generated.push(r.url());});
+ await page.setViewportSize({width:1180,height:900});
+ await page.goto('http://127.0.0.1:4182/');
+ await page.getByRole('region',{name:'Relay Yard'}).waitFor();
+ await page.screenshot({path:out+'play.png',fullPage:true});
+ await page.getByRole('button',{name:'My Agent',exact:true}).click();
+ await page.getByLabel('Coaching message').waitFor();
+ await page.screenshot({path:out+'my-agent.png',fullPage:true});
+ await page.getByRole('button',{name:'Play',exact:true}).click();
+ await page.getByRole('button',{name:'Start practice'}).click();
+ const battle=page.getByRole('region',{name:'Relay match'});
+ const seek=battle.getByRole('slider');
+ await seek.focus();
+ for(let i=0;i<16;i++)await seek.press('ArrowRight');
+ await battle.getByRole('button',{name:'Resume'}).waitFor();
+ await page.screenshot({path:out+'practice-desktop.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});
+ await page.screenshot({path:out+'practice-mobile.png',fullPage:true});
+ if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile overflow');
+ await battle.getByRole('button',{name:'Skip to result'}).click();
+ await battle.getByRole('heading',{name:/wins|Draw/}).waitFor();
+ await page.screenshot({path:out+'practice-result.png',fullPage:true});
+ await battle.getByRole('button',{name:'Rematch',exact:true}).click();
+ await battle.getByRole('button',{name:'Pause'}).waitFor();
+ if(generated.length||errors.length)throw Error('Practice generated a request or page error');
+ return {generated,errors,desktop:true,mobile:true,seek:true,rematch:true};
+}

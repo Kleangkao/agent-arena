@@ -1,0 +1,9 @@
+{
+  "health": 200,
+  "crossOrigin": 403,
+  "noGuest": 401,
+  "invalidConfig": 400,
+  "developerHeader": 404,
+  "matchStatus": 429,
+  "limit": "Arena reached its daily live match limit. Practice and replays are still available."
+}

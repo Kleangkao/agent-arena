@@ -1,0 +1,357 @@
+{
+  "policy": "arena-bot/v3",
+  "source": "scripted 5v5 reference formations; no inference",
+  "rows": [
+    {
+      "mode": "relay",
+      "reference": "split",
+      "difficulty": "easy",
+      "winner": "blue",
+      "tick": 72,
+      "score": [
+        55,
+        51
+      ],
+      "blueAlive": 3,
+      "sandAlive": 4
+    },
+    {
+      "mode": "relay",
+      "reference": "split",
+      "difficulty": "normal",
+      "winner": "blue",
+      "tick": 72,
+      "score": [
+        57,
+        49
+      ],
+      "blueAlive": 2,
+      "sandAlive": 2
+    },
+    {
+      "mode": "relay",
+      "reference": "split",
+      "difficulty": "hard",
+      "winner": "blue",
+      "tick": 26,
+      "score": [
+        9,
+        4
+      ],
+      "blueAlive": 3,
+      "sandAlive": 0
+    },
+    {
+      "mode": "relay",
+      "reference": "north",
+      "difficulty": "easy",
+      "winner": "blue",
+      "tick": 72,
+      "score": [
+        55,
+        53
+      ],
+      "blueAlive": 5,
+      "sandAlive": 4
+    },
+    {
+      "mode": "relay",
+      "reference": "north",
+      "difficulty": "normal",
+      "winner": "blue",
+      "tick": 72,
+      "score": [
+        53,
+        51
+      ],
+      "blueAlive": 4,
+      "sandAlive": 2
+    },
+    {
+      "mode": "relay",
+      "reference": "north",
+      "difficulty": "hard",
+      "winner": "sand",
+      "tick": 72,
+      "score": [
+        46,
+        58
+      ],
+      "blueAlive": 1,
+      "sandAlive": 1
+    },
+    {
+      "mode": "relay",
+      "reference": "south",
+      "difficulty": "easy",
+      "winner": "sand",
+      "tick": 34,
+      "score": [
+        3,
+        5
+      ],
+      "blueAlive": 0,
+      "sandAlive": 2
+    },
+    {
+      "mode": "relay",
+      "reference": "south",
+      "difficulty": "normal",
+      "winner": "sand",
+      "tick": 72,
+      "score": [
+        55,
+        57
+      ],
+      "blueAlive": 4,
+      "sandAlive": 3
+    },
+    {
+      "mode": "relay",
+      "reference": "south",
+      "difficulty": "hard",
+      "winner": "blue",
+      "tick": 72,
+      "score": [
+        57,
+        55
+      ],
+      "blueAlive": 3,
+      "sandAlive": 1
+    },
+    {
+      "mode": "bomb",
+      "reference": "split",
+      "difficulty": "easy",
+      "winner": "blue",
+      "tick": 32,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 3,
+      "sandAlive": 4
+    },
+    {
+      "mode": "bomb",
+      "reference": "split",
+      "difficulty": "normal",
+      "winner": "sand",
+      "tick": 48,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 1,
+      "sandAlive": 2
+    },
+    {
+      "mode": "bomb",
+      "reference": "split",
+      "difficulty": "hard",
+      "winner": "blue",
+      "tick": 35,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 0,
+      "sandAlive": 3
+    },
+    {
+      "mode": "bomb",
+      "reference": "north",
+      "difficulty": "easy",
+      "winner": "blue",
+      "tick": 32,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 5,
+      "sandAlive": 4
+    },
+    {
+      "mode": "bomb",
+      "reference": "north",
+      "difficulty": "normal",
+      "winner": "blue",
+      "tick": 34,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 2,
+      "sandAlive": 2
+    },
+    {
+      "mode": "bomb",
+      "reference": "north",
+      "difficulty": "hard",
+      "winner": "sand",
+      "tick": 42,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 0,
+      "sandAlive": 1
+    },
+    {
+      "mode": "bomb",
+      "reference": "south",
+      "difficulty": "easy",
+      "winner": "sand",
+      "tick": 30,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 0,
+      "sandAlive": 4
+    },
+    {
+      "mode": "bomb",
+      "reference": "south",
+      "difficulty": "normal",
+      "winner": "blue",
+      "tick": 35,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 2,
+      "sandAlive": 3
+    },
+    {
+      "mode": "bomb",
+      "reference": "south",
+      "difficulty": "hard",
+      "winner": "blue",
+      "tick": 33,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 3,
+      "sandAlive": 2
+    },
+    {
+      "mode": "tdm",
+      "reference": "split",
+      "difficulty": "easy",
+      "winner": "sand",
+      "tick": 48,
+      "score": [
+        3,
+        4
+      ],
+      "blueAlive": 5,
+      "sandAlive": 5
+    },
+    {
+      "mode": "tdm",
+      "reference": "split",
+      "difficulty": "normal",
+      "winner": "sand",
+      "tick": 48,
+      "score": [
+        2,
+        5
+      ],
+      "blueAlive": 5,
+      "sandAlive": 5
+    },
+    {
+      "mode": "tdm",
+      "reference": "split",
+      "difficulty": "hard",
+      "winner": "sand",
+      "tick": 48,
+      "score": [
+        3,
+        7
+      ],
+      "blueAlive": 4,
+      "sandAlive": 4
+    },
+    {
+      "mode": "tdm",
+      "reference": "north",
+      "difficulty": "easy",
+      "winner": "blue",
+      "tick": 48,
+      "score": [
+        1,
+        0
+      ],
+      "blueAlive": 5,
+      "sandAlive": 5
+    },
+    {
+      "mode": "tdm",
+      "reference": "north",
+      "difficulty": "normal",
+      "winner": "sand",
+      "tick": 48,
+      "score": [
+        3,
+        7
+      ],
+      "blueAlive": 5,
+      "sandAlive": 5
+    },
+    {
+      "mode": "tdm",
+      "reference": "north",
+      "difficulty": "hard",
+      "winner": "sand",
+      "tick": 48,
+      "score": [
+        5,
+        7
+      ],
+      "blueAlive": 4,
+      "sandAlive": 4
+    },
+    {
+      "mode": "tdm",
+      "reference": "south",
+      "difficulty": "easy",
+      "winner": "sand",
+      "tick": 48,
+      "score": [
+        5,
+        6
+      ],
+      "blueAlive": 4,
+      "sandAlive": 4
+    },
+    {
+      "mode": "tdm",
+      "reference": "south",
+      "difficulty": "normal",
+      "winner": "draw",
+      "tick": 48,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 5,
+      "sandAlive": 5
+    },
+    {
+      "mode": "tdm",
+      "reference": "south",
+      "difficulty": "hard",
+      "winner": "draw",
+      "tick": 48,
+      "score": [
+        0,
+        0
+      ],
+      "blueAlive": 5,
+      "sandAlive": 5
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "rulesVersion": "lane-v1",
+  "mapVersion": "dust-yard-prototype-v1",
+  "label": "Recorded Gemini match · Two-turn planning",
+  "initialState": {
+    "step": 0,
+    "fighters": [
+      {
+        "position": 0,
+        "hp": 100,
+        "ammo": 3
+      },
+      {
+        "position": 6,
+        "hp": 100,
+        "ammo": 3
+      }
+    ],
+    "result": null
+  },
+  "events": [
+    {
+      "step": 1,
+      "actions": [
+        "advance",
+        "advance"
+      ],
+      "state": {
+        "step": 1,
+        "fighters": [
+          {
+            "position": 1,
+            "hp": 100,
+            "ammo": 3
+          },
+          {
+            "position": 5,
+            "hp": 100,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 2,
+      "actions": [
+        "advance",
+        "advance"
+      ],
+      "state": {
+        "step": 2,
+        "fighters": [
+          {
+            "position": 2,
+            "hp": 100,
+            "ammo": 3
+          },
+          {
+            "position": 4,
+            "hp": 100,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 3,
+      "actions": [
+        "attack",
+        "attack"
+      ],
+      "state": {
+        "step": 3,
+        "fighters": [
+          {
+            "position": 2,
+            "hp": 75,
+            "ammo": 2
+          },
+          {
+            "position": 4,
+            "hp": 75,
+            "ammo": 2
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 4,
+      "actions": [
+        "attack",
+        "reload"
+      ],
+      "state": {
+        "step": 4,
+        "fighters": [
+          {
+            "position": 2,
+            "hp": 75,
+            "ammo": 1
+          },
+          {
+            "position": 4,
+            "hp": 50,
+            "ammo": 3
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 5,
+      "actions": [
+        "reload",
+        "attack"
+      ],
+      "state": {
+        "step": 5,
+        "fighters": [
+          {
+            "position": 2,
+            "hp": 50,
+            "ammo": 3
+          },
+          {
+            "position": 4,
+            "hp": 50,
+            "ammo": 2
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 6,
+      "actions": [
+        "attack",
+        "attack"
+      ],
+      "state": {
+        "step": 6,
+        "fighters": [
+          {
+            "position": 2,
+            "hp": 25,
+            "ammo": 2
+          },
+          {
+            "position": 4,
+            "hp": 25,
+            "ammo": 1
+          }
+        ],
+        "result": null
+      }
+    },
+    {
+      "step": 7,
+      "actions": [
+        "attack",
+        "reload"
+      ],
+      "state": {
+        "step": 7,
+        "fighters": [
+          {
+            "position": 2,
+            "hp": 25,
+            "ammo": 1
+          },
+          {
+            "position": 4,
+            "hp": 0,
+            "ammo": 3
+          }
+        ],
+        "result": "blue"
+      }
+    }
+  ],
+  "result": "blue"
+}

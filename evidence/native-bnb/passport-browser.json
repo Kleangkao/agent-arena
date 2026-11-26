@@ -1,0 +1,25 @@
+{
+  "origin": "https://agent-arena-preview.vercel.app",
+  "proof": [
+    {
+      "width": 1180,
+      "publishedIdentity": 2933,
+      "externalIdentity": 100,
+      "owner": "0x0f7340C0B93377f4c59d0ACCcc076991bb872E30",
+      "receipt": "https://testnet.bscscan.com/tx/0xccd05b0c93c3c7931b9c77575894dc78c7bd9850b6a0e35f760ab2c6e61cacb6",
+      "walletProvider": "injected browser test wallet",
+      "rpc": "live BSC Testnet",
+      "generationRequests": 0
+    },
+    {
+      "width": 390,
+      "publishedIdentity": 2933,
+      "externalIdentity": 100,
+      "owner": "0x0f7340C0B93377f4c59d0ACCcc076991bb872E30",
+      "receipt": "https://testnet.bscscan.com/tx/0xccd05b0c93c3c7931b9c77575894dc78c7bd9850b6a0e35f760ab2c6e61cacb6",
+      "walletProvider": "injected browser test wallet",
+      "rpc": "live BSC Testnet",
+      "generationRequests": 0
+    }
+  ]
+}

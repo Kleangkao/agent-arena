@@ -1,0 +1,45 @@
+# V2.7 product-intelligence validation
+
+26 November 2026 ICT
+
+## What the six Objective divergences establish
+
+The first authoritative difference is **tick 209 (6.967 s)** in each pair. This covers seeds 3, 23 and 71, each with ordinary planned-play and injected-503 retry fixtures. Both controllers start from identical authoritative state at tick 208. The finite plan finishes, paced renewal requests a fresh specification, and the injected provider supplies a first stage whose `core-available` guard is true for Blue. Blue's `core:start` packet is accepted and emits a Core start at 20,900 time units. The ordered candidate instead reports `authored-reentry`, keeps the revision accepted at tick zero, and emits no packet on this boundary. It restarts at the next boundary and its already-authorized Core input is accepted at 21,000 units. The same wrapper with reentry disabled reproduces the finite trace and result in all six cases.
+
+The **first divergence is a one-tick handoff and renewal difference triggered by explicit persistence**. Each run stays inside its own validated authorization. The persistent fixture explicitly permitted reentry, which extends permission to reuse authored stages within the original deadline. This fixture permission is additional to the finite plan and was supplied by the benchmark author. It does not establish that a model would choose reentry. Subsequent stage instructions and outcomes can diverge under the different observations and renewal timing, so the trace does not establish that removing the one-tick handoff would restore the outcomes. The evidence does not indicate an engine defect or an unauthorized action. Blue wins at tick 401 for seeds 3 and 23 and tick 375 for seed 71 on finite and wrapped controls. Sand wins at tick 463 in the six reentry runs. No outcome is a gameplay-balance verdict. [Boundary traces](../evidence/gameplay-v27/objective-divergences.json)
+
+## Capability matrix
+
+| Intent | Observed through the existing boundary | Current authorization | Shared execution and limitation |
+| --- | --- | --- | --- |
+| Start the Core when eligible | Mode, public phase and site, own eligibility | `core-available` guard with `core:start` | Validated by engine. |
+| Cancel an eligible own commitment | Own progress and `legal.cancel` | `core:cancel` packet. Phase guard cannot distinguish eligible commitment from no commitment. | Engine rejects invalid cancellation. The experimental generic guard selects the authored packet only when eligible. |
+| Use precision only when eligible | Own `legal.precision` and `legal.stopAndPrecision` | Precision packet and compatible stop input. `can-attack` reads standard eligibility. | Engine validates precision independently. The generic guard directly reads the filtered precision flags. |
+| Reload while moving | Own ammo, reload timer and legal flags | One packet can contain both channels, and `can-reload` is available. | Validator and replay record both channels. Scripted policy may still choose to stand. |
+| Disengage on contact loss | Current contact, historical sample, own position | `no-contact` with authored movement or a stop; explicit alternatives | Current loss can switch branches. The legacy guard cannot distinguish stale contact from never seeing the rival. |
+| React to contact age or a score threshold | Sample time, clock, own-relative scores | Model can use them at request time. The current condition language has no general numeric comparisons. | No executor inference or hidden access. Generic own-capability guards leave this limitation intact. |
+| Choose a fresh goal from an observed change | Legitimate current or historical sample and public geometry | Model can author a bounded coordinate in a new specification. Existing guards can select among authored targets. | No arbitrary dynamic coordinate binding. Engine still checks inputs. |
+| Deliberately wait | Own state and public context | Empty packet or unmet guard, with different status | Distinguishes intentional wait, guard waiting and missing authorization. |
+
+The local-only generic predicate uses an allowlist of the existing own `legal` booleans and only controls which **authored** branch runs. Tests close the concrete cancellation and precision gaps and reject additional selectors such as rival side. The predicate is absent from the default plan parser and current live probe. Model comprehension, dynamic expressiveness and the benefit of adding it to the actual model interface remain unmeasured. No new predicate for history or numeric thresholds was introduced.
+
+## Genuine validation and quotas
+
+The supplied local file was opened without displaying values. It contains seven distinct entries. The first matches the previously checked credential in the local encrypted vault. The path supplied again does not identify a distinct new entry, and no authenticated project mapping or Free/no-billing quota verification for a new entry was available. No other key was tried. The Stage 1 command stopped locally before a provider request. This is an **identity and cost-verification blocker**, independent of the historical competition reservation status. No provider refusal or capacity exhaustion was observed in V2.7.
+
+The internal reservation is a shared competitive lifecycle control. The isolated operator CLI reserves each probe stage atomically in a Git-ignored directory before generation. It permits one two-request Stage 1 and one six-request Stage 2, sequentially and with no retry. It requires explicit review of both Stage 1 outputs before Stage 2 and caps each request and whole batch. It requires a recent operator verification of project association, Free tier with billing disabled, and enough quota headroom for the batch. The configured key goes only to the provider SDK and receipts stay in the private ledger. These probes create no competitive job, settlement or learning credit. Genuine Objective Duel keeps the separate existing competitive path. [Gemini project limits](https://ai.google.dev/gemini-api/docs/rate-limits) · [Pricing](https://ai.google.dev/gemini-api/docs/pricing) · [Probe fixture inspection](../evidence/gameplay-v27/probe-fixtures.txt) · [Stage 1 blocker](../evidence/gameplay-v27/stage1-blocker.txt)
+
+After identifying the entry, verify its project, billing and quotas in AI Studio. The private `.arena-data/v27/free-project.json` expected by the runner contains `file`, `line`, `project`, `model`, `tier` (Free), `billingEnabled` (false), `verifiedAt` (UTC), `rpm`, `tpm` and `rpd` headroom. It contains no key value. `npm exec --offline -- tsx scripts/probe-v27.ts stage1` uses the confirmed entry. The first pair uses an identical legitimate Objective observation with historical but no current contact. Three snapshots are frozen for the next stage. The runner stores accepted specifications and contrasts their local behavior against the same scripted policy in short matched engine traces. Those traces are conditional reuse of a response. They do not count as additional model decisions.
+
+## Disposition
+
+1. Retain finite paced renewal and the experimental alternatives. The divergence is evidence of a handoff and authorization tradeoff. Outcome identity alone is insufficient grounds for rejecting a persistent controller.
+2. Use the first real matched responses to locate the earliest failure in coaching comprehension, strategic choice, expressibility or execution. Compare packets, movement and committed actions. Treat one pair as exploratory.
+3. Review coverage of the generic predicate only if model evidence points to eligibility-based intent that the baseline cannot express. Defer controller replacement, game design changes and further synthetic idle tuning.
+4. Keep genuine duel, reflection, memory reuse and gameplay acceptance open. There were zero generation calls and no genuine coaching replays in this pass.
+
+## Gameplay observation and regression
+
+Replayed two manual-versus-scripted sequences in Chromium. The same scripted opponent started reload at tick 93 in both. With the key released near tick 30 and separation at 20,640 units (3.47 tiles), Sand stood still. Holding the key until tick 88 brought Blue to 3,540 units (0.60 tiles) of Sand, and Sand moved while reloading. The action cue matched the authoritative trace. These runs demonstrate the policy's context-dependent choice. They do not reproduce the owner's exact autonomous close-approach issue. Both sessions exported through tick 150 with zero API calls or browser errors. [Stationary reload](../evidence/gameplay-v27/revised-reload.png) · [Moving reload](../evidence/gameplay-v27/revised-close-reload.png) · [Browser log](../evidence/gameplay-v27/browser.txt)
+
+All **132 tests** passed with local Hardhat parity after restarting the previously unavailable loopback node. The production build passed with existing bundle warnings. The master specification, gameplay engine and replay source hashes match the previous version. [Tests](../evidence/gameplay-v27/tests.txt) · [Build](../evidence/gameplay-v27/build.txt)
