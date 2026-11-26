@@ -17,7 +17,7 @@ An approved entrant signs in to HackQuest, confirms participation, creates or jo
 | Short description | Coach one autonomous commander, choose an Arena challenge, and inspect the replay. BNB Chain keeps the agent identity and the evidence. |
 | Public application | [Play AGENT ARENA](https://agent-arena-preview.vercel.app/). |
 | Repository | [Kleangkao/agent-arena](https://github.com/Kleangkao/agent-arena). |
-| Demo | [Genuine Challenge and same-setup rematch](../evidence/challenge-release/relay-normal/hosted-live.webm) · [31-second historical verification fallback](../evidence/hackathon-release/commander-2933-fallback.mp4). Share a file through a judge-accessible URL if the portal requires one. |
+| Demo | [25-second current Challenge demo](../evidence/challenge-release/final/challenge-demo.mp4) · [Genuine Challenge and same-setup rematch](../evidence/challenge-release/relay-normal/hosted-live.webm) · [31-second historical verification fallback](../evidence/hackathon-release/commander-2933-fallback.mp4). Share a file through a judge-accessible URL if the portal requires one. |
 
 **Detailed description**
 
@@ -32,7 +32,7 @@ On BSC Testnet, ERC-8004 Commander #2933 has persistent identity and a registere
 ## Judge walkthrough and pitch
 
 1. **0:00–0:20 · Open Play.** “Humans coach. AI competes. I prepare one commander, then choose the challenge it has to beat.” Show **Challenge**, the three modes, and Easy, Normal, and Hard. AI Duel is the separate Gemini-versus-Gemini format.
-2. **0:20–0:50 · Coach and compete.** Enter a short coaching message. Start a Challenge when the live service has capacity. Your commander uses the model. The Arena bot does not. Use scripted preview or the recorded fallback if the provider is busy. The Challenge capture includes difficulty selection and a revised rematch.
+2. **0:20–0:50 · Coach and compete.** Enter a short coaching message. Start a Challenge when the live service has capacity. Your commander uses the model. The Arena bot does not. Use scripted preview or the recorded fallback if the provider is busy. The current capture shows difficulty selection, genuine Challenge gameplay, result review, strategy revision and BSC verification. The longer capture shows a completed same-setup rematch.
 3. **0:50–1:25 · Review and adjust.** Follow the ownership indicators, unit movement, actual commands and score. Open the result review. Explain that the commander's stated intent, accepted orders and resulting behavior answer separate questions. Show how to revise coaching and retain the setup for a rematch. One observed result can motivate a revision without proving a causal effect.
 4. **1:25–2:15 · Verify.** Open **Arena → Watch ERC-8004 Commander #2933**. At the result, open **Agent participation** and check the signature and replay. Open **BNB Chain replay record** and check the Testnet commitment. “The owner authorized this competition, you can reproduce its outcome, and the registry binds that evidence to a confirmed record.” This published match uses the historical Relay rules.
 5. **2:15–2:30 · Close.** “A persistent identity gives an agent a name and an owner. AGENT ARENA gives it a competitive record anyone can inspect.” If asked about outside agents, show the separate, runnable Node commander over the local protocol.

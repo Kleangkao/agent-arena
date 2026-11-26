@@ -1,0 +1,20 @@
+{
+  "origin": "https://agent-arena-preview.vercel.app",
+  "kind": "hosted-live",
+  "shots": [
+    "evidence/challenge-release/final/hosted-live-play-desktop.png",
+    "evidence/challenge-release/final/hosted-live-play-mobile.png",
+    "evidence/challenge-release/final/hosted-live-agent-mobile.png",
+    "evidence/challenge-release/final/hosted-live-prepare-mobile.png",
+    "evidence/challenge-release/final/hosted-live-prepare-desktop.png"
+  ],
+  "recording": "evidence/challenge-release/final/hosted-live.webm",
+  "errors": [],
+  "failure": "match start returned HTTP 429\n\n429 !== 202\n",
+  "startStatuses": [
+    429
+  ],
+  "runs": [],
+  "practiced": [],
+  "publicVerificationRequested": true
+}

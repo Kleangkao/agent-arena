@@ -175,6 +175,10 @@ try{
  if(verifyPractice){
   const before=matchPosts.length;
   await page.reload();
+  const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('arena-challenge-history')??'[]'));
+  for(const run of runs as Array<{id:string;replay:{final:string}}>) {
+   assert(stored.some((row:any)=>row.id===run.id&&row.result===run.replay.final));
+  }
   for(const mode of ['Bomb Mode','Team Deathmatch','Relay']){
    await button(mode).click();
    await button(/Start practice|Try scripted practice/i).click();
@@ -186,6 +190,8 @@ try{
    practiced.push(mode);
   }
   assert.equal(matchPosts.length,before,'scripted practice started an AI match');
+  const after=await page.evaluate(()=>JSON.parse(localStorage.getItem('arena-challenge-history')??'[]'));
+  assert.deepEqual(after,stored,'scripted practice modified challenge history');
  }
  assert.deepEqual(errors,[]);
  assert.equal(matchPosts.length,runs.length);

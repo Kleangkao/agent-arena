@@ -1,0 +1,234 @@
+{
+  "origin": "https://agent-arena-preview.vercel.app",
+  "kind": "hosted-live",
+  "shots": [
+    "evidence/challenge-release/tdm-normal/hosted-live-play-desktop.png",
+    "evidence/challenge-release/tdm-normal/hosted-live-play-mobile.png",
+    "evidence/challenge-release/tdm-normal/hosted-live-agent-mobile.png",
+    "evidence/challenge-release/tdm-normal/hosted-live-prepare-mobile.png",
+    "evidence/challenge-release/tdm-normal/hosted-live-prepare-desktop.png",
+    "evidence/challenge-release/tdm-normal/hosted-live-battle-desktop.png",
+    "evidence/challenge-release/tdm-normal/hosted-live-battle-mobile.png",
+    "evidence/challenge-release/tdm-normal/hosted-live-review-mobile.png",
+    "evidence/challenge-release/tdm-normal/hosted-live-review-desktop.png",
+    "evidence/challenge-release/tdm-normal/hosted-live-rematch-setup.png"
+  ],
+  "recording": null,
+  "errors": [],
+  "failure": null,
+  "startStatuses": [
+    202
+  ],
+  "runs": [
+    {
+      "id": "58030461-4e83-4c54-8a09-159a8f7033a2",
+      "status": "completed",
+      "model": "gemini-3.5-flash-lite",
+      "guidance": {
+        "strategy": "proactive",
+        "autonomy": "coach-led",
+        "coaching": "Keep the team close and regroup when units respawn.",
+        "revision": "e12d2939ec26699f91c80838f9136bdd2c1a7ae581ed0036d0e49ae160304df3",
+        "requests": 4,
+        "received": {
+          "autonomy": "Give the coach’s guidance strong weight where practical. Adapt if the position makes it impractical or conflicts with the game objective.",
+          "coaching": "Keep the team close and regroup when units respawn.",
+          "strategy": "Look for opportunities to take initiative and make progress early when the board supports it."
+        }
+      },
+      "attempts": [
+        {
+          "ms": 659,
+          "side": 0,
+          "step": 0,
+          "input": 1739,
+          "model": "gemini-3.5-flash-lite",
+          "output": 66,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "e12d2939ec26699f91c80838f9136bdd2c1a7ae581ed0036d0e49ae160304df3"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 0,
+          "status": "accepted",
+          "attempt": 1
+        },
+        {
+          "ms": 619,
+          "side": 0,
+          "step": 12,
+          "input": 2021,
+          "model": "gemini-3.5-flash-lite",
+          "output": 68,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "e12d2939ec26699f91c80838f9136bdd2c1a7ae581ed0036d0e49ae160304df3"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 12,
+          "status": "accepted",
+          "attempt": 1
+        },
+        {
+          "ms": 625,
+          "side": 0,
+          "step": 24,
+          "input": 2037,
+          "model": "gemini-3.5-flash-lite",
+          "output": 72,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "e12d2939ec26699f91c80838f9136bdd2c1a7ae581ed0036d0e49ae160304df3"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 24,
+          "status": "accepted",
+          "attempt": 1
+        },
+        {
+          "ms": 636,
+          "side": 0,
+          "step": 36,
+          "input": 2026,
+          "model": "gemini-3.5-flash-lite",
+          "output": 71,
+          "status": "accepted",
+          "attempt": 1,
+          "coachingRevision": "e12d2939ec26699f91c80838f9136bdd2c1a7ae581ed0036d0e49ae160304df3"
+        },
+        {
+          "ms": 0,
+          "side": 1,
+          "step": 36,
+          "status": "accepted",
+          "attempt": 1
+        }
+      ],
+      "durationMs": 2576,
+      "replay": {
+        "final": "sand",
+        "config": {
+          "mode": "tdm",
+          "teamSize": 5,
+          "mapVersion": "relay-yard-v1",
+          "rulesVersion": "squads-v3"
+        },
+        "source": "arena-challenge",
+        "version": 7,
+        "windows": [
+          [
+            {
+              "intent": "Regroup and advance together to take the initiative early.",
+              "orders": [
+                "5,7",
+                "5,7",
+                "8,7",
+                "8,7",
+                "8,10"
+              ]
+            },
+            {
+              "intent": "Group up and authorize pulses.",
+              "orders": [
+                "14,3/pulse",
+                "13,2/pulse",
+                "13,4/pulse",
+                "12,3/pulse",
+                "14,4/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Regroup and advance together to take the initiative.",
+              "orders": [
+                "5,7",
+                "5,7",
+                "11,7",
+                "11,7",
+                "11,10"
+              ]
+            },
+            {
+              "intent": "Group up and authorize pulses.",
+              "orders": [
+                "14,3/pulse",
+                "13,2/pulse",
+                "13,4/pulse",
+                "12,3/pulse",
+                "14,4/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Regroup with respawned units and advance together.",
+              "orders": [
+                "5,7",
+                "5,7",
+                "-",
+                "11,7/pulse",
+                "11,10"
+              ]
+            },
+            {
+              "intent": "Group up and authorize pulses.",
+              "orders": [
+                "14,3/pulse",
+                "13,2/pulse",
+                "13,4/pulse",
+                "12,3/pulse",
+                "14,4/pulse"
+              ]
+            }
+          ],
+          [
+            {
+              "intent": "Regroup forces and advance together toward central positions.",
+              "orders": [
+                "8,7",
+                "8,7",
+                "-",
+                "11,7/pulse",
+                "11,10"
+              ]
+            },
+            {
+              "intent": "Group up and authorize pulses.",
+              "orders": [
+                "14,3/pulse",
+                "13,2/pulse",
+                "13,4/pulse",
+                "12,3/pulse",
+                "14,4/pulse"
+              ]
+            }
+          ]
+        ],
+        "challenge": {
+          "format": "challenge",
+          "policy": "arena-bot/v3",
+          "opponent": "arena-normal",
+          "difficulty": "normal"
+        },
+        "interruption": null
+      },
+      "terminal": {
+        "score": [
+          0,
+          2
+        ],
+        "tick": 48,
+        "result": "sand"
+      }
+    }
+  ],
+  "practiced": [],
+  "publicVerificationRequested": false
+}
